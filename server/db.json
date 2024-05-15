@@ -1,0 +1,217 @@
+{
+  "workshop": {
+    "id": 1,
+    "name": "AutoVIP Workshop",
+    "address": "456 Oak Street, City",
+    "phone": "555-789-1234",
+    "email": "info@autovip.com",
+    "logo_url": "https://i.postimg.cc/BnRQw4hj/company-logo.png",
+    "business_hours": "Monday to Saturday, 7:00 AM - 6:00 PM"
+  },
+  "customers": [
+    {
+      "id": 1,
+      "name": "Jose Corral",
+      "workshopId": 1,
+      "address": "123 Main Street, City",
+      "phone": "123-456-7890",
+      "email": "juan.rodriguez@example.com",
+      "image_url": "https://i.postimg.cc/zGBMZknL/persona1.png"
+    },
+    {
+      "id": 2,
+      "name": "Jose Torres Peralta",
+      "workshopId": 1,
+      "address": "456 Central Avenue, City",
+      "phone": "987-654-3210",
+      "email": "jose.torres@example.com",
+      "image_url": "https://i.postimg.cc/GpRX3JDJ/persona2.png"
+    },
+    {
+      "id": 3,
+      "name": "Jose Rodriguez Benavides",
+      "workshopId": 1,
+      "address": "789 Liberty Avenue, City",
+      "phone": "555-123-4567",
+      "email": "jose.benavides@example.com",
+      "image_url": "https://i.postimg.cc/W4pf6w4p/persona3.png"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "plate": "ABC123",
+      "make": "Audi",
+      "model": "A1",
+      "year": 2018,
+      "color": "Gray",
+      "image_url": "https://i.postimg.cc/Qdcrnmsp/Audi-Car.png",
+      "mileage": 50000,
+      "status": "En reparación",
+      "lastVisitDate": "2024-04-20",
+      "servicesHistory": [
+        {
+          "serviceDate": "2024-04-10",
+          "description": "Maintenance service",
+          "cost": 800.00,
+          "mileage": 49000
+        },
+        {
+          "serviceDate": "2023-12-15",
+          "description": "Tire replacement",
+          "cost": 700.00,
+          "mileage": 45000
+        }
+      ],
+      "comments": "Cliente reporta ruido en el motor",
+      "estimates": [
+        {
+          "estimateDate": "2024-04-25",
+          "description": "Engine diagnostics",
+          "estimatedCost": 300.00
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "plate": "DEF456",
+      "make": "Mitsubishi",
+      "model": "New Ask",
+      "year": 2019,
+      "color": "Blue",
+      "image_url": "https://i.postimg.cc/ZRR2Zxks/Mitsubishi-Car.png",
+      "mileage": 35000,
+      "status": "Listo para entrega",
+      "lastVisitDate": "2024-05-01",
+      "servicesHistory": [
+        {
+          "serviceDate": "2024-04-20",
+          "description": "Engine repair",
+          "cost": 800.00,
+          "mileage": 34000
+        }
+      ],
+      "comments": "Cliente solicita cambio de aceite",
+      "estimates": []
+    },
+    {
+      "id": 3,
+      "customerId": 3,
+      "plate": "GHI789",
+      "make": "Volkswagen",
+      "model": "Nivus",
+      "year": 2021,
+      "color": "White",
+      "image_url": "https://i.postimg.cc/sfZyhs86/Volkwagen-Car.png",
+      "mileage": 15000,
+      "status": "En espera de repuestos",
+      "lastVisitDate": "2024-03-10",
+      "servicesHistory": [
+        {
+          "serviceDate": "2024-02-15",
+          "description": "Oil change",
+          "cost": 50.00,
+          "mileage": 14000
+        },
+        {
+          "serviceDate": "2023-11-20",
+          "description": "General inspection",
+          "cost": 550.00,
+          "mileage": 12000
+        }
+      ],
+      "comments": "Cliente reporta vibraciones al frenar",
+      "estimates": [
+        {
+          "estimateDate": "2024-04-30",
+          "description": "Brake pads replacement",
+          "estimatedCost": 400.00
+        }
+      ]
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "number": "F2022001",
+      "issue_date": "2022-04-15",
+      "total": 1500.00,
+      "status": "Paid",
+      "details": [
+        {
+          "description": "Maintenance service",
+          "amount": 800.00
+        },
+        {
+          "description": "Tire replacement",
+          "amount": 700.00
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "number": "F2022002",
+      "issue_date": "2022-06-20",
+      "status": "Paid",
+      "total": 1200.00,
+      "details": [
+        {
+          "description": "Engine repair",
+          "amount": 800.00
+        },
+        {
+          "description": "Oil change",
+          "amount": 100.00
+        },
+        {
+          "description": "New brakes",
+          "amount": 300.00
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "customerId": 3,
+      "number": "F2022003",
+      "issue_date": "2022-07-10",
+      "total": 800.00,
+      "status": "Paid",
+      "details": [
+        {
+          "description": "Engine repair",
+          "amount": 800.00
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "productId": "P001",
+      "name": "Motor Oil (5W-30)",
+      "quantity": 100,
+      "price": 20.00,
+      "image_url": "https://i.postimg.cc/ABC123/motor-oil.png",
+      "workshopId": 1
+    },
+    {
+      "productId": "P002",
+      "name": "Brake Pads",
+      "quantity": 50,
+      "price": 40.00,
+      "image_url": "https://i.postimg.cc/XYZ789/brake-pads.png",
+      "workshopId": 1
+    },
+    {
+      "productId": "P003",
+      "name": "Tires (Set of 4)",
+      "quantity": 20,
+      "price": 300.00,
+      "image_url": "https://i.postimg.cc/GHI789/tires.png",
+      "workshopId": 1
+    }
+  ]
+}

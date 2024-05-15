@@ -1,0 +1,67 @@
+<div class="container-add-invoice">
+  <div class="content-add-invoice">
+    <div class="day-random">
+      <p id="date">Actual Date: {{ today | date }}</p>
+      <p id="random">Invoice Number: {{ randomWord }}</p>
+    </div>
+    <div class="content-forms-invoice">
+      <div class="inputs-invoice">
+        <label>Select Customer: </label>
+        <select [(ngModel)]="selectedCustomer" (change)="onCustomerChange()">
+          <option *ngFor="let customer of customers" [ngValue]="customer.id">{{ customer.name }}</option>
+        </select>
+      </div>
+
+      <div class="inputs-invoice">
+        <label>Select Customer Vehicle: </label>
+        <select>
+          <option>{{selectedVehicle.model}}</option>
+        </select>
+      </div>
+
+
+
+      <div class="inputs-invoice">
+        <label>RUC:</label>
+        <input type="text" placeholder="Type RUC">
+      </div>
+
+    </div>
+    <div class="content-table-invoice">
+      <p>Enter the data of each service, description and unit value. When finished, select the “Invoice Completed” button.</p>
+      <table border="1">
+        <thead>
+        <tr>
+          <th>Service</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let service of services; let i = index">
+          <td><input type="text" [(ngModel)]="service.name" placeholder="Service Name"></td>
+          <td><input type="text" [(ngModel)]="service.description" placeholder="Description"></td>
+          <td><input type="number" [(ngModel)]="service.price" placeholder="Price"></td>
+          <td><button  (click)="removeService(i)">Remove</button></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+      <button (click)="addService()">Add Service</button>
+    </div>
+    <div class="confirm-buttom">
+      <button (click)="onCancel()">Cancel</button>
+      <button>Invoice Complete</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
