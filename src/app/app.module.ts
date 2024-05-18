@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InvoicesCardComponent } from './invoices/components/invoice-card/invoices-card.component';
+import { InvoicesCardComponent } from './manager/invoices/components/invoice-card/invoices-card.component';
 import {HttpClientModule} from "@angular/common/http";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
@@ -18,10 +18,10 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { SideNavegationBarComponent } from './public/pages/side-navegation-bar/side-navegation-bar.component';
-import { InvoiceListComponent } from './invoices/pages/invoice-list/invoice-list.component';
+import { InvoiceListComponent } from './manager/invoices/pages/invoice-list/invoice-list.component';
 import {MatButtonModule} from "@angular/material/button";
-import { AddInvoiceComponent } from './invoices/components/add-invoice/add-invoice.component';
-import { InvoicePreviewComponent } from './invoices/components/invoice-preview/invoice-preview.component';
+import { AddInvoiceComponent } from './manager/invoices/components/add-invoice/add-invoice.component';
+import { InvoicePreviewComponent } from './manager/invoices/components/invoice-preview/invoice-preview.component';
 
 @NgModule({
   declarations: [

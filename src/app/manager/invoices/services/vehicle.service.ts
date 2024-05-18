@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Vehicle } from '../model/vehicle.entity';
-import { BaseService } from '../../shared/base.service';
+import { BaseService } from '../../../shared/base.service';
 
 @Injectable({
   providedIn: 'root'
