@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../../services/customer.service';
-import { InvoiceService } from '../../services/invoice.service';
-import { Customer } from '../../model/customer.entity';
-import { Invoice } from '../../model/invoice.entity';
+import { CustomerService } from '../../../services/services/customer.service';
+import { InvoiceService } from '../../../services/services/invoice.service';
+import { Customer } from '../../../model/model/customer.entity';
+import { Invoice } from '../../../model/model/invoice.entity';
 import {Router} from "@angular/router";
 
 @Component({

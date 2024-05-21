@@ -29,6 +29,19 @@ export class BaseService<T> {
     return `${this.basePath}${this.resourceEndpoint}`
   }
 
+  create(item: any): Observable<T> {
+    return this.http.post<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
+        .pipe(retry(2), catchError(this.handleError));
+  }
+
+  delete(id: any) {
+    return this.http.delete(`${this.resourcePath()}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
+  }
+
+  update(id: any, item: any) {
+    return this.http.put<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item), this.httpOptions).pipe(retry(2), catchError(this.handleError));
+  }
+
   getAll() {
     return this.http.get<T>(this.resourcePath(), this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }

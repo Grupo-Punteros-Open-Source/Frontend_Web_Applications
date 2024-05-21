@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../../services/customer.service';
-import { VehicleService } from '../../services/vehicle.service';
-import { Customer } from '../../model/customer.entity';
-import { Vehicle } from '../../model/vehicle.entity';
+import { CustomerService } from '../../../services/services/customer.service';
+import { VehicleService } from '../../../services/services/vehicle.service';
+import { Customer } from '../../../model/model/customer.entity';
+import { Vehicle } from '../../../model/model/vehicle.entity';
 import {Location} from "@angular/common";
 
 @Component({
