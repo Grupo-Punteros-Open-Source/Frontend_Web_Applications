@@ -9,6 +9,6 @@ import { BaseService } from '../../../shared/base.service';
 export class CustomerService extends BaseService<Customer> {
   constructor(http: HttpClient) {
     super(http);
-    this.resourceEndpoint = '/manager';
+    this.resourceEndpoint = '/customers';
   }
 }

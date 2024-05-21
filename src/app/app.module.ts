@@ -22,6 +22,10 @@ import { InvoiceListComponent } from './manager/invoices/pages/invoice-list/invo
 import {MatButtonModule} from "@angular/material/button";
 import { AddInvoiceComponent } from './manager/invoices/components/add-invoice/add-invoice.component';
 import { InvoicePreviewComponent } from './manager/invoices/components/invoice-preview/invoice-preview.component';
+import { AddCustomerComponent } from './manager/customers/components/add-customer/add-customer.component';
+import { CustomerListComponent } from './manager/customers/pages/customer-list/customer-list.component';
+import { CardCustomerComponent } from './manager/customers/components/card-customer/card-customer.component';
+import { ProfileCustomerComponent } from './manager/customers/components/profile-customer/profile-customer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,12 @@ import { InvoicePreviewComponent } from './manager/invoices/components/invoice-p
     SideNavegationBarComponent,
     InvoiceListComponent,
     AddInvoiceComponent,
-    InvoicePreviewComponent
+    InvoicePreviewComponent,
+
+    AddCustomerComponent,
+    CustomerListComponent,
+    CardCustomerComponent,
+    ProfileCustomerComponent
   ],
   imports: [
     BrowserModule,

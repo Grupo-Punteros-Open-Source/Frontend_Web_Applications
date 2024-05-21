@@ -35,7 +35,6 @@ export class InvoicePreviewComponent implements OnInit {
   }
 
 
-
   ngOnInit(): void {
 
     const customerId = Number(this.route.snapshot.paramMap.get('clientId') ?? '0');
