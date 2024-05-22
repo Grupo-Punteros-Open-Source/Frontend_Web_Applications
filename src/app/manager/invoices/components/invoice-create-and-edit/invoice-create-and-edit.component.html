@@ -1,0 +1,81 @@
+<!-- Create and Edit Form -->
+<h2>{{ editMode ? 'Edit Invoice' : 'New Invoice' }}</h2>
+
+<div class="form-section">
+    <form (submit)="onSubmit()" #invoiceForm='ngForm' class="form-row">
+        <mat-form-field>
+            <label for="customerId">Customer</label>
+            <mat-select id="customerId" placeholder="Select a customer" name="customerId" required [(ngModel)]="invoice.customerId" #customerId="ngModel">
+                <mat-option *ngFor="let customer of customers" [value]="customer.id">
+                    {{customer.name}}
+                </mat-option>
+            </mat-select>
+            <div *ngIf="customerId.invalid && (customerId.dirty || customerId.touched)" class="error">
+                Customer is required.
+            </div>
+        </mat-form-field>
+        <mat-form-field>
+            <label for="number">Number</label>
+            <input id="number" matInput placeholder="Invoice number" name="number" required [(ngModel)]="invoice.number" readonly #number="ngModel">
+            <div *ngIf="number.invalid && (number.dirty || number.touched)" class="error">
+                Number is required.
+            </div>
+        </mat-form-field>
+        <mat-form-field>
+            <label for="issue_date">Issue Date</label>
+            <input id="issue_date" matInput type="date" placeholder="Issue date" name="issue_date" required [(ngModel)]="invoice.issue_date" readonly #issue_date="ngModel">
+            <div *ngIf="issue_date.invalid && (issue_date.dirty || issue_date.touched)" class="error">
+                Issue Date is required.
+            </div>
+        </mat-form-field>
+        <mat-form-field>
+            <label for="total">Total</label>
+            <input id="total" matInput placeholder="Total amount" name="total" required [(ngModel)]="invoice.total" readonly #total="ngModel">
+            <div *ngIf="total.invalid && (total.dirty || total.touched)" class="error">
+                Total is required.
+            </div>
+        </mat-form-field>
+        <mat-form-field>
+            <label for="status">Status</label>
+            <mat-select id="status" placeholder="Payment status" name="status" required [(ngModel)]="invoice.status" #status="ngModel">
+                <mat-option [value]="'Paid'">
+                    Paid
+                </mat-option>
+                <mat-option [value]="'UnPaid'">
+                    UnPaid
+                </mat-option>
+            </mat-select>
+            <div *ngIf="status.invalid && (status.dirty || status.touched)" class="error">
+                Status is required.
+            </div>
+        </mat-form-field>
+        <!-- Add fields for details here -->
+        <button (click)="addDetail()" class="add-detail-button">Add Detail Invoice</button>
+        <div *ngFor="let detail of invoice.details; let i = index; " class="detail-row">
+            <mat-form-field class="detail-field">
+                <label for="description{{i}}">Description</label>
+                <input id="description{{i}}" matInput placeholder="Item description" name="description" required [(ngModel)]="detail.description" #description="ngModel">
+                <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error">
+                    Description is required.
+                </div>
+            </mat-form-field>
+            <mat-form-field class="detail-field">
+                <label for="amount{{i}}">Amount</label>
+                <input id="amount{{i}}" matInput placeholder="Item amount" name="amount" required [(ngModel)]="detail.amount" (ngModelChange)="calculateTotal()" #amount="ngModel">
+                <div *ngIf="amount.invalid && (amount.dirty || amount.touched)" class="error">
+                    Amount is required.
+                </div>
+            </mat-form-field>
+            <button (click)="removeDetail(i)" class="remove-button">Remove</button>
+        </div>
+
+        <ng-container *ngIf="editMode; else elseTemplate">
+            <button mat-raised-button color="primary" class="update-button">Update</button>
+            <button mat-raised-button color="warn" class="cancel-button">Cancel</button>
+        </ng-container>
+
+        <ng-template #elseTemplate>
+            <button class="add-button">Add Invoice</button>
+        </ng-template>
+    </form>
+</div>

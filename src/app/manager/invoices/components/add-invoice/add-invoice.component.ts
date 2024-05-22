@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../../../services/services/customer.service';
-import { VehicleService } from '../../../services/services/vehicle.service';
-import { Customer } from '../../../model/model/customer.entity';
-import { Vehicle } from '../../../model/model/vehicle.entity';
+import {Component} from '@angular/core';
+import { InvoiceService } from "../../../services/services/invoice.service";
+import {MatTableDataSource} from "@angular/material/table";
+import { Invoice } from '../../../model/model/invoice.entity';
+import {Router} from "@angular/router";
 import {Location} from "@angular/common";
 
 @Component({
@@ -10,66 +10,44 @@ import {Location} from "@angular/common";
   templateUrl: './add-invoice.component.html',
   styleUrls: ['./add-invoice.component.css']
 })
-export class AddInvoiceComponent implements OnInit {
-  customers: Customer[] = [];
-  vehicles: Vehicle[] = [];
-  today: Date = new Date();
-  randomWord: string;
-  selectedCustomer: number = 0;
-  selectedVehicle: Vehicle = {} as Vehicle;
-  vehiclesById: { [id: number]: Vehicle } = {};
-  services: any[] = [];
+export class AddInvoiceComponent  {
 
-  constructor(private customerService: CustomerService, private vehicleService: VehicleService,
+  invoiceData: Invoice;
+  dataSource!: MatTableDataSource<any>;
+
+  constructor(private invoiceService: InvoiceService,
+              private router: Router,
               private location: Location) {
-    this.randomWord = this.generateRandomWord(8);
+    this.invoiceData = {} as Invoice;
+    this.dataSource = new MatTableDataSource<any>();
+    this.getAllInvoices();
   }
 
-  ngOnInit(): void {
-    this.getCustomers();
-    this.getVehicles();
-  }
-
-  getCustomers(): void {
-    this.customerService.getAll().subscribe((response: any) => {
-      this.customers = response;
-    });
-  }
-
-  getVehicles(): void {
-    this.vehicleService.getAll().subscribe((response: any) => {
-      this.vehicles = response;
-      this.vehiclesById = this.vehicles.reduce((acc, vehicle) => ({ ...acc, [vehicle.id]: vehicle }), {});
-    });
-  }
-
-  generateRandomWord(length: number): string {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123';
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  }
-
-  addService() {
-    this.services.push({ name: '', description: '', price: 0 });
-  }
-
-  removeService(index: number) {
-    this.services.splice(index, 1);
-  }
-
-  onCancel(): void {
+  onCancel() {
     this.location.back();
   }
 
-  onCustomerChange(): void {
-    this.selectedVehicle = this.vehiclesById[this.selectedCustomer];
-    console.log('Selected vehicle:', this.selectedVehicle);
+  private getAllInvoices() {
+    this.invoiceService.getAll().subscribe((response: any) => {
+      this.dataSource.data = response;
+      console.log('Response from server:', response);
+    });
+  };
+
+  onInvoiceAdded(element: Invoice) {
+    this.invoiceData = element;
+    this.createInvoice();
+    alert('Invoice created successfully!');
+    this.router.navigate(['/workshop/invoices/invoice-preview', this.invoiceData.customerId, this.invoiceData.id]);
   }
 
-  onVehicleChange(): void {
-  }
+  private createInvoice() {
+    this.invoiceService.create(this.invoiceData).subscribe((response: any) => {
+      this.dataSource.data.push({...response});
+      this.dataSource.data = this.dataSource.data.map((invoice: Invoice) => {
+        return invoice;
+      });
+    });
+  };
+
 }

@@ -7,6 +7,7 @@ import { Customer } from '../../../model/model/customer.entity';
 import { Invoice } from '../../../model/model/invoice.entity';
 import {Workshop} from "../../../model/model/workshop.entity";
 import {Location} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-invoice-preview',
@@ -23,15 +24,16 @@ export class InvoicePreviewComponent implements OnInit {
     private customerService: CustomerService,
     private invoiceService: InvoiceService,
     private workshopService: WorkshopService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) { }
 
   onCancel(): void {
-    this.location.back();
+    this.router.navigate(['workshop/invoices']);
   }
 
   getTotalAmount(): number {
-    return this.invoice.details.reduce((total: number, detail: { amount: number }) => total + detail.amount, 0);
+    return this.invoice.details.reduce((total: number, detail: { amount: number }) => total + Number(detail.amount), 0);
   }
 
 
@@ -47,6 +49,7 @@ export class InvoicePreviewComponent implements OnInit {
 
     this.invoiceService.getById(invoiceId).subscribe((invoice: Invoice) => {
       this.invoice = invoice;
+      console.log('Invoice:', invoice);
     });
 
     this.workshopService.getAll().subscribe((response: any) => {
