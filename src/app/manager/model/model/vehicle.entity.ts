@@ -1,5 +1,5 @@
 export class Vehicle {
-  id: number;
+  id: string;
   customerId: number;
   plate: string;
   make: string;
@@ -12,7 +12,7 @@ export class Vehicle {
   lastVisitDate: string;
   comments: string;
 
-  constructor(id: number, customerId: number, plate: string, make: string, model: string, year: number,
+  constructor(id: string, customerId: number, plate: string, make: string, model: string, year: number,
               color: string, imageUrl: string, mileage: number, status: string,
               lastVisitDate: string, comments: string) {
     this.id = id;

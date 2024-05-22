@@ -1,5 +1,5 @@
 export class Invoice {
-  id: number;
+  id: string;
   customerId: number;
   number: string;
   issue_date: string;
@@ -7,9 +7,9 @@ export class Invoice {
   status: string;
   details: { description: string, amount: number }[];
 
-  constructor(id: number, customerId: number, number: string,
-              issue_date: string, total: number,status: string, details:
-                { description: string, amount: number }[]) {
+  constructor(id: string, customerId: number, number: string,
+              issue_date: string, total: number, status: string, details:
+                  { description: string, amount: number }[]) {
     this.id = id;
     this.customerId = customerId;
     this.number = number;
@@ -18,4 +18,7 @@ export class Invoice {
     this.status = status;
     this.details = details;
   }
+
+
 }
+

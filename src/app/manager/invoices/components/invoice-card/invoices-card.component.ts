@@ -14,7 +14,9 @@ export class InvoicesCardComponent implements OnInit {
   customers: Customer[] = [];
   invoices: Invoice[] = [];
 
-  constructor(private customerService: CustomerService, private invoiceService: InvoiceService, private router: Router) { }
+  constructor(private customerService: CustomerService,
+              private invoiceService: InvoiceService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getCustomers();
@@ -24,16 +26,18 @@ export class InvoicesCardComponent implements OnInit {
   getCustomers(): void {
     this.customerService.getAll().subscribe((response: any) => {
       this.customers = response;
+      console.log('Response from card:', response);
     });
   }
 
   getInvoices(): void {
     this.invoiceService.getAll().subscribe((response: any) => {
       this.invoices = response;
+
     });
   }
 
-  preview(customerId: number, numberId: number): void {
+  preview(customerId: number, numberId: string): void {
     this.router.navigate(['/workshop/invoices/invoice-preview', customerId, numberId]);
   }
 

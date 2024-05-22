@@ -129,7 +129,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# angular & idea
+#angular
+
 .angular
 .idea
 

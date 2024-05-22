@@ -22,6 +22,10 @@ import { InvoiceListComponent } from './manager/invoices/pages/invoice-list/invo
 import {MatButtonModule} from "@angular/material/button";
 import { AddInvoiceComponent } from './manager/invoices/components/add-invoice/add-invoice.component';
 import { InvoicePreviewComponent } from './manager/invoices/components/invoice-preview/invoice-preview.component';
+import { InvoiceCreateAndEditComponent } from './manager/invoices/components/invoice-create-and-edit/invoice-create-and-edit.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { InvoicePreviewComponent } from './manager/invoices/components/invoice-p
     SideNavegationBarComponent,
     InvoiceListComponent,
     AddInvoiceComponent,
-    InvoicePreviewComponent
+    InvoicePreviewComponent,
+    InvoiceCreateAndEditComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,10 @@ import { InvoicePreviewComponent } from './manager/invoices/components/invoice-p
     MatDialogModule,
     FormsModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
   providers: [
     provideAnimationsAsync()

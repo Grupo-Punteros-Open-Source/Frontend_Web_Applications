@@ -10,7 +10,7 @@
   },
   "customers": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Jose Corral",
       "workshopId": 1,
       "address": "123 Main Street, City",
@@ -19,7 +19,7 @@
       "image_url": "https://i.postimg.cc/zGBMZknL/persona1.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jose Torres Peralta",
       "workshopId": 1,
       "address": "456 Central Avenue, City",
@@ -28,7 +28,7 @@
       "image_url": "https://i.postimg.cc/GpRX3JDJ/persona2.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Jose Rodriguez Benavides",
       "workshopId": 1,
       "address": "789 Liberty Avenue, City",
@@ -39,7 +39,7 @@
   ],
   "vehicles": [
     {
-      "id": 1,
+      "id": "1",
       "customerId": 1,
       "plate": "ABC123",
       "make": "Audi",
@@ -54,13 +54,13 @@
         {
           "serviceDate": "2024-04-10",
           "description": "Maintenance service",
-          "cost": 800.00,
+          "cost": 800,
           "mileage": 49000
         },
         {
           "serviceDate": "2023-12-15",
           "description": "Tire replacement",
-          "cost": 700.00,
+          "cost": 700,
           "mileage": 45000
         }
       ],
@@ -69,12 +69,12 @@
         {
           "estimateDate": "2024-04-25",
           "description": "Engine diagnostics",
-          "estimatedCost": 300.00
+          "estimatedCost": 300
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "customerId": 2,
       "plate": "DEF456",
       "make": "Mitsubishi",
@@ -89,7 +89,7 @@
         {
           "serviceDate": "2024-04-20",
           "description": "Engine repair",
-          "cost": 800.00,
+          "cost": 800,
           "mileage": 34000
         }
       ],
@@ -97,7 +97,7 @@
       "estimates": []
     },
     {
-      "id": 3,
+      "id": "3",
       "customerId": 3,
       "plate": "GHI789",
       "make": "Volkswagen",
@@ -112,13 +112,13 @@
         {
           "serviceDate": "2024-02-15",
           "description": "Oil change",
-          "cost": 50.00,
+          "cost": 50,
           "mileage": 14000
         },
         {
           "serviceDate": "2023-11-20",
           "description": "General inspection",
-          "cost": 550.00,
+          "cost": 550,
           "mileage": 12000
         }
       ],
@@ -127,65 +127,93 @@
         {
           "estimateDate": "2024-04-30",
           "description": "Brake pads replacement",
-          "estimatedCost": 400.00
+          "estimatedCost": 400
         }
       ]
     }
   ],
   "invoices": [
     {
-      "id": 1,
+      "id": "1",
       "customerId": 1,
       "number": "F2022001",
       "issue_date": "2022-04-15",
-      "total": 1500.00,
+      "total": 1500,
       "status": "Paid",
       "details": [
         {
           "description": "Maintenance service",
-          "amount": 800.00
+          "amount": 800
         },
         {
           "description": "Tire replacement",
-          "amount": 700.00
+          "amount": 700
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "customerId": 2,
       "number": "F2022002",
       "issue_date": "2022-06-20",
       "status": "Paid",
-      "total": 1200.00,
+      "total": 1200,
       "details": [
         {
           "description": "Engine repair",
-          "amount": 800.00
+          "amount": 800
         },
         {
           "description": "Oil change",
-          "amount": 100.00
+          "amount": 100
         },
         {
           "description": "New brakes",
-          "amount": 300.00
+          "amount": 300
         }
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "customerId": 3,
       "number": "F2022003",
       "issue_date": "2022-07-10",
-      "total": 800.00,
+      "total": 800,
       "status": "Paid",
       "details": [
         {
           "description": "Engine repair",
-          "amount": 800.00
+          "amount": 800
         }
       ]
+    },
+    {
+      "id": "4",
+      "customerId": 1,
+      "number": "F2022004",
+      "issue_date": "2024-05-22",
+      "status": "Paid",
+      "details": [
+        {
+          "description": "Change Oil",
+          "amount": 50
+        }
+      ],
+      "total": 50
+    },
+    {
+      "id": "5",
+      "customerId": 1,
+      "number": "F2022005",
+      "issue_date": "2024-05-22",
+      "status": "Paid",
+      "details": [
+        {
+          "description": "Maintance",
+          "amount": 100
+        }
+      ],
+      "total": 100
     }
   ],
   "inventory": [
@@ -193,25 +221,28 @@
       "productId": "P001",
       "name": "Motor Oil (5W-30)",
       "quantity": 100,
-      "price": 20.00,
+      "price": 20,
       "image_url": "https://i.postimg.cc/ABC123/motor-oil.png",
-      "workshopId": 1
+      "workshopId": 1,
+      "id": "1228"
     },
     {
       "productId": "P002",
       "name": "Brake Pads",
       "quantity": 50,
-      "price": 40.00,
+      "price": 40,
       "image_url": "https://i.postimg.cc/XYZ789/brake-pads.png",
-      "workshopId": 1
+      "workshopId": 1,
+      "id": "af24"
     },
     {
       "productId": "P003",
       "name": "Tires (Set of 4)",
       "quantity": 20,
-      "price": 300.00,
+      "price": 300,
       "image_url": "https://i.postimg.cc/GHI789/tires.png",
-      "workshopId": 1
+      "workshopId": 1,
+      "id": "a9a2"
     }
   ]
 }

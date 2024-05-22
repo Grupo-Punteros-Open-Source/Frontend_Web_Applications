@@ -1,5 +1,5 @@
 export class Workshop {
-  id: number;
+  id: string;
   name: string;
   address: string;
   phone: string;
@@ -7,7 +7,7 @@ export class Workshop {
   logo_url: string;
   business_hours: string;
 
-  constructor(id: number, name: string, address: string, phone: string, email: string, logo_url: string, business_hours: string) {
+  constructor(id: string, name: string, address: string, phone: string, email: string, logo_url: string, business_hours: string) {
     this.id = id;
     this.name = name;
     this.address = address;
