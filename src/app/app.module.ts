@@ -26,6 +26,7 @@ import { InvoiceCreateAndEditComponent } from './manager/invoices/components/inv
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync()

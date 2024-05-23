@@ -59,7 +59,7 @@ export class InvoiceCreateAndEditComponent {
       // Form the new invoice number
       let currentYear = new Date().getFullYear();
       this.invoice.number = 'F' + highestNumber.toString().padStart(7, '0');
-      this.invoice.id = (this.invoices.length+1 ).toString();
+      this.invoice.id = (this.invoices.length + 1).toString();
 
 
     });
@@ -73,7 +73,7 @@ export class InvoiceCreateAndEditComponent {
   }
 
   addDetail() {
-    this.invoice.details.push({ description: "", amount: 0 });
+    this.invoice.details.push({description: "", amount: 0});
   }
 
   removeDetail(index: number) {
@@ -91,6 +91,7 @@ export class InvoiceCreateAndEditComponent {
 
   // Event Handlers
   onSubmit() {
+
     this.invoice.customerId = Number(this.invoice.customerId);
     this.invoice.details = this.invoice.details.map(detail => {
       return {
@@ -110,13 +111,6 @@ export class InvoiceCreateAndEditComponent {
 
 
   }
-
-  onCancel() {
-    this.editCanceled.emit();
-    this.resetEditState();
-  }
-
-
 
 
 }

@@ -191,43 +191,15 @@
       "id": "4",
       "customerId": 1,
       "number": "F2022004",
-      "issue_date": "2024-05-22",
+      "issue_date": "2024-05-23",
       "status": "Paid",
       "details": [
         {
           "description": "Change Oil",
-          "amount": 50
-        }
-      ],
-      "total": 50
-    },
-    {
-      "id": "5",
-      "customerId": 1,
-      "number": "F2022005",
-      "issue_date": "2024-05-22",
-      "status": "Paid",
-      "details": [
-        {
-          "description": "Maintance",
           "amount": 100
         }
       ],
       "total": 100
-    },
-    {
-      "id": "6",
-      "customerId": 3,
-      "number": "F2022006",
-      "issue_date": "2024-05-23",
-      "status": "UnPaid",
-      "details": [
-        {
-          "description": "1",
-          "amount": 50
-        }
-      ],
-      "total": 50
     }
   ],
   "inventory": [
