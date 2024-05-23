@@ -3,7 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import {CustomerService} from "../../../services/customer.service";
 import {Location} from "@angular/common";
 import {Customer} from "../../../model/customer.entity";
-
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-profile-customer',
@@ -27,6 +27,20 @@ export class ProfileCustomerComponent implements OnInit {
     this.customerService.getById(customerId).subscribe((customer: Customer) => {
       this.customer = customer;
     });
+  }
+
+  editing = false;
+
+  onEdit(): void {
+    this.editing = true;
+  }
+
+  onSubmit(form: NgForm): void {
+    if (form.valid) {
+      this.customerService.update(this.customer.id, this.customer).subscribe(() => {
+        this.editing = false;
+      });
+    }
   }
 
 }
