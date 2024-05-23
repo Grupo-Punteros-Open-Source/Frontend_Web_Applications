@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-add-customer',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './add-customer.component.css'
 })
 export class AddCustomerComponent {
-
+  constructor(private location: Location) {
+  }
+  onCancel(): void {
+    this.location.back();
+  }
 }

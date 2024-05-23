@@ -11,7 +11,7 @@ import {Customer} from "../../../model/customer.entity";
 export class CustomerListComponent implements OnInit {
   customers: Customer[] = [];
 
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService, private router: Router) { }
 
   ngOnInit(): void {
     this.getCustomers();
@@ -21,6 +21,9 @@ export class CustomerListComponent implements OnInit {
     this.customerService.getAll().subscribe((response: any) => {
       this.customers = response;
     });
+  }
+  add(): void {
+    this.router.navigate(['/workshop/customers/add-customer']);
   }
 
 }
