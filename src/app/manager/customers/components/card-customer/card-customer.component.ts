@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {CustomerService} from "../../../services/customer.service";
-import {ProfileCustomerComponent} from "../profile-customer/profile-customer.component";
-/*import {ClientDeleteConfirmationComponent} from "../client-delete-confirmation/client-delete-confirmation.component";*/
 import {Router} from "@angular/router";
 import {Customer} from "../../../model/customer.entity";
 import {Workshop} from '../../../model/workshop.entity';
@@ -15,7 +13,7 @@ import {WorkshopService} from "../../../services/workshop.service";
 export class CardCustomerComponent implements OnInit {
   customers: Customer[] = [];
   workshop: Workshop[] = [];
-  workshopById: { [id: number]: Workshop } = {};
+  /*workshopById: { [id: number]: Workshop } = {};*/
 
   constructor(private customerService: CustomerService, private workshopService: WorkshopService, private router: Router) { }
 
@@ -43,7 +41,7 @@ export class CardCustomerComponent implements OnInit {
     this.router.navigate(['/workshop/customers/profile',clientId]);
   }
   delete(clientId: string): void {
-    this.router.navigate(['/workshop/customers/delete',clientId]);
+    this.router.navigate(['/workshop/customers/profile/delete',clientId]);
   }
 }
 

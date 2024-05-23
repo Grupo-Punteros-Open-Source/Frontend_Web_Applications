@@ -6,6 +6,7 @@ import {InvoicePreviewComponent} from "./manager/invoices/components/invoice-pre
 import {CustomerListComponent} from "./manager/customers/pages/customer-list/customer-list.component";
 import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
 import {AddCustomerComponent} from "./manager/customers/components/add-customer/add-customer.component";
+import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent},
   {path:'workshop/customers', component: CustomerListComponent},
   {path:'workshop/customers/add-customer', component: AddCustomerComponent},
-  {path:'workshop/customers/profile/:clientId', component: ProfileCustomerComponent}
+  {path:'workshop/customers/profile/:clientId', component: ProfileCustomerComponent},
+  {path:'workshop/customers/profile/delete/:clientId', component: DeleteProfileCustomerComponent}
 ];
 
 @NgModule({

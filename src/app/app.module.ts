@@ -30,6 +30,7 @@ import {AddCustomerComponent} from "./manager/customers/components/add-customer/
 import {CustomerListComponent} from "./manager/customers/pages/customer-list/customer-list.component";
 import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
 import {CardCustomerComponent} from "./manager/customers/components/card-customer/card-customer.component";
+import { DeleteProfileCustomerComponent } from './manager/customers/components/delete-profile-customer/delete-profile-customer.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {CardCustomerComponent} from "./manager/customers/components/card-custome
     AddCustomerComponent,
     CustomerListComponent,
     ProfileCustomerComponent,
-    CardCustomerComponent
+    CardCustomerComponent,
+    DeleteProfileCustomerComponent
 
   ],
   imports: [
