@@ -26,6 +26,10 @@ import { InvoiceCreateAndEditComponent } from './manager/invoices/components/inv
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {AddCustomerComponent} from "./manager/customers/components/add-customer/add-customer.component";
+import {CustomerListComponent} from "./manager/customers/pages/customer-list/customer-list.component";
+import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
+import {CardCustomerComponent} from "./manager/customers/components/card-customer/card-customer.component";
 
 @NgModule({
   declarations: [
@@ -35,7 +39,12 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     InvoiceListComponent,
     AddInvoiceComponent,
     InvoicePreviewComponent,
-    InvoiceCreateAndEditComponent
+    InvoiceCreateAndEditComponent,
+    AddCustomerComponent,
+    CustomerListComponent,
+    ProfileCustomerComponent,
+    CardCustomerComponent
+
   ],
   imports: [
     BrowserModule,

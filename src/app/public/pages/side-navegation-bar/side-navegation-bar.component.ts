@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class SideNavegationBarComponent {
   options = [
     {path: 'workshop/invoices', title: 'Invoice', icon: 'folder'},
+    {path: 'workshop/customers', title: 'Customers', icon: 'people'},
   ]
 }
 
