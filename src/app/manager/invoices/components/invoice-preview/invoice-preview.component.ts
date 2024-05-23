@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CustomerService } from '../../../services/services/customer.service';
-import { InvoiceService } from '../../../services/services/invoice.service';
-import {WorkshopService} from "../../../services/services/workshop.service";
-import { Customer } from '../../../model/model/customer.entity';
-import { Invoice } from '../../../model/model/invoice.entity';
-import {Workshop} from "../../../model/model/workshop.entity";
+import { CustomerService } from '../../../services/customer.service';
+import { InvoiceService } from '../../../services/invoice.service';
+import {WorkshopService} from "../../../services/workshop.service";
+import { Customer } from '../../../model/customer.entity';
+import { Invoice } from '../../../model/invoice.entity';
+import {Workshop} from "../../../model/workshop.entity";
 import {Location} from "@angular/common";
 import {Router} from "@angular/router";
 

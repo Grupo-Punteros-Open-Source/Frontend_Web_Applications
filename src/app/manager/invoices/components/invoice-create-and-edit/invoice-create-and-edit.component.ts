@@ -1,9 +1,9 @@
 import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {NgForm} from "@angular/forms";
-import {Invoice} from "../../../model/model/invoice.entity";
-import { Customer } from '../../../model/model/customer.entity';
-import {InvoiceService} from "../../../services/services/invoice.service";
-import {CustomerService} from "../../../services/services/customer.service";
+import {Invoice} from "../../../model/invoice.entity";
+import { Customer } from '../../../model/customer.entity';
+import {InvoiceService} from "../../../services/invoice.service";
+import {CustomerService} from "../../../services/customer.service";
 
 @Component({
   selector: 'app-invoice-create-and-edit',

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import { InvoiceService } from "../../../services/services/invoice.service";
+import { InvoiceService } from "../../../services/invoice.service";
 import {MatTableDataSource} from "@angular/material/table";
-import { Invoice } from '../../../model/model/invoice.entity';
+import { Invoice } from '../../../model/invoice.entity';
 import {Router} from "@angular/router";
 import {Location} from "@angular/common";
 
