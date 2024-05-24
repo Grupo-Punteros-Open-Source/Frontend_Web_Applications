@@ -26,9 +26,11 @@ import { InvoiceCreateAndEditComponent } from './manager/invoices/components/inv
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
-import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import {MatTableModule} from "@angular/material/table";
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatTooltipModule
   ],
   providers: [
     provideAnimationsAsync()
