@@ -258,5 +258,15 @@
       "workshopId": 1,
       "id": "a9a2"
     }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "type": "info",
+      "title": "System Update",
+      "message": "The system will update in 15 minutes. Please save your work.",
+      "timestamp": "2024-06-01T12:00:00Z",
+      "read": false
+    }
   ]
 }
