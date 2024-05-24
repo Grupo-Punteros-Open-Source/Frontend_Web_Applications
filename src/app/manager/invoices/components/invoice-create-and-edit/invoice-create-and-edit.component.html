@@ -54,15 +54,15 @@
         <div *ngFor="let detail of invoice.details; let i = index; " class="detail-row">
             <mat-form-field class="detail-field">
                 <label for="description{{i}}">Description</label>
-                <input id="description{{i}}" matInput placeholder="Item description" name="description" required [(ngModel)]="detail.description" #description="ngModel">
-                <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error">
+                <input id="description{{i}}" matInput placeholder="Service description" name="description" required [(ngModel)]="detail.description" #description="ngModel">
+                <div *ngIf="description.invalid && description.touched" class="error">
                     Description is required.
                 </div>
             </mat-form-field>
             <mat-form-field class="detail-field">
                 <label for="amount{{i}}">Amount</label>
                 <input id="amount{{i}}" matInput placeholder="Item amount" name="amount" required [(ngModel)]="detail.amount" (ngModelChange)="calculateTotal()" #amount="ngModel">
-                <div *ngIf="amount.invalid && (amount.dirty || amount.touched)" class="error">
+                <div *ngIf="amount.invalid && amount.touched" class="error">
                     Amount is required.
                 </div>
             </mat-form-field>
@@ -77,5 +77,7 @@
         <ng-template #elseTemplate>
             <button class="add-button">Add Invoice</button>
         </ng-template>
+
+
     </form>
 </div>

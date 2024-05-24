@@ -1,22 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { CustomerService } from '../../../services/customer.service';
 import { InvoiceService } from '../../../services/invoice.service';
 import { Customer } from '../../../model/customer.entity';
 import { Invoice } from '../../../model/invoice.entity';
 import {Router} from "@angular/router";
-import { MatTableDataSource } from '@angular/material/table'; // Add this line
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-invoice-card',
   templateUrl: './invoice-card.component.html',
   styleUrls: ['./invoice-card.component.css']
 })
-export class InvoicesCardComponent implements OnInit {
+export class InvoicesCardComponent implements OnInit, AfterViewInit {
   customers: Customer[] = [];
-  invoices: MatTableDataSource<Invoice>; // Change this line
+  invoices: MatTableDataSource<Invoice>;
   displayedColumns: string[] = ['number', 'issue_date', 'total', 'status', 'view', 'delete','edit'];
   @ViewChild('filterInput') filterInput!: ElementRef;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private customerService: CustomerService,
               private invoiceService: InvoiceService,
@@ -29,6 +30,10 @@ export class InvoicesCardComponent implements OnInit {
     this.getInvoices();
   }
 
+  ngAfterViewInit() {
+    this.invoices.paginator = this.paginator;
+  }
+
   getCustomers(): void {
     this.customerService.getAll().subscribe((response: any) => {
       this.customers = response;
@@ -38,7 +43,8 @@ export class InvoicesCardComponent implements OnInit {
 
   getInvoices(): void {
     this.invoiceService.getAll().subscribe((response: any) => {
-      this.invoices = new MatTableDataSource(response); // Change this line
+      this.invoices = new MatTableDataSource(response);
+      this.invoices.paginator = this.paginator;
     });
   }
 
@@ -56,20 +62,15 @@ export class InvoicesCardComponent implements OnInit {
   }
 
   deleteInvoice(invoiceId: string): void {
-    // Ask for confirmation before deleting the invoice
     if (confirm('Are you sure you want to delete this invoice?')) {
-      // If the user clicked "OK", delete the invoice
       this.invoiceService.delete(invoiceId).subscribe(() => {
-        // Refresh the invoices
         this.getInvoices();
       });
     }
   }
 
   editInvoice(invoice: Invoice): void {
-    // Ask for confirmation before making changes
     if (confirm('Are you sure you want to change the status of this invoice?')) {
-      // If the user clicked "OK", make the changes
       if (invoice.status === 'Paid') {
         invoice.status = 'Unpaid';
       } else {
@@ -77,11 +78,8 @@ export class InvoicesCardComponent implements OnInit {
       }
 
       this.invoiceService.update(invoice.id, invoice).subscribe(updatedInvoice => {
-        // You can do something with the updated invoice here if needed
-        // For now, we'll just log it
         console.log('Updated invoice', updatedInvoice);
       });
     }
   }
-
 }

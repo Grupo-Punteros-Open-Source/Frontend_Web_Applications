@@ -1,6 +1,22 @@
 .invoice-table-container {
   margin: 0 auto;
   max-width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mat-elevation-z8 {
+  border-radius: 20px;
+  color: white;
+  box-shadow: none;
+}
+
+.queweba {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
 }
 
 .mat-toolbar {

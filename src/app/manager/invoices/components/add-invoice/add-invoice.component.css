@@ -16,7 +16,7 @@
 .content-add-invoice {
   width: 80%;
   height: auto;
-  border: 1px solid black;
+  border: 2px solid white;
   margin-top: 20px;
   background-color: #002e43;
   display: flex;

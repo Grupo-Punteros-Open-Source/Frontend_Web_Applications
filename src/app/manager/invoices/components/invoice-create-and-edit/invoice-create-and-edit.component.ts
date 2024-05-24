@@ -106,7 +106,7 @@ export class InvoiceCreateAndEditComponent {
       this.resetEditState();
     } else {
       console.error('Invalid data in form');
-      alert('Please fill out all required fields.');
+
     }
 
 

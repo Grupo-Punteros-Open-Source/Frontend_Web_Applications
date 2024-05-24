@@ -1,5 +1,5 @@
 <div class="invoice-table-container ">
-    <mat-form-field>
+    <mat-form-field class="queweba">
         <mat-label>
             <mat-icon>search</mat-icon> Search
         </mat-label>
@@ -34,7 +34,7 @@
         <ng-container matColumnDef="view">
             <mat-header-cell *matHeaderCellDef> View </mat-header-cell>
             <mat-cell *matCellDef="let invoice">
-                <button mat-button (click)="preview(invoice.customerId, invoice.id)">View</button>
+                <button mat-raised-button color="primary" (click)="preview(invoice.customerId, invoice.id)">View</button>
             </mat-cell>
         </ng-container>
 
