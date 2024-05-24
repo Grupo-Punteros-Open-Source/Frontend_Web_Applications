@@ -26,6 +26,9 @@ import { InvoiceCreateAndEditComponent } from './manager/invoices/components/inv
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { NotificationComponent } from './public/components/notification/notification.component';
+import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     InvoiceListComponent,
     AddInvoiceComponent,
     InvoicePreviewComponent,
-    InvoiceCreateAndEditComponent
+    InvoiceCreateAndEditComponent,
+    NotificationComponent,
+    HomeManagerComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync()
