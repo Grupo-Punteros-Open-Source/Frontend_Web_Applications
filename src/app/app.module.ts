@@ -29,6 +29,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import { NotificationComponent } from './public/components/notification/notification.component';
+import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     InvoiceListComponent,
     AddInvoiceComponent,
     InvoicePreviewComponent,
-    InvoiceCreateAndEditComponent
+    InvoiceCreateAndEditComponent,
+    NotificationComponent,
+    HomeManagerComponent
   ],
   imports: [
     BrowserModule,

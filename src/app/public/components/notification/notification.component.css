@@ -1,0 +1,22 @@
+
+.mat-row {
+    padding: 10px 0;
+}
+
+.mat-card {
+    margin: 20px;
+}
+
+.mat-card-header {
+    background-color: #e8eaf6;
+}
+
+.mat-card-title {
+    background-color: black;
+}
+
+.mat-divider {
+    margin: 10px 0;
+}
+
+
