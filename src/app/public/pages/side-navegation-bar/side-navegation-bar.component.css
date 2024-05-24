@@ -1,0 +1,70 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.mat-sidenav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: black;
+  color: white;
+  height: 70px;
+  padding-right: 20px;
+}
+
+.sidenav {
+  background: black;
+  color: white;
+}
+
+#logo {
+  object-fit: cover;
+}
+
+.toolbar-row {
+  height: 80px;
+  margin: 30px;
+}
+
+.toolbar {
+  background: black;
+  color: white;
+}
+
+.container {
+  display: inherit;
+  gap: 3em;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+.login-container {
+  display: inherit;
+  align-items: center;
+
+  background: black;
+  color: white;
+}
+
+.nav-list-item {
+  display: flex;
+  gap: 1em;
+
+  width: 150px;
+}
+
+.icon {
+  color: white;
+}
+
+mat-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}

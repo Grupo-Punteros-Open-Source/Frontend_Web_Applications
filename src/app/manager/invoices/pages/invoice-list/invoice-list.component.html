@@ -1,0 +1,25 @@
+<div class="container-invoice-list">
+  <div class="title-invoice-list">
+    <h1>Invoice List</h1>
+  </div>
+  <div class="content-invoice-list">
+    <div class="content-search">
+      <div class="search-list">
+        <p>Invoice ID</p>
+        <p>Invoice Date</p>
+        <p>Amount</p>
+        <p>Status</p>
+        <input type="text" placeholder="Type">
+      </div>
+    </div>
+    <div class="add-event">
+      <button (click)="addInvoice()">Add Invoice</button>
+    </div>
+    <div class="view-list">
+      <app-invoice-card/>
+    </div>
+  </div>
+</div>
+
+
+
