@@ -262,7 +262,7 @@
   "notifications": [
     {
       "id": "1",
-      "type": "info",
+      "type": "1",
       "title": "System Update",
       "message": "The system will update in 15 minutes. Please save your work.",
       "timestamp": "2024-06-01T12:00:00Z",

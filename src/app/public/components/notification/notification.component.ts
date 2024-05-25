@@ -18,7 +18,7 @@ export class NotificationComponent implements OnInit {
   }
 
   getNotifications(): void {
-    this.notificationService.getAll().subscribe((notifications: any) => {
+    this.notificationService.getByType('1').subscribe((notifications: any) => {
       this.notifications = notifications;
       if (this.notifications.length === 0) {
         this.message = 'Sin notificaciones';
