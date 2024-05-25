@@ -31,6 +31,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import { LogInComponent } from './auth/components/log-in/login.component';
+import { SignInComponent } from './auth/components/sign-in/signin.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
     InvoicePreviewComponent,
     InvoiceCreateAndEditComponent,
     NotificationComponent,
-    HomeManagerComponent
+    HomeManagerComponent,
+    LogInComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,

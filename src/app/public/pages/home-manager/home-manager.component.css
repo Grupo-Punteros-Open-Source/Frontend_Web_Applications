@@ -1,10 +1,9 @@
 .notification-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     margin-top: 5%;
-    width: 100%;
     height: 100vh;
+    background-color: #181a27;
 }
 
 .notification-container > div {
@@ -14,17 +13,5 @@
 
 .list-notfication {
     width: 80%;
-    height: auto;
+    height: 300px;
 }
-
-.title-home-manager {
-    width: 80%;
-}
-
-.title-home-manager h1 {
-    font-size: 40px;
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
