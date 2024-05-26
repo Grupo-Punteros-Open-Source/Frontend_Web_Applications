@@ -26,6 +26,11 @@ import { InvoiceCreateAndEditComponent } from './manager/invoices/components/inv
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {AddCustomerComponent} from "./manager/customers/components/add-customer/add-customer.component";
+import {CustomerListComponent} from "./manager/customers/pages/customer-list/customer-list.component";
+import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
+import {CardCustomerComponent} from "./manager/customers/components/card-customer/card-customer.component";
+import { DeleteProfileCustomerComponent } from './manager/customers/components/delete-profile-customer/delete-profile-customer.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
@@ -41,6 +46,11 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
     AddInvoiceComponent,
     InvoicePreviewComponent,
     InvoiceCreateAndEditComponent,
+    AddCustomerComponent,
+    CustomerListComponent,
+    ProfileCustomerComponent,
+    CardCustomerComponent,
+    DeleteProfileCustomerComponent,
     NotificationComponent,
     HomeManagerComponent
   ],
