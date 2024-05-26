@@ -9,6 +9,7 @@ export class SideNavegationBarComponent {
   options = [
     {path: 'workshop', title: 'Home', icon: 'home'},
     {path: 'workshop/invoices', title: 'Invoice', icon: 'folder'},
+    {path: 'workshop/products/product-card', title: 'Products', icon: 'production_quantity_limits'}
 
   ]
 }
