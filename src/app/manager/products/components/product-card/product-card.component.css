@@ -1,0 +1,131 @@
+body {
+    font-family: "Roboto Mono";
+    background-color: #181a27;
+    color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.vector-parent2 {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+.products-catalog1 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-left: 80px;
+    background-color: #464040;
+    padding: 30px;
+    display: inline-block;
+    width: 370px;
+}
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 20px;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: #181a27;
+}
+.product-card {
+    background-color: #6a90a9;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+}
+.product-image {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 30px;
+    border-radius: 6px;
+}
+.product-info {
+    margin-top: 20px;
+
+}
+.product-details {
+    list-style-type: none;
+    padding: 0;
+
+}
+.product-details li {
+    margin-bottom: 10px;
+}
+.low-stock-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    z-index: 1000;
+    width: 300px;
+    border: 2px solid #f0ad4e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.low-stock-notification p,
+.low-stock-notification ul {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+.low-stock-notification ul {
+    list-style-type: none;
+}
+.close-notification {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin-left: 10px;
+}
+.alert-icon {
+    font-size: 24px;
+    color: #f0ad4e;
+    margin-left: 10px;
+}
+.add-product-button-container {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.add-product-button {
+    transform: translate(-530px,120px);
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #406378;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-button:hover {
+    background-color: #45a049;
+}
