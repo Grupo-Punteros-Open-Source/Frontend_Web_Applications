@@ -31,6 +31,11 @@ import {CustomerListComponent} from "./manager/customers/pages/customer-list/cus
 import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
 import {CardCustomerComponent} from "./manager/customers/components/card-customer/card-customer.component";
 import { DeleteProfileCustomerComponent } from './manager/customers/components/delete-profile-customer/delete-profile-customer.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { NotificationComponent } from './public/components/notification/notification.component';
+import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +50,9 @@ import { DeleteProfileCustomerComponent } from './manager/customers/components/d
     CustomerListComponent,
     ProfileCustomerComponent,
     CardCustomerComponent,
-    DeleteProfileCustomerComponent
-
+    DeleteProfileCustomerComponent,
+    NotificationComponent,
+    HomeManagerComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +72,10 @@ import { DeleteProfileCustomerComponent } from './manager/customers/components/d
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatTooltipModule
   ],
   providers: [
     provideAnimationsAsync()

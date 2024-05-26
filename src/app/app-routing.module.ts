@@ -7,9 +7,11 @@ import {CustomerListComponent} from "./manager/customers/pages/customer-list/cus
 import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
 import {AddCustomerComponent} from "./manager/customers/components/add-customer/add-customer.component";
 import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
-
+import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
 
 const routes: Routes = [
+  {path:'', component: HomeManagerComponent},
+  {path:'workshop', component: HomeManagerComponent},
   {path:'workshop/invoices', component: InvoiceListComponent},
   {path:'workshop/invoices/add-invoice', component: AddInvoiceComponent},
   {path:'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent},
