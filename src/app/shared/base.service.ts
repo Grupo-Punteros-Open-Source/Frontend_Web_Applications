@@ -1,5 +1,5 @@
 import {environment} from "../../environments/environment";
-import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 
 export class BaseService<T> {
@@ -54,7 +54,11 @@ export class BaseService<T> {
     return this.http.get<Notification[]>(`${this.resourcePath()}?type=${type}`, this.httpOptions)
         .pipe(retry(2), catchError(this.handleError));
   }
-
+  getByName(name: string): Observable<T[]> {
+    let params = new HttpParams().set('name', name);
+    return this.http.get<T[]>(this.resourcePath(), { params: params, headers: this.httpOptions.headers })
+        .pipe(retry(2), catchError(this.handleError));
+  }
 }
 
 
