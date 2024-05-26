@@ -50,6 +50,10 @@
     }
 }
 
+.div-5 button {
+    color: #ffffff;
+}
+
 @media (max-width: 991px) {
     .div-5 {
         padding: 0 20px;
@@ -63,5 +67,4 @@ button{
     justify-content: center;
     padding: 22px 49px;
     color: #ffffff;
-
 }

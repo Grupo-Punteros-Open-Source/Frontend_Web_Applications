@@ -37,7 +37,7 @@ export class CardCustomerComponent implements OnInit {
     });
   }*/
 
-  edit(clientId: string): void {
+  onEdit(clientId: string): void {
     this.router.navigate(['/workshop/customers/profile',clientId]);
   }
   delete(clientId: string): void {

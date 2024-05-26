@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import {CustomerService} from "../../../services/customer.service";
 import {Location} from "@angular/common";
 import {Customer} from "../../../model/customer.entity";
+
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -12,12 +13,9 @@ import { NgForm } from '@angular/forms';
 })
 export class ProfileCustomerComponent implements OnInit {
   customer: Customer = {} as Customer;
+  isEditing = false;
 
-  constructor(private route: ActivatedRoute, private customerService: CustomerService, private location: Location) { }
-
-  onCancel(): void {
-    this.location.back();
-  }
+  constructor(private router: Router,private route: ActivatedRoute, private customerService: CustomerService, private location: Location) { }
 
   ngOnInit(): void {
     const customerId = Number(this.route.snapshot.paramMap.get('clientId') ?? '0');
@@ -29,18 +27,40 @@ export class ProfileCustomerComponent implements OnInit {
     });
   }
 
-  editing = false;
-
   onEdit(): void {
-    this.editing = true;
+    this.isEditing = true;
   }
 
-  onSubmit(form: NgForm): void {
-    if (form.valid) {
-      this.customerService.update(this.customer.id, this.customer).subscribe(() => {
-        this.editing = false;
-      });
+  onCancel(): void {
+    this.location.back();
+  }
+
+  onSave(): void {
+    this.customerService.update(this.customer.id, this.customer).subscribe(() => {
+      this.isEditing = false;
+    });
+  }
+
+  onSubmit(field: string, newValue: string): void {
+    switch (field) {
+      case 'name':
+        this.customer.name = newValue;
+        break;
+      case 'phone':
+        this.customer.phone = newValue;
+        break;
+      case 'email':
+        this.customer.email = newValue;
+        break;
+      case 'address':
+        this.customer.address = newValue;
+        break;
     }
+    this.customerService.update(this.customer.id, this.customer).subscribe();
+  }
+
+  delete(clientId: string): void {
+    this.router.navigate(['/workshop/customers/profile/delete',clientId]);
   }
 
 }

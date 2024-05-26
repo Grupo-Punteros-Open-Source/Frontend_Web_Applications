@@ -170,97 +170,64 @@
     }
 }
 
-.div-12 {
+.div-12, .div-15 {
     display: flex;
-    width: 556px;
+    justify-content: flex-start;
+    width: 100%;
     max-width: 100%;
     gap: 16px;
     font-size: 20px;
     color: #fff;
     font-weight: 400;
     text-align: center;
-    margin: 145px 0 0 90px;
+    margin-top: 40px;
 }
 
 @media (max-width: 991px) {
-    .div-12 {
+    .div-12, .div-15 {
         flex-wrap: wrap;
         margin-top: 40px;
     }
 }
 
 @media (max-width: 991px) {
-    .div-13 {
+    .div-13, .div-14, .div-16, .div-17 {
         padding: 0 20px;
     }
 }
 
-@media (max-width: 991px) {
-    .div-14 {
-        padding: 0 20px;
-    }
+.div-16 button, .div-17 button {
+    font-family: Roboto Mono, sans-serif;
+    border-radius: 40px;
+    background-color: #002e43;
+    justify-content: center;
+    padding: 22px 49px;
+    color: #ffffff;
+    margin-top: 47px;
 }
 
-.div-15 {
-    display: flex;
-    width: 556px;
-    max-width: 100%;
-    gap: 16px;
-    font-size: 20px;
-    color: #fff;
-    font-weight: 400;
+button {
+    font-family: Roboto Mono, sans-serif;
+    border-radius: 40px;
+    background-color: #002e43;
+    justify-content: center;
+    padding: 22px 49px;
+    color: #ffffff;
+    min-width: 150px;
     text-align: center;
-
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
 }
 
-@media (max-width: 991px) {
-    .div-15 {
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 991px) {
-    .div-16 {
-        margin: 40px 0 0 10px;
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 991px) {
-    .div-17 {
-        margin: 40px 0 0 10px;
-        padding: 0 20px;
-    }
-}
-
-.div-16 button{
-    font-family: Roboto Mono, sans-serif;
-    border-radius: 40px;
-    background-color: #002e43;
-    justify-content: center;
-    padding: 22px 49px;
-    color: #ffffff;
-    margin: 47px 0 0 90px;
-}
-.div-17 button {
-    font-family: Roboto Mono, sans-serif;
-    border-radius: 40px;
-    background-color: #002e43;
-    justify-content: center;
-    padding: 22px 62px;
-    color: #ffffff;
-    margin: 47px 0 0 1px;
-}
-
-button{
-    font-family: Roboto Mono, sans-serif;
-    border-radius: 40px;
-    background-color: #002e43;
-    justify-content: center;
-    padding: 22px 49px;
-    color: #ffffff;
-
+button:hover {
+    background-color: #00354f;
 }
 
 
+.editable {
+    border: 1px dashed #000;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
