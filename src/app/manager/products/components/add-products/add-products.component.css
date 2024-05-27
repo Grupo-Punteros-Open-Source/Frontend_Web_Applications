@@ -1,36 +1,37 @@
 .ingresar-stock-child {
     position: absolute;
-    top: 9.5%;
+    top: 12.5%;
     left: 36.65%;
     border-radius: 50px;
     background-color: #d7dce0;
-    width: 520px;
-    height: 891px;
+    width: 420px;
+    height: 691px;
 }
 .ingresar-stock-item {
     border: 1px solid #000;
     outline: none;
     background-color: #d9d9d9;
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 38.5%;
     border-radius: 40px;
     box-sizing: border-box;
-    width: 432px;
-    height: 53px;
+    width: 372px;
+    height: 33px;
 }
 .product-name2 {
     position: absolute;
-    top: 18%;
+    top: 21%;
     left: 41.4%;
     display: inline-block;
     width: 274px;
     height: 41px;
+    font-size: 15px;
 }
 .organize-stock-of1 {
     position: absolute;
     top: 45%;
-    left: 74.4%;
+    left: 71.4%;
     color: #fff;
     display: flex;
     align-items: center;
@@ -40,66 +41,69 @@
 }
 .reference-image1 {
     position: absolute;
-    top: 0%;
+    top: 70%;
     left: 37%;
     display: inline-block;
     width: 220px;
     height: 41.3px;
+    font-size: 15px;
 }
 .register-new-product3 {
     position: absolute;
     top: 28%;
-    left: 5%;
-    font-size: 47px;
+    left: 4%;
+    font-size: 33px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
     height: 40%;
+
 }
 .ingresar-stock-inner {
     border: 1px solid #000;
     background-color: #d9d9d9;
     outline: none;
     position: absolute;
-    top: 46.5%;
+    top: 49.5%;
     left: 38.5%;
     border-radius: 40px;
     box-sizing: border-box;
-    width: 432px;
-    height: 202px;
+    width: 362px;
+    height: 182px;
 }
 .description2 {
     position: absolute;
-    top: 42.2%;
-    left: 44.5%;
+    top: 43.8%;
+    left: 45.1%;
     display: inline-block;
     width: 141px;
     height: 41px;
+    font-size: 17px;
 }
 .ingresar-stock-child1 {
     border: 1px solid #000;
     outline: none;
     background-color: #d9d9d9;
     position: absolute;
-    top: 34%;
-    left: 49.6%;
+    top: 36%;
+    left: 50.6%;
     border-radius: 40px;
     box-sizing: border-box;
-    width: 169px;
-    height: 51px;
+    width: 160px;
+    height: 41px;
 }
 .group-child2 {
     position: absolute;
-    top: 40%;
-    left: 42%;
+    top: 115%;
+    left: 52%;
     border-radius: 40px;
     background-color: #d9d9d9;
     border: 1px solid #000;
     box-sizing: border-box;
-    width: 202px;
-    height: 52.2px;
+    width: 154.8px;
+    height: 41.1px;
 }
 .upload-image1 {
     cursor: pointer;
@@ -126,19 +130,19 @@
 }
 .group-child3 {
     position: absolute;
-    bottom: 90%;
-    right: 26.7%;
+    bottom: -140%;
+    right: 27.7%;
     border-radius: 40px;
     background-color: #d9d9d9;
     border: 1px solid #000;
     box-sizing: border-box;
-    width: 385px;
-    height: 48px;
+    width: 355px;
+    height: 47px;
 }
 .register1 {
     position: absolute;
-    bottom: 110%;
-    right:61%;
+    bottom: -110%;
+    right:57%;
     font-size: 18px;
     font-family: "Roboto Mono";
     color: #000;
@@ -160,35 +164,37 @@
 }
 .initial-discount1 {
     position: absolute;
-    top: 30.4%;
+    top: 31.4%;
     left: 47.2%;
     display: inline-block;
     width: 274px;
     height: 41px;
+    font-size: 15px;
 }
 .ingresar-stock-child2 {
     border: 1px solid #000;
     outline: none;
     background-color: #d9d9d9;
     position: absolute;
-    top: 34%;
+    top: 36%;
     left: 38.8%;
     border-radius: 40px;
     box-sizing: border-box;
-    width: 170px;
-    height: 52px;
+    width: 160px;
+    height: 41px;
 }
 .regular-price1 {
     position: absolute;
-    top: 30.3%;
+    top: 31.3%;
     left: 38%;
     display: inline-block;
     width: 186px;
     height: 41px;
+    font-size: 15px;
 }
 .s2 {
     position: absolute;
-    top: 35.2%;
+    top: 37.2%;
     left: 40%;
     text-align: left;
     display: inline-block;
@@ -200,20 +206,21 @@
     outline: none;
     background-color: #d9d9d9;
     position: absolute;
-    top: 44.2%;
-    left: 55%;
+    top: 115%;
+    left: 45%;
     border-radius: 40px;
     box-sizing: border-box;
-    width: 153.8px;
-    height: 51.1px;
+    width: 124.8px;
+    height: 41.1px;
 }
 .initial-stock {
     position: absolute;
-    top: 1%;
-    left:49%;
+    top: 70%;
+    left:33%;
     display: inline-block;
     width: 162.7px;
     height: 41.3px;
+    font-size: 15px;
 }
 .rectangle-parent2 {
     position: absolute;
@@ -224,8 +231,8 @@
 }
 .div2 {
     position: absolute;
-    top: 35.3%;
-    left: 50.6%;
+    top: 37.3%;
+    left: 51.8%;
     white-space: pre-wrap;
     text-align: right;
     display: inline-block;
@@ -241,17 +248,16 @@
 }
 .register-new-product4 {
     position: absolute;
-    top: 30%;
-    left: 21.5%;
+    top: 39%;
+    left: 15.5%;
     display: flex;
     align-items: center;
-
-    width: 433.1px;
-    height: 23.9px;
+    width: 333.1px;
+    height: 16.9px;
     background-color: #6A90A9;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     max-width: 86%;
     padding: 1.6%;

@@ -4,8 +4,8 @@
     left: 115px;
     border-radius: 50px;
     background-color: #6a90a9;
-    width: 1700px;
-    height: 898px;
+    width: 1200px;
+    height: 748px;
 }
 .vuesaxlinearclose-circle {
     cursor: pointer;
@@ -13,7 +13,7 @@
     background-color: transparent;
     position: absolute;
     top: 162px;
-    left: 1713px;
+    left: 1213px;
     width: 57px;
     height: 53px;
     display: flex;
@@ -49,7 +49,7 @@
 .description-price-quantity {
     margin: 0;
     font-family: inherit;
-    padding-left: 48px;
+    padding-left: 28px;
 }
 .blank-line2 {
     margin: 0;
@@ -58,12 +58,12 @@
 .description-price-quantity-container {
     position: absolute;
     top: 396px;
-    left: 948px;
+    left:748px;
     text-align: justify;
     display: inline-block;
-    width: 822px;
+    width: 522px;
     height: 265px;
-    font-size: 36px;
+    font-size: 23px;
 }
 
 .products-catalog1 {
@@ -90,11 +90,11 @@
 }
 .individual-stock-supervision-item {
     position: absolute;
-    top: 305px;
-    left: 248px;
+    top: 320px;
+    left: 180px;
     border-radius: 10px;
-    width: 608px;
-    height: 526px;
+    width: 508px;
+    height: 456px;
     object-fit: cover;
 }
 .individual-stock-supervision {
