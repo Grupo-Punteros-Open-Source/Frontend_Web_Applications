@@ -84,15 +84,13 @@ a {
 }
 
 .button1:hover {
-    background-color: white; /* Cambia el fondo al pasar el ratón */
-    color: black; /* Cambia el color del texto al pasar el ratón */
-    border-color: white; /* Cambia el color del borde al pasar el ratón */
+    background-color: white;
+    color: black;
+    border-color: white;
 }
 
 .checks {
     margin-bottom: 20px;
 }
-
-
 
 

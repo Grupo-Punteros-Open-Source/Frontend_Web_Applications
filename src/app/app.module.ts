@@ -32,7 +32,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
 import { LogInComponent } from './auth/components/log-in/login.component';
-import { SignInComponent } from './auth/components/sign-in/signin.component';
+import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { SignInComponent } from './auth/components/sign-in/signin.component';
     NotificationComponent,
     HomeManagerComponent,
     LogInComponent,
-    SignInComponent
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +70,8 @@ import { SignInComponent } from './auth/components/sign-in/signin.component';
     MatSnackBarModule,
     MatTableModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule
   ],
   providers: [
     provideAnimationsAsync()

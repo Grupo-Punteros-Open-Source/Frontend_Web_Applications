@@ -5,16 +5,16 @@ import {AddInvoiceComponent} from "./manager/invoices/components/add-invoice/add
 import {InvoicePreviewComponent} from "./manager/invoices/components/invoice-preview/invoice-preview.component";
 import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
 import {LogInComponent} from "./auth/components/log-in/login.component";
-import {SignInComponent} from "./auth/components/sign-in/signin.component";
+import {SignUpComponent} from "./auth/components/sign-up/sign-up.component";
 
 const routes: Routes = [
-  {path:'', component: HomeManagerComponent},
+  {path:'', component: LogInComponent},
   {path:'workshop', component: HomeManagerComponent},
   {path:'workshop/invoices', component: InvoiceListComponent},
   {path:'workshop/invoices/add-invoice', component: AddInvoiceComponent},
   {path:'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent},
   {path:'auth/login', component: LogInComponent},
-  {path:'auth/signin', component: SignInComponent}
+  {path:'auth/signup', component: SignUpComponent}
 ];
 
 @NgModule({
