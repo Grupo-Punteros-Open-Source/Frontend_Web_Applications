@@ -37,6 +37,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
 import { ProfileComponent } from './clients/customer/components/profile/profile.component';
+import { MenuComponent } from './clients/customer/components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ProfileComponent } from './clients/customer/components/profile/profile.
     DeleteProfileCustomerComponent,
     NotificationComponent,
     HomeManagerComponent,
-    ProfileComponent
+    ProfileComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

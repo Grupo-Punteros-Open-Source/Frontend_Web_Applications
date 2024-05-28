@@ -9,6 +9,7 @@ import {AddCustomerComponent} from "./manager/customers/components/add-customer/
 import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
 import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
 import {ProfileComponent} from "./clients/customer/components/profile/profile.component";
+import {MenuComponent} from "./clients/customer/components/menu/menu.component";
 
 const routes: Routes = [
   {path:'', component: HomeManagerComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'workshop/customers/add-customer', component: AddCustomerComponent},
   {path:'workshop/customers/profile/:clientId', component: ProfileCustomerComponent},
   {path:'workshop/customers/profile/delete/:clientId', component: DeleteProfileCustomerComponent},
-  {path:'customers/profile/:clientId', component: ProfileComponent} /*Ruta momentanea para vista del perfil del cliente*/
+  {path:'customers/profile/:clientId', component: ProfileComponent}, /*Ruta momentanea para vista del perfil del cliente*/
+  {path: 'customers/menu' , component: MenuComponent}
 ];
 
 @NgModule({

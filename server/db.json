@@ -268,5 +268,14 @@
       "timestamp": "2024-06-01T12:00:00Z",
       "read": false
     }
+  ],
+  "advertising": [
+    { "id" : "1",
+      "workshopId": "1",
+      "image_url" : "https://i.postimg.cc/VL55XtX9/dia-del-trabajador.jpg",
+      "slogan": "Keep your vehicle running smoothly!",
+      "Msg1": "Major Maintenance and Electronic Tuning from S/ 499.",
+      "Msg2": "\uD83D\uDCE2\uD83D\uDEA8 YOU ASKED FOR IT, AND STARTING TODAY, WE'RE BACK WITH A 20% DISCOUNT ON ENGINE REPAIRS \uD83C\uDF81\uD83C\uDF81\uD83C\uDF81\uD83C\uDF81\n\n✳ Get your Engine Repair done and receive a 20% discount on labor for this service. Engine noises, loss of power in your vehicle – we provide the solution."
+    }
   ]
 }
