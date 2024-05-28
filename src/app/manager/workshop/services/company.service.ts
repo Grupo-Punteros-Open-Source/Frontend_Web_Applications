@@ -1,0 +1,14 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {BaseService} from "../../shared/base.service";
+import {Workshop} from "../../manager/model/workshop.entity";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CompanyService extends BaseService<Workshop> {
+  constructor(http: HttpClient) {
+    super(http);
+    this.resourceEndpoint = '/workshop';
+  }
+}
