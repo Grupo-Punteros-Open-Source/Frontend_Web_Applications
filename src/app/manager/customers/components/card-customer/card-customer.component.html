@@ -3,9 +3,9 @@
         <div class="div-3">
             <div *ngFor="let customer of customers">
                 <mat-card class="customer-card">
-                    <img mat-card-image [src]="customer.image_url" alt="Client Image" style="width: 200px; height: 200px; margin-left: 10px; margin-top: 10px;">
+                    <img mat-card-image [src]="customer.image_url" alt="Client Image" class="customer-image">
                     <div mat-card-avatar class="customer-avatar"></div>
-                    <mat-card-title>Name: {{ customer.name }}</mat-card-title>
+                    <mat-card-title class="customer-card-title">Name: {{ customer.name }}</mat-card-title>
                     <mat-card-actions class="customer-card-action">
                         <button mat-button (click)="onEdit(customer.id)">Edit</button>
                         <button mat-button (click)="delete(customer.id)">Delete</button>

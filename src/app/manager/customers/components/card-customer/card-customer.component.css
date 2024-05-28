@@ -1,80 +1,76 @@
 
 .div {
-    background-color: #406378;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 66px 60px 0;
-}
-
-@media (max-width: 991px) {
-    .div {
-        padding: 0 20px;
-    }
+    width: 100%;
+    max-width: 97%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #002e43;
 }
 
 .div-2 {
-    background-color: #406378;
-    display: flex;
-    width: 100%;
-    max-width: 1418px;
-    flex-direction: column;
-    padding: 80px 70px;
+    margin-top: 20px;
+
 }
 
-@media (max-width: 991px) {
-    .div-2 {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-}
 
 .div-3 {
-
     display: flex;
-    margin-top: 70px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
 }
 
-@media (max-width: 991px) {
-    .div-3 {
-        max-width: 100%;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-}
 
 .customer-card {
-    margin: 20px;
-    max-width: 400px;
-    background-color: #6A90A9;
-    border: white 3px solid;
-    text-align: justify;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: 250px;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
 }
 
-.mat-card-title,
-.mat-card-subtitle {
-    font-family: Roboto Mono, sans-serif;
-    color: #000;
+.customer-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.customer-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
     text-align: center;
 }
 
-.mat-card-content p {
-
-    font-family: Roboto Mono, sans-serif;
-    text-align: center;
-    color: #000;
-    margin: 0;
+.customer-card-action {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .customer-card-action button {
-    font-family: Roboto Mono, sans-serif;
-    border-radius: 40px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     background-color: #002e43;
     color: #ffffff;
-    margin-right: 8px;
-    justify-content: center;
-    padding: 22px 49px;
 }
 
-
+.customer-card-action button:hover {
+    background-color: #001f30;
+}

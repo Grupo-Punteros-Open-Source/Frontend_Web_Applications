@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import {CustomerService} from "../../../services/customer.service";
+import {Component, OnInit} from '@angular/core';
+import {Customer} from "../../../../manager/model/customer.entity";
+import {ActivatedRoute, Router} from "@angular/router";
+import {CustomerService} from "../../../../manager/services/customer.service";
 import {Location} from "@angular/common";
-import {Customer} from "../../../model/customer.entity";
 
 @Component({
-  selector: 'app-profile-customer',
-  templateUrl: './profile-customer.component.html',
-  styleUrl: './profile-customer.component.css'
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.css'
 })
-export class ProfileCustomerComponent implements OnInit {
+
+export class ProfileComponent implements OnInit {
   customer: Customer = {} as Customer;
   isEditing = false;
 
@@ -57,9 +58,4 @@ export class ProfileCustomerComponent implements OnInit {
     this.customerService.update(this.customer.id, this.customer).subscribe();
   }
 
-  delete(clientId: string): void {
-    this.router.navigate(['/workshop/customers/profile/delete',clientId]);
-  }
-
 }
-
