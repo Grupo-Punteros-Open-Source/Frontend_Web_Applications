@@ -9,6 +9,7 @@ import {AddCustomerComponent} from "./manager/customers/components/add-customer/
 import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
 import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
 import {ProfileComponent} from "./clients/customer/components/profile/profile.component";
+import {WorkshopInfoComponent} from "./workshop/components/workshop-info/workshop-info.component";
 
 const routes: Routes = [
   {path:'', component: HomeManagerComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'workshop/invoices/add-invoice', component: AddInvoiceComponent},
   {path:'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent},
   {path:'workshop/customers', component: CustomerListComponent},
+  {path:'workshop/workshop-info', component: WorkshopInfoComponent},
   {path:'workshop/customers/add-customer', component: AddCustomerComponent},
   {path:'workshop/customers/profile/:clientId', component: ProfileCustomerComponent},
   {path:'workshop/customers/profile/delete/:clientId', component: DeleteProfileCustomerComponent},

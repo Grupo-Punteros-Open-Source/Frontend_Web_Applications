@@ -37,6 +37,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
 import { ProfileComponent } from './clients/customer/components/profile/profile.component';
+import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
+import {SupportComponent} from "./manager/workshop/components/support/support.component";
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { ProfileComponent } from './clients/customer/components/profile/profile.
     DeleteProfileCustomerComponent,
     NotificationComponent,
     HomeManagerComponent,
-    ProfileComponent
+    ProfileComponent,
+    WorkshopInfoComponent,
+    SupportComponent
   ],
   imports: [
     BrowserModule,
