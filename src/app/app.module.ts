@@ -36,6 +36,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import { ProfileComponent } from './clients/customer/components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
     CardCustomerComponent,
     DeleteProfileCustomerComponent,
     NotificationComponent,
-    HomeManagerComponent
+    HomeManagerComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

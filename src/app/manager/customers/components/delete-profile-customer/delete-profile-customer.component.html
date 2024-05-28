@@ -1,25 +1,25 @@
 <div *ngIf="customer">
-    <div class="div">
-        <div class="div-2">
-            <div class="div-3">
-                <div class="div-4">Are you sure you want to delete the client?</div>
-                <div class="div-5">
-                    <div class="div-6">
-                        <div class="column">
-                            <div class="div-7">
-                                <div class="div-8">
-                                    <div class="textbox">Name: {{customer.name}}</div>
-                                    <div class="textbox2">Phone: {{customer.phone}}</div>
-                                </div>
-                                <div class="div-9"><button>Confirm</button></div>
-                            </div>
+    <div class="container">
+        <div class="inner-container">
+            <div class="header">
+                <div class="subheader">Are you sure you want to delete the client?</div>
+                <div class="content">
+                    <div class="column">
+                        <div class="column-content">
+                            <div class="textbox">Name: {{customer.name}}</div>
+                            <div class="textbox">Phone: {{customer.phone}}</div>
                         </div>
-                        <div class="column-2">
-                            <div class="div-10">
-                                <div class="textbox">E-mail: {{ customer.email }}</div>
-                                <div class="textbox2">Address: {{customer.address}}</div>
-                                <div class="div-11"><button (click)="onCancel()">Cancel</button></div>
-                            </div>
+                        <div class="button-group">
+                            <button class="confirm-button">Confirm</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="column-content">
+                            <div class="textbox">E-mail: {{customer.email}}</div>
+                            <div class="textbox">Address: {{customer.address}}</div>
+                        </div>
+                        <div class="button-group">
+                            <button class="cancel-button" (click)="onCancel()">Cancel</button>
                         </div>
                     </div>
                 </div>
