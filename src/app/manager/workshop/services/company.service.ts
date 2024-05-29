@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {BaseService} from "../../shared/base.service";
-import {Workshop} from "../../manager/model/workshop.entity";
+import {BaseService} from "../../../shared/base.service";
+import {Workshop} from "../../model/workshop.entity";
 
 @Injectable({
   providedIn: 'root'

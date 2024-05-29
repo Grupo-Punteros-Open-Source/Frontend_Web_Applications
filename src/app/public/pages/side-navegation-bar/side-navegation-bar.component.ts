@@ -12,5 +12,6 @@ export class SideNavegationBarComponent {
     {path: 'workshop/customers', title: 'Customers', icon: 'people'},
     {path: 'workshop/workshop-info', title: 'Info', icon: 'workshop'},
     {path: 'workshop/support', title: 'Support', icon: 'help'},
+    {path: 'workshop/plans', title: 'Plans', icon: 'payment'}
   ]
 }
