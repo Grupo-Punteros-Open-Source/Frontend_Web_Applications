@@ -1,15 +1,17 @@
 export class Advertising {
 
   id: string;
-  workshopId: string;
+  name:string;
+  workshopId: number;
   image_url: string;
   slogan: string;
   Msg1: string;
   Msg2: string;
   Msg3: string;
 
-  constructor(id: string, workshopId: string, image_url: string, slogan: string, Msg1: string, Msg2: string, Msg3: string) {
+  constructor(id: string, name:string,workshopId: number, image_url: string, slogan: string, Msg1: string, Msg2: string, Msg3: string) {
     this.id = id;
+    this.name= name;
     this.workshopId = workshopId;
     this.image_url = image_url;
     this.slogan = slogan;
