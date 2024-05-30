@@ -9,7 +9,7 @@ import {AddCustomerComponent} from "./manager/customers/components/add-customer/
 import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
 import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
 import {ProfileComponent} from "./clients/customer/components/profile/profile.component";
-import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
+import {WorkshopInfoComponent} from "./workshop/components/workshop-info/workshop-info.component";
 
 const routes: Routes = [
   {path:'', component: HomeManagerComponent},
