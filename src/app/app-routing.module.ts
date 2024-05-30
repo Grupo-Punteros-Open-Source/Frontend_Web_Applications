@@ -9,6 +9,10 @@ import {AddCustomerComponent} from "./manager/customers/components/add-customer/
 import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
 import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
 import {ProfileComponent} from "./clients/customer/components/profile/profile.component";
+import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
+import {SupportComponent} from "./manager/workshop/components/support/support.component";
+import {PlansListComponent} from "./manager/plans/components/plans-list/plans-list.component";
+import {PlansPaymentComponent} from "./manager/plans/components/plans-payment/plans-payment.component";
 
 const routes: Routes = [
   {path:'', component: HomeManagerComponent},
@@ -17,10 +21,14 @@ const routes: Routes = [
   {path:'workshop/invoices/add-invoice', component: AddInvoiceComponent},
   {path:'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent},
   {path:'workshop/customers', component: CustomerListComponent},
+  {path:'workshop/workshop-info', component: WorkshopInfoComponent},
   {path:'workshop/customers/add-customer', component: AddCustomerComponent},
+  {path:'workshop/support', component: SupportComponent},
   {path:'workshop/customers/profile/:clientId', component: ProfileCustomerComponent},
+  {path:'workshop/plans', component: PlansListComponent},
+  {path:'workshop/plans/payment', component: PlansPaymentComponent},
   {path:'workshop/customers/profile/delete/:clientId', component: DeleteProfileCustomerComponent},
-  {path:'customers/profile/:clientId', component: ProfileComponent} /*Ruta momentanea para vista del perfil del cliente*/
+  {path:'customers/profile/:clientId', component: ProfileComponent}
 ];
 
 @NgModule({
