@@ -39,6 +39,8 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
 import { ProfileComponent } from './clients/customer/components/profile/profile.component';
 import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
 import {SupportComponent} from "./manager/workshop/components/support/support.component";
+import { PlansListComponent } from './manager/plans/components/plans-list/plans-list.component';
+import { PlansPaymentComponent } from './manager/plans/components/plans-payment/plans-payment.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import {SupportComponent} from "./manager/workshop/components/support/support.co
     HomeManagerComponent,
     ProfileComponent,
     WorkshopInfoComponent,
-    SupportComponent
+    SupportComponent,
+    PlansListComponent,
+    PlansPaymentComponent
   ],
   imports: [
     BrowserModule,
