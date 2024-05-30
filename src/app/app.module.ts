@@ -31,6 +31,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import { ClientVehicleListComponent } from './manager/vehicles/pages/client-vehicle-list/client-vehicle-list.component';
+import { VehicleCardComponent } from './manager/vehicles/components/vehicle-card/vehicle-card.component';
+import { AddVehicleComponent } from './manager/vehicles/pages/add-vehicle/add-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
     InvoicePreviewComponent,
     InvoiceCreateAndEditComponent,
     NotificationComponent,
-    HomeManagerComponent
+    HomeManagerComponent,
+    ClientVehicleListComponent,
+    VehicleCardComponent,
+    AddVehicleComponent
   ],
   imports: [
     BrowserModule,
