@@ -50,11 +50,6 @@ export class BaseService<T> {
     return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
 
-  getByType(type: any): Observable<Notification[]> {
-    return this.http.get<Notification[]>(`${this.resourcePath()}?type=${type}`, this.httpOptions)
-        .pipe(retry(2), catchError(this.handleError));
-  }
-
 }
 
 

@@ -8,6 +8,8 @@ import {ProfileCustomerComponent} from "./manager/customers/components/profile-c
 import {AddCustomerComponent} from "./manager/customers/components/add-customer/add-customer.component";
 import {DeleteProfileCustomerComponent} from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
 import {HomeManagerComponent} from "./public/pages/home-manager/home-manager.component";
+import {LogInComponent} from "./auth/components/log-in/login.component";
+import {SignUpComponent} from "./auth/components/sign-up/sign-up.component";
 import {ProfileComponent} from "./clients/customer/components/profile/profile.component";
 import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
 import {SupportComponent} from "./manager/workshop/components/support/support.component";
@@ -15,11 +17,13 @@ import {PlansListComponent} from "./manager/plans/components/plans-list/plans-li
 import {PlansPaymentComponent} from "./manager/plans/components/plans-payment/plans-payment.component";
 
 const routes: Routes = [
-  {path:'', component: HomeManagerComponent},
+  {path:'', component: LogInComponent},
   {path:'workshop', component: HomeManagerComponent},
   {path:'workshop/invoices', component: InvoiceListComponent},
   {path:'workshop/invoices/add-invoice', component: AddInvoiceComponent},
   {path:'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent},
+  {path:'auth/login', component: LogInComponent},
+  {path:'auth/signup', component: SignUpComponent},
   {path:'workshop/customers', component: CustomerListComponent},
   {path:'workshop/workshop-info', component: WorkshopInfoComponent},
   {path:'workshop/customers/add-customer', component: AddCustomerComponent},

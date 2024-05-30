@@ -36,6 +36,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import { LogInComponent } from './auth/components/log-in/login.component';
+import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import { ProfileComponent } from './clients/customer/components/profile/profile.component';
 import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
 import {SupportComponent} from "./manager/workshop/components/support/support.component";
@@ -58,6 +61,8 @@ import { PlansPaymentComponent } from './manager/plans/components/plans-payment/
     DeleteProfileCustomerComponent,
     NotificationComponent,
     HomeManagerComponent,
+    LogInComponent,
+    SignUpComponent,
     ProfileComponent,
     WorkshopInfoComponent,
     SupportComponent,
@@ -85,7 +90,8 @@ import { PlansPaymentComponent } from './manager/plans/components/plans-payment/
     MatSnackBarModule,
     MatTableModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule
   ],
   providers: [
     provideAnimationsAsync()
