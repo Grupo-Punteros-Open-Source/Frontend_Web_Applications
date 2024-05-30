@@ -1,0 +1,84 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #6A90A9;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.mat-sidenav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black; /*Toggle*/
+    color: white;
+    height: 70px;
+    padding-right: 20px;
+}
+
+.sidenav {
+    background: #B2C3D3; /**/
+    color: black;
+}
+
+#logo {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.toolbar-row {
+    height: 80px;
+    margin: 30px;
+}
+
+.toolbar {
+    background: #B2C3D3;
+    color: white;
+}
+
+.container {
+    display: inherit;
+    gap: 3em;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+.login-container {
+    display: inherit;
+    align-items: center;
+    background: #406378;
+    color: white;
+}
+
+.nav-list-item {
+    display: flex;
+    gap: 1em;
+    width: 150px;
+}
+
+.icon {
+    color: #406378;
+}
+
+mat-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-right: 5%;
+}

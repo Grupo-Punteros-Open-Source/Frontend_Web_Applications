@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport>
+        <mat-toolbar class="toolbar">
+            <mat-toolbar-row class="toolbar-row">
+                <div class="customer-info">
+                    <img id="logo" [src]="customer.image_url" alt="Foto del Cliente"/>
+                    <p>{{customer.name}}</p>
+                </div>
+                <button class="toolbar-item" (click)="drawer.toggle()" aria-label="Toggle Sidenav" mat-icon-button type="button">
+                    <mat-icon aria-label="Sidenav toggle icon">menu</mat-icon>
+                </button>
+
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-nav-list>
+            <div *ngFor="let option of options">
+                <a style="color: white;" mat-button [routerLink]="option.path" (click)="drawer.close()">
+                    <h3>{{ option.title }}</h3>
+                    <mat-icon>{{ option.icon }}</mat-icon>
+                </a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="drawer.toggle()" aria-label="Toggle Sidenav" mat-icon-button type="button">
+            <mat-icon aria-label="Sidenav toggle icon">menu</mat-icon>
+        </button>
+        <section class="container">
+            <div class="login-container">
+
+                <mat-icon aria-label="Toolbar Client icon">notifications</mat-icon>
+
+            </div>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<router-outlet/>
+
+
+
+

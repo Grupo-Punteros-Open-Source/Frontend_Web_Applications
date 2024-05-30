@@ -38,6 +38,7 @@ import { NotificationComponent } from './public/components/notification/notifica
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
 import { ProfileComponent } from './clients/customer/components/profile/profile.component';
 import { MenuComponent } from './clients/customer/components/menu/menu.component';
+import { SideNavegationBarCustomerComponent } from './public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MenuComponent } from './clients/customer/components/menu/menu.component
     NotificationComponent,
     HomeManagerComponent,
     ProfileComponent,
-    MenuComponent
+    MenuComponent,
+    SideNavegationBarCustomerComponent
   ],
   imports: [
     BrowserModule,
