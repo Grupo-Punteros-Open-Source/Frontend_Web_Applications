@@ -15,7 +15,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatDialogModule} from "@angular/material/dialog";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { SideNavegationBarComponent } from './public/pages/side-navegation-bar/side-navegation-bar.component';
 import { InvoiceListComponent } from './manager/invoices/pages/invoice-list/invoice-list.component';
@@ -71,7 +71,8 @@ import { AddVehicleComponent } from './manager/vehicles/pages/add-vehicle/add-ve
     MatSnackBarModule,
     MatTableModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
