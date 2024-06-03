@@ -26,6 +26,11 @@ import { InvoiceCreateAndEditComponent } from './manager/invoices/components/inv
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {AddCustomerComponent} from "./manager/customers/components/add-customer/add-customer.component";
+import {CustomerListComponent} from "./manager/customers/pages/customer-list/customer-list.component";
+import {ProfileCustomerComponent} from "./manager/customers/components/profile-customer/profile-customer.component";
+import {CardCustomerComponent} from "./manager/customers/components/card-customer/card-customer.component";
+import { DeleteProfileCustomerComponent } from './manager/customers/components/delete-profile-customer/delete-profile-customer.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
@@ -34,6 +39,14 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
 import { ClientVehicleListComponent } from './manager/vehicles/pages/client-vehicle-list/client-vehicle-list.component';
 import { VehicleCardComponent } from './manager/vehicles/components/vehicle-card/vehicle-card.component';
 import { AddVehicleComponent } from './manager/vehicles/pages/add-vehicle/add-vehicle.component';
+import { LogInComponent } from './auth/components/log-in/login.component';
+import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { ProfileComponent } from './clients/customer/components/profile/profile.component';
+import {WorkshopInfoComponent} from "./manager/workshop/components/workshop-info/workshop-info.component";
+import {SupportComponent} from "./manager/workshop/components/support/support.component";
+import { PlansListComponent } from './manager/plans/components/plans-list/plans-list.component';
+import { PlansPaymentComponent } from './manager/plans/components/plans-payment/plans-payment.component';
 
 @NgModule({
   declarations: [
@@ -44,11 +57,23 @@ import { AddVehicleComponent } from './manager/vehicles/pages/add-vehicle/add-ve
     AddInvoiceComponent,
     InvoicePreviewComponent,
     InvoiceCreateAndEditComponent,
+    AddCustomerComponent,
+    CustomerListComponent,
+    ProfileCustomerComponent,
+    CardCustomerComponent,
+    DeleteProfileCustomerComponent,
     NotificationComponent,
     HomeManagerComponent,
     ClientVehicleListComponent,
     VehicleCardComponent,
-    AddVehicleComponent
+    AddVehicleComponent,
+    LogInComponent,
+    SignUpComponent,
+    ProfileComponent,
+    WorkshopInfoComponent,
+    SupportComponent,
+    PlansListComponent,
+    PlansPaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +97,8 @@ import { AddVehicleComponent } from './manager/vehicles/pages/add-vehicle/add-ve
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule
   ],
   providers: [
     provideAnimationsAsync()
