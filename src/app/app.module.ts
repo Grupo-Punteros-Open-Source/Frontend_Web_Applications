@@ -15,7 +15,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatDialogModule} from "@angular/material/dialog";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { SideNavegationBarComponent } from './public/pages/side-navegation-bar/side-navegation-bar.component';
 import { InvoiceListComponent } from './manager/invoices/pages/invoice-list/invoice-list.component';
@@ -36,6 +36,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { NotificationComponent } from './public/components/notification/notification.component';
 import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import { ClientVehicleListComponent } from './manager/vehicles/pages/client-vehicle-list/client-vehicle-list.component';
+import { VehicleCardComponent } from './manager/vehicles/components/vehicle-card/vehicle-card.component';
+import { AddVehicleComponent } from './manager/vehicles/pages/add-vehicle/add-vehicle.component';
 import { LogInComponent } from './auth/components/log-in/login.component';
 import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
@@ -61,6 +64,9 @@ import { PlansPaymentComponent } from './manager/plans/components/plans-payment/
     DeleteProfileCustomerComponent,
     NotificationComponent,
     HomeManagerComponent,
+    ClientVehicleListComponent,
+    VehicleCardComponent,
+    AddVehicleComponent,
     LogInComponent,
     SignUpComponent,
     ProfileComponent,
@@ -91,6 +97,7 @@ import { PlansPaymentComponent } from './manager/plans/components/plans-payment/
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
+    ReactiveFormsModule,
     MatSlideToggleModule
   ],
   providers: [

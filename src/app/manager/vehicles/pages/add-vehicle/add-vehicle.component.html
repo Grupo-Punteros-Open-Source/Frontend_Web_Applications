@@ -1,0 +1,36 @@
+<div class="body">
+    <div class="div">
+        <div class="title-container">New Vehicle</div>
+        <form class="container" [formGroup]="form" (submit)="onSubmit()">
+            <div class="left">
+                <div class="input-item">
+                    <input formControlName="make" type="text" id="brand" name="brand" placeholder="Brand:">
+                </div>
+                <div class="input-item">
+                    <input formControlName="model" type="text" id="model" name="model" placeholder="Model:">
+                </div>
+                <div class="input-item">
+                    <input formControlName="plate" type="text" id="license-plate" name="license-plate"
+                           placeholder="License plate:">
+                </div>
+                <div class="input-item">
+                    <input formControlName="kilometer" type="text" id="kilometer" name="kilometer"
+                           placeholder="Kilometer:">
+                </div>
+                <div class="input-item">
+                    <input formControlName="color" type="text" id="color" name="color" placeholder="Color:">
+                </div>
+                <div class="input-item">
+                    <input formControlName="year" type="text" id="year" name="year" placeholder="Year:">
+                </div>
+                <div>
+                    <button>Add Vehicle</button>
+                </div>
+            </div>
+            <div class="right">
+                <h3>Enter a picture (URL):</h3>
+                <input formControlName="imageUrl" type="url">
+            </div>
+        </form>
+    </div>
+</div>
