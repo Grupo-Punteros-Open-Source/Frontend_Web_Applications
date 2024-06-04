@@ -62,7 +62,7 @@ export class ProfileCustomerComponent implements OnInit {
   }
 
   toVehicleList(): void {
-    this.router.navigate([`/workshop/customers/${this.customer.id}/vehicle-list`]);
+    this.router.navigate([`/workshop/customer/${this.customer.id}/vehicle-list`]);
   }
 
 }
