@@ -266,31 +266,58 @@
   ],
   "inventory": [
     {
-      "productId": "P001",
+      "id": "P001",
       "name": "Motor Oil (5W-30)",
       "quantity": 100,
       "price": 20,
-      "image_url": "https://i.postimg.cc/ABC123/motor-oil.png",
-      "workshopId": 1,
-      "id": "1228"
+      "description": "High-quality synthetic motor oil suitable for all types of vehicles.",
+      "image_url": "https://i.postimg.cc/d1Y8Mgf6/oil.jpg",
+      "workshopId": 1
     },
     {
-      "productId": "P002",
+      "id": "P002",
       "name": "Brake Pads",
       "quantity": 50,
       "price": 40,
-      "image_url": "https://i.postimg.cc/XYZ789/brake-pads.png",
-      "workshopId": 1,
-      "id": "af24"
+      "description": "High-performance brake pads for safe and reliable braking.",
+      "image_url": "https://i.postimg.cc/sgGSMVdK/brakepasdas.jpg",
+      "workshopId": 1
     },
     {
-      "productId": "P003",
+      "id": "P003",
       "name": "Tires (Set of 4)",
       "quantity": 20,
       "price": 300,
-      "image_url": "https://i.postimg.cc/GHI789/tires.png",
-      "workshopId": 1,
-      "id": "a9a2"
+      "description": "Durable and resilient set of 4 tires suitable for all weather conditions.",
+      "image_url": "https://i.postimg.cc/Hxz8qnXW/tires.jpg",
+      "workshopId": 1
+    },
+    {
+      "id": "P004",
+      "name": "Spark Plugs",
+      "quantity": 200,
+      "price": 15,
+      "description": "Premium spark plugs for optimal engine performance.",
+      "image_url": "https://i.postimg.cc/s2RB17JD/sparkplugs.jpg",
+      "workshopId": 1
+    },
+    {
+      "id": "P005",
+      "name": "Air Filters",
+      "quantity": 150,
+      "price": 25,
+      "description": "High-efficiency air filters to keep your engine clean.",
+      "image_url": "https://i.postimg.cc/G3SHGZjf/airfilter.jpg",
+      "workshopId": 1
+    },
+    {
+      "id": "P006",
+      "name": "Wiper Blades",
+      "quantity": 120,
+      "price": 160,
+      "description": "Durable wiper blades for clear visibility during rain.",
+      "image_url": "https://i.postimg.cc/zGTvm31m/wisperbalcede.jpg",
+      "workshopId": 1
     }
   ],
   "notifications": [
