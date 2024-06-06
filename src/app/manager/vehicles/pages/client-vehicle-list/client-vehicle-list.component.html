@@ -1,0 +1,13 @@
+<div *ngIf="client">
+    <main>
+        <header class="upper">
+            <div class="title-container">
+                <h1>Search vehicles for {{ client.name }}</h1>
+            </div>
+            <button (click)="addVehicle()">Add vehicle</button>
+        </header>
+        <div class="lower">
+            <app-vehicle-card [clientId]="clientId" [client]="client"/>
+        </div>
+    </main>
+</div>

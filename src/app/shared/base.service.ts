@@ -1,6 +1,6 @@
-import {environment} from "../../environments/environment";
-import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from "@angular/common/http";
-import {catchError, Observable, retry, throwError} from "rxjs";
+import { environment } from "../../environments/environment";
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from "@angular/common/http";
+import { catchError, Observable, retry, throwError } from "rxjs";
 
 export class BaseService<T> {
   basePath: string = `${environment.serverBasePath}`;
@@ -12,7 +12,7 @@ export class BaseService<T> {
     })
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(protected http: HttpClient) {}
 
   handleError(error: HttpErrorResponse) {
     // Default error handling
@@ -25,7 +25,7 @@ export class BaseService<T> {
     return throwError(() => new Error('Something happened with request, please try again later'));
   }
 
-  private resourcePath() {
+  protected resourcePath() {
     return `${this.basePath}${this.resourceEndpoint}`
   }
 
@@ -54,11 +54,10 @@ export class BaseService<T> {
     return this.http.get<Notification[]>(`${this.resourcePath()}?type=${type}`, this.httpOptions)
         .pipe(retry(2), catchError(this.handleError));
   }
+
   getByName(name: string): Observable<T[]> {
     let params = new HttpParams().set('name', name);
     return this.http.get<T[]>(this.resourcePath(), { params: params, headers: this.httpOptions.headers })
         .pipe(retry(2), catchError(this.handleError));
   }
 }
-
-
