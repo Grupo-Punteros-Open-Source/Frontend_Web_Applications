@@ -1,0 +1,71 @@
+<div class="log-in-container">
+    <div class="form-content">
+        <form class="log-in-form" style="margin: 50px auto; width: 400px;" (ngSubmit)="onSignUp()" #signUpForm="ngForm">
+
+            <h1>Get Started</h1>
+            <span>Start Now</span>
+
+            <div>
+                <div class="inputs-container" style="margin-top: 20px">
+                    <label>User</label>
+                    <mat-form-field>
+                        <input matInput placeholder="Type your user" [(ngModel)]="newUser.username" name="username" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="inputs-container" style="margin-top: 20px">
+                    <label>Email</label>
+                    <mat-form-field>
+                        <input matInput placeholder="Type your email" [(ngModel)]="newUser.email" name="email" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="inputs-container" style="margin-top: 20px">
+                    <label>Direction</label>
+                    <mat-form-field>
+                        <input matInput placeholder="Type your direction" [(ngModel)]="newUser.address" name="address" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="inputs-container" style="margin-top: 20px">
+                    <label>Password</label>
+                    <mat-form-field>
+                        <input matInput type="password" placeholder="Type your password" [(ngModel)]="newUser.password" name="password" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="inputs-container" style="margin-top: 20px">
+                    <mat-slide-toggle [(ngModel)]="newUser.customer" name="customer" >
+                        <label style="color: white"> I'm a workshop proprietary </label>
+                    </mat-slide-toggle>
+                </div>
+
+                <div class="inputs-container" style="margin-top: 20px">
+                    <input class="checks" type="checkbox" [(ngModel)]="termsAccepted" name="termsAccepted">
+                    <label>I agree to the <a href="">term/politics</a></label>
+                </div>
+
+            </div>
+
+            <button mat-raised-button color="primary" style="width: 100%; background-color: black; color: white;" type="submit">Sign Up</button>
+
+            <div class="buttons" style="margin-top: 20%;">
+                <button class="button1">
+                    <mat-icon>local_post_office</mat-icon>
+                    Sign in with Google
+                </button>
+
+                <button class="button1">
+                    <mat-icon>apple</mat-icon>
+                    Sign in with Apple
+                </button>
+            </div>
+
+            <p>Do you already have an account? <a href="" (click)="navigateToLogin()">Log In</a></p>
+
+        </form>
+    </div>
+    <div class="image-container">
+        <img [src]="'assets/images/logo-white.svg'" alt="Logo-AutoPro-Tracker">
+    </div>
+</div>

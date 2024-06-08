@@ -1,0 +1,61 @@
+<div class="container-invoice-preview">
+  <div class="content-invoice-preview">
+    <div class="information-invoice">
+      <div class="pvc-informaction">
+        <div class="pvc-title">
+          <h1>Invoice</h1>
+        </div>
+        <div class="pvc-information-invoice">
+          <p>Invoice Date: {{invoice.issue_date}}</p>
+        </div>
+        <div class="pvc-information-invoice">
+          <p>Invoice Number: {{invoice.number}}</p>
+        </div>
+        <div class="pvc-information-invoice">
+          <p>Total amount: S/.{{invoice.total}} </p>
+        </div>
+      </div>
+      <div class="company-image">
+        <img [src]="workshop.logo_url" alt="Logo de la compañía">
+      </div>
+    </div>
+    <div class="users-informations">
+      <div class="company-information">
+        <p>From</p>
+        <p>{{workshop.name}}</p>
+        <p>{{workshop.address}}</p>
+        <p>{{workshop.phone}}</p>
+        <p>{{workshop.email}}</p>
+      </div>
+      <div class="client-information">
+        <p>Invoice to</p>
+        <p>Nombre: {{customer.name}}</p>
+        <p>Correo: {{customer.email}}</p>
+        <p>Number: {{customer.phone}}</p>
+      </div>
+    </div>
+    <div class="details-invoices">
+      <table *ngIf="invoice?.details">
+        <thead>
+        <tr>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let detail of invoice.details">
+          <td>{{detail.description}}</td>
+          <td>S./{{detail.amount}}</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td><strong>S./{{getTotalAmount()}}</strong></td>
+        </tr>
+        </tbody>
+      </table>
+      <button (click)="onCancel()">Return</button>
+    </div>
+
+  </div>
+
+</div>
