@@ -61,5 +61,9 @@ export class ProfileCustomerComponent implements OnInit {
     this.router.navigate(['/workshop/customers/profile/delete',clientId]);
   }
 
+  toVehicleList(): void {
+    this.router.navigate([`/workshop/customer/${this.customer.id}/vehicle-list`]);
+  }
+
 }
 

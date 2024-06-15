@@ -1,0 +1,54 @@
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto Mono:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Jockey One:wght@400&display=swap"
+    />
+</head>
+<body>
+<div class="individual-stock-supervision" *ngIf="product" >
+    <div class="individual-stock-supervision-child"></div>
+    <button class="vuesaxlinearclose-circle" (click)="goBack()">
+        <span class="close-icon">X</span>
+    </button>
+    <div class="product-name3">{{ product.name}}</div>
+    <div class="description-price-quantity-container">
+        <ul class="description-price-quantity">
+            <li class="description4">
+                <span>Description: {{ product.description }} </span>
+            </li>
+            <br>
+            <br>
+            <br>
+            <li class="price1">
+                <span>Price: {{ product.price }} </span>
+            </li>
+            <br>
+            <br>
+            <br>
+            <li class="quantity1">
+                <span>Quantity: {{ product.quantity }}</span>
+            </li>
+        </ul>
+        <p class="blank-line2">&nbsp;</p>
+    </div>
+    <div class="vector-parent2">
+        <div class="products-catalog1">Products Catalog</div>
+    </div>
+    <img
+            class="individual-stock-supervision-item"
+            [src]="product.image_url" alt="Product Image"
+    />
+</div>
+</body>
