@@ -1,0 +1,40 @@
+<div class="workshop-header">
+  <h1>Workshop Info</h1>
+</div>
+<div class="background">
+  <div class="image-container">
+    <img [src]="user.image_url" alt="Logo de la compañía">
+  </div>
+  <div class="workshop-container">
+
+    <div class="info-container">
+      <div class="group">
+        <div class="info-box company-photo">
+          <img [src]="user.image_url" alt="Logo de la compañía">
+        </div>
+
+        <div class="info-box phone">
+          <h2>Telephone</h2>
+          <p>{{user.phone}}</p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="info-box location">
+          <h2>Location</h2>
+          <p>{{user.address}}</p>
+        </div>
+
+        <div class="info-box website">
+          <h2>Website</h2>
+          <p><a href="https://www.facebook.com/autoviptaller/?locale=es_LA">www.autoviptaller.com</a></p>
+        </div>
+      </div>
+
+      <div class="info-box business-hours">
+        <h2>Email</h2>
+        <p>{{user.email}}</p>
+      </div>
+    </div>
+  </div>
+</div>

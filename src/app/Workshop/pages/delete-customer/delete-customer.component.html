@@ -1,0 +1,30 @@
+<div *ngIf="user">
+  <div class="container">
+    <div class="inner-container">
+      <div class="header">
+        <div class="subheader">Are you sure you want to delete the client?</div>
+        <div class="content">
+          <div class="column">
+            <div class="column-content">
+              <div class="textbox">Name: {{user.name}}</div>
+              <div class="textbox">Phone: {{user.phone}}</div>
+            </div>
+            <div class="button-group">
+              <button class="confirm-button">Confirm</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-content">
+              <div class="textbox">E-mail: {{user.email}}</div>
+              <div class="textbox">Address: {{user.address}}</div>
+            </div>
+            <div class="button-group">
+              <button class="cancel-button" (click)="onCancel()">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

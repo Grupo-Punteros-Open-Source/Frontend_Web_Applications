@@ -1,0 +1,26 @@
+<body>
+
+<form>
+  <h3 style="text-align: center;">Plan Payment Process</h3>
+
+  <label for="tipo_tarjeta">Card Type:</label>
+  <select id="tipo_tarjeta" name="tipo_tarjeta" required>
+    <option value="Visa">Visa</option>
+    <option value="PayPal">PayPal</option>
+  </select>
+
+  <label for="numero_tarjeta">Card Number:</label>
+  <input type="text" id="numero_tarjeta" name="numero_tarjeta" required>
+
+  <label for="cvv">CVV:</label>
+  <input type="text" id="cvv" name="cvv" required>
+
+  <div class="fixed-text">
+    <p>Start Date: 02/05/2024</p>
+    <p>Next Payment Date: 02/06/2024</p>
+  </div>
+
+  <button type="submit">Proceed</button>
+</form>
+
+</body>

@@ -1,0 +1,19 @@
+<div *ngFor="let vehicle of vehicles">
+  <mat-card class="client-vehicle-card">
+    <img mat-card-image [src]="vehicle.image_url" alt="Vehicle Image" style="width: 300px; height: 140px; margin-left: 10px; margin-top: 10px;">
+    <div mat-card-content class="card-content">
+      <div class="card-item">
+        <h2>Vehicle brand</h2>
+        <h1><b>{{vehicle.make}}</b></h1>
+      </div>
+      <div class="card-item">
+        <h2>Model</h2>
+        <h1><b>{{vehicle.model}}</b></h1>
+      </div>
+      <div class="card-item">
+        <h2>Year of Manufacture</h2>
+        <h1><b>{{vehicle.year}}</b></h1>
+      </div>
+    </div>
+  </mat-card>
+</div>

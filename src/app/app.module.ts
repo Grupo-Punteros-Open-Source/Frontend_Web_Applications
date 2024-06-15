@@ -1,67 +1,78 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonToggleModule } from "@angular/material/button-toggle";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import { MatIconModule } from "@angular/material/icon";
-import { MatListModule } from "@angular/material/list";
-import { MatCardModule } from "@angular/material/card";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatDialogModule } from "@angular/material/dialog";
-import { MatGridListModule } from "@angular/material/grid-list";
-import { MatButtonModule } from "@angular/material/button";
-import { MatInputModule } from "@angular/material/input";
-import { MatSelectModule } from "@angular/material/select";
-import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { MatTableModule } from "@angular/material/table";
-import { MatPaginatorModule } from "@angular/material/paginator";
-import { MatTooltipModule } from "@angular/material/tooltip";
-import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-
-import { InvoicesCardComponent } from './manager/invoices/components/invoice-card/invoices-card.component';
-import { SideNavegationBarComponent } from './public/pages/side-navegation-bar/side-navegation-bar.component';
-import { InvoiceListComponent } from './manager/invoices/pages/invoice-list/invoice-list.component';
-import { AddInvoiceComponent } from './manager/invoices/components/add-invoice/add-invoice.component';
-import { InvoicePreviewComponent } from './manager/invoices/components/invoice-preview/invoice-preview.component';
-import { InvoiceCreateAndEditComponent } from './manager/invoices/components/invoice-create-and-edit/invoice-create-and-edit.component';
-import { AddCustomerComponent } from "./manager/customers/components/add-customer/add-customer.component";
-import { CustomerListComponent } from "./manager/customers/pages/customer-list/customer-list.component";
-import { ProfileCustomerComponent } from "./manager/customers/components/profile-customer/profile-customer.component";
-import { CardCustomerComponent } from "./manager/customers/components/card-customer/card-customer.component";
-import { DeleteProfileCustomerComponent } from './manager/customers/components/delete-profile-customer/delete-profile-customer.component';
-import { NotificationComponent } from './public/components/notification/notification.component';
-import { HomeManagerComponent } from './public/pages/home-manager/home-manager.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { SignInComponent } from './User/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './User/pages/sign-up/sign-up.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { SideNavegationBarCustomerComponent } from './public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component';
+import { SideNavegationBarWorkshopComponent } from './public/pages/side-navegation-bar-workshop/side-navegation-bar-workshop.component';
+import { ProfileWorkshopComponent } from './Workshop/pages/profile-workshop/profile-workshop.component';
+import { SupportComponent } from './Workshop/pages/support/support.component';
+import { InventoryComponent } from './Workshop/pages/inventory/inventory.component';
+import { PlansComponent } from './Workshop/pages/plans/plans.component';
+import { PlansPaymentComponent } from './Workshop/pages/plans-payment/plans-payment.component';
+import { CustomerListComponent } from './Workshop/pages/customer-list/customer-list.component';
+import { CardCustomerComponent } from './Workshop/components/card-customer/card-customer.component';
+import { ProfileCustomerComponent } from './Workshop/pages/profile-customer/profile-customer.component';
+import { AddCustomerComponent } from './Workshop/pages/add-customer/add-customer.component';
+import { DeleteCustomerComponent } from './Workshop/pages/delete-customer/delete-customer.component';
+import { CardVehicleComponent } from './WorkShop/components/card-vehicle/card-vehicle.component';
+import { CustomerVehicleListComponent } from './Workshop/pages/customer-vehicle-list/customer-vehicle-list.component';
+import { MaintananceListComponent } from './Maintenance/pages/maintanance-list/maintanance-list.component';
+import { MaintananceCardComponent } from './Maintenance/components/maintanance-card/maintanance-card.component';
+import { HomeWorkshopComponent } from './public/pages/home-workshop/home-workshop.component';
+import { HomeCustomerComponent } from './public/pages/home-customer/home-customer.component';
+import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/view-maintanance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InvoicesCardComponent,
-    SideNavegationBarComponent,
-    InvoiceListComponent,
-    AddInvoiceComponent,
-    InvoicePreviewComponent,
-    InvoiceCreateAndEditComponent,
-    AddCustomerComponent,
+    SignInComponent,
+    SignUpComponent,
+    SideNavegationBarCustomerComponent,
+    SideNavegationBarWorkshopComponent,
+    ProfileWorkshopComponent,
+    SupportComponent,
+    InventoryComponent,
+    PlansComponent,
+    PlansPaymentComponent,
     CustomerListComponent,
-    ProfileCustomerComponent,
     CardCustomerComponent,
-    DeleteProfileCustomerComponent,
-    NotificationComponent,
-    HomeManagerComponent
+    ProfileCustomerComponent,
+    AddCustomerComponent,
+    DeleteCustomerComponent,
+    CardVehicleComponent,
+    CustomerVehicleListComponent,
+    MaintananceListComponent,
+    MaintananceCardComponent,
+    HomeWorkshopComponent,
+    HomeCustomerComponent,
+    ViewMaintananceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
     MatButtonToggleModule,
     MatFormFieldModule,
     MatCheckboxModule,
@@ -71,6 +82,7 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
     MatSidenavModule,
     MatToolbarModule,
     MatDialogModule,
+    FormsModule,
     MatGridListModule,
     MatButtonModule,
     MatInputModule,
@@ -79,9 +91,11 @@ import { HomeManagerComponent } from './public/pages/home-manager/home-manager.c
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
-    MatSlideToggleModule
+
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

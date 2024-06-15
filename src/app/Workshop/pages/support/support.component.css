@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181A27; /* Color de fondo */
+  margin: 0;
+  padding: 0;
+}
+.support-container {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.background {
+  background-color: #181a27;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.support-form {
+  width: 60%;
+  max-width: 600px;
+  background-color: #002E43;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.support-info {
+  margin-left: 20px;
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  margin-top: 0;
+}
+label {
+  font-weight: bold;
+}
+select, input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #6A90A9; /* Color del borde */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  background-color: #D7DCE0; /* Color de fondo del botón */
+  color: black;
+  padding: 14px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 35%;
+  box-sizing: border-box;
+}
+button:hover {
+  background-color: #B2C3D3;
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .support-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}

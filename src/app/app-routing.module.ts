@@ -1,46 +1,47 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InvoiceListComponent } from "./manager/invoices/pages/invoice-list/invoice-list.component";
-import { AddInvoiceComponent } from "./manager/invoices/components/add-invoice/add-invoice.component";
-import { InvoicePreviewComponent } from "./manager/invoices/components/invoice-preview/invoice-preview.component";
-import { CustomerListComponent } from "./manager/customers/pages/customer-list/customer-list.component";
-import { ProfileCustomerComponent } from "./manager/customers/components/profile-customer/profile-customer.component";
-import { AddCustomerComponent } from "./manager/customers/components/add-customer/add-customer.component";
-import { DeleteProfileCustomerComponent } from "./manager/customers/components/delete-profile-customer/delete-profile-customer.component";
-import { HomeManagerComponent } from "./public/pages/home-manager/home-manager.component";
-import { AddProductsComponent } from "./manager/products/components/add-products/add-products.component";
-import { UpdateProductComponent } from "./manager/products/components/update-product/update-product.component";
-import { ProductCardComponent } from "./manager/products/components/product-card/product-card.component";
-import { ProductDetailsComponent } from "./manager/products/components/product-details/product-details.component";
-import { ClientVehicleListComponent } from "./manager/vehicles/pages/client-vehicle-list/client-vehicle-list.component";
-import { AddVehicleComponent } from "./manager/vehicles/pages/add-vehicle/add-vehicle.component";
-import { LogInComponent } from "./auth/components/log-in/login.component";
-import { SignUpComponent } from "./auth/components/sign-up/sign-up.component";
-import { ProfileComponent } from "./clients/customer/components/profile/profile.component";
-import { WorkshopInfoComponent } from "./manager/workshop/components/workshop-info/workshop-info.component";
-import { SupportComponent } from "./manager/workshop/components/support/support.component";
-import { PlansListComponent } from "./manager/plans/components/plans-list/plans-list.component";
-import { PlansPaymentComponent } from "./manager/plans/components/plans-payment/plans-payment.component";
+import { SignInComponent } from './User/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './User/pages/sign-up/sign-up.component';
+import { ProfileWorkshopComponent } from './Workshop/pages/profile-workshop/profile-workshop.component';
+import {SupportComponent} from "./Workshop/pages/support/support.component";
+import {PlansComponent} from "./Workshop/pages/plans/plans.component";
+import {PlansPaymentComponent} from "./Workshop/pages/plans-payment/plans-payment.component";
+import {CustomerListComponent} from "./Workshop/pages/customer-list/customer-list.component";
+import {ProfileCustomerComponent} from "./Workshop/pages/profile-customer/profile-customer.component";
+import {AddCustomerComponent} from "./Workshop/pages/add-customer/add-customer.component";
+import {DeleteCustomerComponent} from "./Workshop/pages/delete-customer/delete-customer.component";
+import {MaintananceListComponent} from "./Maintenance/pages/maintanance-list/maintanance-list.component";
+import {CustomerVehicleListComponent} from "./Workshop/pages/customer-vehicle-list/customer-vehicle-list.component";
+import {HomeCustomerComponent} from "./public/pages/home-customer/home-customer.component";
+import {HomeWorkshopComponent} from "./public/pages/home-workshop/home-workshop.component";
+import {ViewMaintananceComponent} from "./Maintenance/pages/view-maintanance/view-maintanance.component";
+import {
+  SideNavegationBarWorkshopComponent
+} from "./public/pages/side-navegation-bar-workshop/side-navegation-bar-workshop.component";
+import {
+  SideNavegationBarCustomerComponent
+} from "./public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component";
 
 const routes: Routes = [
-  { path: '', component: LogInComponent },
-  { path: 'workshop', component: HomeManagerComponent },
-  { path: 'workshop/invoices', component: InvoiceListComponent },
-  { path: 'workshop/invoices/add-invoice', component: AddInvoiceComponent },
-  { path: 'workshop/invoices/invoice-preview/:clientId/:invoiceId', component: InvoicePreviewComponent },
-  { path: 'workshop/customer/:clientId/vehicle-list', component: ClientVehicleListComponent },
-  { path: 'workshop/customer/:clientId/add-vehicle', component: AddVehicleComponent },
-  { path: 'auth/login', component: LogInComponent },
-  { path: 'auth/signup', component: SignUpComponent },
-  { path: 'workshop/customers', component: CustomerListComponent },
-  { path: 'workshop/workshop-info', component: WorkshopInfoComponent },
-  { path: 'workshop/customers/add-customer', component: AddCustomerComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent },
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'workshop', component: SideNavegationBarWorkshopComponent },
+  { path: 'workshop/home', component: HomeWorkshopComponent },
+  { path: 'workshop/profile', component: ProfileWorkshopComponent },
   { path: 'workshop/support', component: SupportComponent },
-  { path: 'workshop/customers/profile/:clientId', component: ProfileCustomerComponent },
-  { path: 'workshop/plans', component: PlansListComponent },
+  { path: 'workshop/plans', component: PlansComponent },
   { path: 'workshop/plans/payment', component: PlansPaymentComponent },
-  { path: 'workshop/customers/profile/delete/:clientId', component: DeleteProfileCustomerComponent },
-  { path: 'customers/profile/:clientId', component: ProfileComponent }
+  { path: 'workshop/customers', component: CustomerListComponent },
+  { path: 'workshop/customers/profile/:userId', component: ProfileCustomerComponent },
+  { path: 'workshop/customers/add-customer', component: AddCustomerComponent },
+  { path: 'workshop/customers/delete-customer/:userId', component: DeleteCustomerComponent },
+  { path: 'workshop/customers/vehicles/:userId', component: CustomerVehicleListComponent },
+  { path: 'workshop/maintenances', component: MaintananceListComponent },
+  { path: 'workshop/maintenances/view/:maintenanceId', component: ViewMaintananceComponent },
+  { path: 'customer', component: SideNavegationBarCustomerComponent },
+  { path: 'customer/home', component: HomeCustomerComponent }
+
 ];
 
 @NgModule({

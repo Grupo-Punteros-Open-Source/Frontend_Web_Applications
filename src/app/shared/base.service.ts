@@ -1,6 +1,6 @@
-import { environment } from "../../environments/environment";
-import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from "@angular/common/http";
-import { catchError, Observable, retry, throwError } from "rxjs";
+import {environment} from "../../environments/environment";
+import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
+import {catchError, Observable, retry, throwError} from "rxjs";
 
 export class BaseService<T> {
   basePath: string = `${environment.serverBasePath}`;
@@ -30,8 +30,8 @@ export class BaseService<T> {
   }
 
   create(item: any): Observable<T> {
-    return this.http.post<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
-        .pipe(retry(2), catchError(this.handleError));
+    return this.http.post<T>(this.resourcePath(), item, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   delete(id: any) {
@@ -39,7 +39,7 @@ export class BaseService<T> {
   }
 
   update(id: any, item: any) {
-    return this.http.put<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item), this.httpOptions).pipe(retry(2), catchError(this.handleError));
+    return this.http.put<T>(`${this.resourcePath()}/${id}`, item, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
 
   getAll() {
@@ -50,14 +50,7 @@ export class BaseService<T> {
     return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
 
-  getByType(type: any): Observable<Notification[]> {
-    return this.http.get<Notification[]>(`${this.resourcePath()}?type=${type}`, this.httpOptions)
-        .pipe(retry(2), catchError(this.handleError));
-  }
 
-  getByName(name: string): Observable<T[]> {
-    let params = new HttpParams().set('name', name);
-    return this.http.get<T[]>(this.resourcePath(), { params: params, headers: this.httpOptions.headers })
-        .pipe(retry(2), catchError(this.handleError));
-  }
 }
+
+

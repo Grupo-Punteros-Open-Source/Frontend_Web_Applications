@@ -1,0 +1,71 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
+}
+
+.mat-elevation-z4 {
+  max-width: 100%;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+
+.header-image {
+  background-image: url('https://i.postimg.cc/GHI789/tires.png');
+  background-size: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.vehicle-image {
+  width: 20%;
+  height: auto;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.details-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1em;
+  margin-left: 10%;
+}
+
+.maintenance-details, .vehicle-details {
+  flex: 1;
+}
+
+.mat-card-title, .mat-card-subtitle {
+  color: #333;
+}
+
+p, h3 {
+  color: #666;
+}
+
+.view-more-button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Change text size */
+  margin: 4px 2px; /* Some margin */
+  cursor: pointer; /* Mouse pointer on hover */
+  transition-duration: 0.4s; /* Transition effects */
+  border-radius: 12px; /* Rounded corners */
+}
+
+.view-more-button:hover {
+  background-color: #45a049; /* Green background on hover */
+}

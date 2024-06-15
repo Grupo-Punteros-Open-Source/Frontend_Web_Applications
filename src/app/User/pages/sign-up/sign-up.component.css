@@ -1,0 +1,91 @@
+
+
+h1 {
+  font-size: 32px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.log-in-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.form-content {
+  width: 60%;
+  padding: 20px;
+  height: auto;
+}
+
+.image-container {
+  display: flex;
+  border: 1px solid black ;
+  background-color: blue;
+  width: 40%;
+  height: 120vh;
+  text-align: center;
+  border-bottom-left-radius: 10%;
+  border-top-left-radius: 10%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+
+}
+
+button {
+  font-size: 13px;
+}
+
+a {
+  color: blue;
+}
+
+.log-in-form p {
+  text-align: center;
+}
+
+
+
+.inputs-container a{
+  text-align: end;
+}
+
+
+.inputs-container mat-form-field {
+  width: 100%;
+}
+
+.button1{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  width: 190px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button1:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.checks {
+  margin-bottom: 20px;
+}
+
+

@@ -1,0 +1,76 @@
+
+.div {
+  width: 100%;
+  max-width: 97%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #002e43;
+}
+
+.div-2 {
+  margin-top: 20px;
+
+}
+
+
+.div-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.customer-card {
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: 250px;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #333;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+
+.customer-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.customer-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.customer-card-action {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.customer-card-action button {
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #002e43;
+  color: #ffffff;
+}
+
+.customer-card-action button:hover {
+  background-color: #001f30;
+}

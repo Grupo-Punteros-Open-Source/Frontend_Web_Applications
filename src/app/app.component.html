@@ -1,1 +1,4 @@
-<app-side-navegation-bar/>
+<app-side-navegation-bar-workshop *ngIf="userType === 'workshop'"></app-side-navegation-bar-workshop>
+<app-side-navegation-bar-customer *ngIf="userType === 'customer'"></app-side-navegation-bar-customer>
+<router-outlet/>
+

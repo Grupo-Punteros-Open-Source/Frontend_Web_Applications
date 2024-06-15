@@ -1,0 +1,28 @@
+<div class="card-grid">
+  <mat-card class="mat-elevation-z4" *ngFor="let maintenance of maintenances">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>Maintenance ID: {{maintenance.id}}</mat-card-title>
+      <mat-card-subtitle>Status: {{maintenance.status}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <div class="details-section">
+        <div class="maintenance-details">
+          <p>Last Visit Date: {{maintenance.lastVisitDate}}</p>
+          <p>Comment: {{maintenance.comment}}</p>
+        </div>
+        <div class="vehicle-details" *ngIf="getVehicle(maintenance.vehicle_id) as vehicle">
+          <p>Year: {{vehicle.year}}</p>
+          <p>Color: {{vehicle.color}}</p>
+          <p>Mileage: {{vehicle.mileage}}</p>
+        </div>
+        <ng-container *ngIf="getVehicle(maintenance.vehicle_id) as vehicle">
+          <img mat-card-image [src]="vehicle.image_url" alt="Vehicle image" class="vehicle-image">
+        </ng-container>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="ViewMaintenance(maintenance.id)" class="view-more-button">View More</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
