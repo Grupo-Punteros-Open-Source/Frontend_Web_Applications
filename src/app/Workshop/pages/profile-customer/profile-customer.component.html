@@ -1,0 +1,54 @@
+<div *ngIf="user">
+  <div class="div">
+    <div class="div-2">
+      <div class="div-3">Customer profile</div>
+      <div class="div-4">
+        <div class="div-5">
+          <div class="column">
+            <img mat-card-image [src]="user.image_url" alt="Client Image">
+          </div>
+          <div class="column-2">
+            <div class="div-6">
+              <div class="div-7">
+                                <span>Name:
+                                    <span *ngIf="!isEditing">{{user.name}}</span>
+                                    <span #nameElement *ngIf="isEditing" contenteditable="true" (blur)="onSubmit('name', nameElement.innerText)" class="editable">{{user.name}}</span>
+                                </span>
+              </div>
+              <div class="div-9">Number:
+                <span *ngIf="!isEditing">{{user.phone}}</span>
+                <span #phoneElement *ngIf="isEditing" contenteditable="true" (blur)="onSubmit('phone', phoneElement.innerText)" class="editable">{{user.phone}}</span>
+              </div>
+              <div class="div-10">E-mail:
+                <span *ngIf="!isEditing">{{user.email}}</span>
+                <span #emailElement *ngIf="isEditing" contenteditable="true" (blur)="onSubmit('email', emailElement.innerText)" class="editable">{{user.email}}</span>
+              </div>
+              <div class="div-11">Address:
+                <span *ngIf="!isEditing">{{user.address}}</span>
+                <span #addressElement *ngIf="isEditing" contenteditable="true" (blur)="onSubmit('address', addressElement.innerText)" class="editable">{{user.address}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-12">
+        <div class="div-13">
+          <button (click)="onEdit()" *ngIf="!isEditing">Edit customer</button>
+          <button (click)="onSave()" *ngIf="isEditing">Save</button>
+        </div>
+        <div class="div-14">
+          <button (click)="delete(user.id)">Delete customer</button>
+        </div>
+      </div>
+      <div class="div-15">
+        <div class="div-16">
+          <button (click)="toVehicleList(user.id)">Vehicle list</button>
+        </div>
+        <div class="div-17">
+          <button (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

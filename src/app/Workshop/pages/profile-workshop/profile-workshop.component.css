@@ -1,0 +1,96 @@
+.workshop-header {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: #181a27
+}
+
+.workshop-header h1 {
+  background-color: #181a27;
+  font-size: 36px;
+}
+
+.background {
+  background-color: #181a27;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.workshop-container {
+  max-width: 800px;
+  width: 80%;
+  padding: 20px;
+  background-color: #181a27;
+  border-radius: 8px;
+}
+
+.info-container {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.group {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.info-box img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.info-box h2 {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+.info-box p {
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+
+.company-photo {
+  background-color: #406378;
+}
+
+.location {
+  background-color: #6a90a9;
+}
+
+.phone {
+  background-color: #b2c3d3;
+}
+
+.website {
+  background-color: #b2c3d3;
+}
+
+.business-hours {
+  background-color: #b2c3d3;
+}
+
+@media (max-width: 768px) {
+  .info-box {
+    flex: 1 1 100%;
+  }
+}

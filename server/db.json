@@ -1,301 +1,295 @@
 {
-  "workshop": {
-    "id": 1,
-    "name": "AutoVIP Workshop",
-    "address": "456 Oak Street, City",
-    "phone": "555-789-1234",
-    "email": "info@autovip.com",
-    "logo_url": "https://i.postimg.cc/BnRQw4hj/company-logo.png",
-    "business_hours": "Monday to Saturday, 7:00 AM - 6:00 PM"
-  },
-  "customers": [
+  "workshops": [
     {
-      "id": "1",
-      "name": "Jose Corral",
-      "workshopId": 1,
-      "address": "123 Main Street, City",
-      "phone": "123-456-7890",
-      "email": "juan.rodriguez@example.com",
+      "id": 1,
+      "user_id": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "autovip",
+      "password": "n2ca782e21",
+      "name": "AutoVIP Admin",
+      "address": "456 Oak Street, City",
+      "phone": "555-789-1234",
+      "email": "admin@autovip.com",
+      "image_url": "https://i.postimg.cc/BnRQw4hj/company-logo.png"
+    },
+    {
+      "id": 2,
+      "username": "alejandro",
+      "password": "m12ssk726",
+      "name": "Alejandro Perez",
+      "address": "789 Workshop Street, City",
+      "phone": "555-321-9876",
+      "email": "alejandro@example.com",
       "image_url": "https://i.postimg.cc/zGBMZknL/persona1.png"
     },
     {
-      "id": "2",
-      "name": "Jose Torres Peralta",
-      "workshopId": 1,
-      "address": "456 Central Avenue, City",
-      "phone": "987-654-3210",
-      "email": "jose.torres@example.com",
-      "image_url": "https://i.postimg.cc/GpRX3JDJ/persona2.png"
+      "id": 3,
+      "username": "maria",
+      "password": "m12ssk726",
+      "name": "Maria Rodriguez",
+      "address": "123 Main Street, City",
+      "phone": "555-456-7890",
+      "email": "xd",
+      "image_url": "https://i.postimg.cc/3wzvJ1Z1/persona2.png"
     },
     {
-      "id": "3",
-      "name": "Jose Rodriguez Benavides",
-      "workshopId": 1,
-      "address": "789 Liberty Avenue, City",
-      "phone": "555-123-4567",
-      "email": "jose.benavides@example.com",
-      "image_url": "https://i.postimg.cc/W4pf6w4p/persona3.png"
+      "id": 4,
+      "username": "juan",
+      "password": "m12ssk726",
+      "name": "Juan Lopez",
+      "address": "456 Elm Street, City",
+      "phone": "555-654-3210",
+      "email": "woa",
+      "image_url": "https://i.postimg.cc/3wzvJ1Z1/persona3.png"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "user_id": 2
+    },
+    {
+      "id": 2,
+      "user_id": 3
+    },
+    {
+      "id": 3,
+      "user_id": 4
     }
   ],
   "vehicles": [
     {
-      "id": "1",
-      "customerId": 1,
+      "id": 1,
       "plate": "ABC123",
       "make": "Audi",
       "model": "A1",
       "year": 2018,
       "color": "Gray",
-      "imageUrl": "https://i.postimg.cc/Qdcrnmsp/Audi-Car.png",
-      "mileage": 50000,
-      "status": "En reparación",
-      "lastVisitDate": "2024-04-20",
-      "servicesHistory": [
-        {
-          "serviceDate": "2024-04-10",
-          "description": "Maintenance service",
-          "cost": 800,
-          "mileage": 49000
-        },
-        {
-          "serviceDate": "2023-12-15",
-          "description": "Tire replacement",
-          "cost": 700,
-          "mileage": 45000
-        }
-      ],
-      "comments": "Cliente reporta ruido en el motor",
-      "estimates": [
-        {
-          "estimateDate": "2024-04-25",
-          "description": "Engine diagnostics",
-          "estimatedCost": 300
-        }
-      ]
+      "image_url": "https://i.postimg.cc/Qdcrnmsp/Audi-Car.png",
+      "mileage": 50000
     },
     {
-      "id": "2",
-      "customerId": 2,
+      "id": 2,
       "plate": "DEF456",
       "make": "Mitsubishi",
       "model": "New Ask",
       "year": 2019,
       "color": "Blue",
-      "imageUrl": "https://i.postimg.cc/ZRR2Zxks/Mitsubishi-Car.png",
-      "mileage": 35000,
-      "status": "Listo para entrega",
-      "lastVisitDate": "2024-05-01",
-      "servicesHistory": [
-        {
-          "serviceDate": "2024-04-20",
-          "description": "Engine repair",
-          "cost": 800,
-          "mileage": 34000
-        }
-      ],
-      "comments": "Cliente solicita cambio de aceite",
-      "estimates": []
+      "image_url": "https://i.postimg.cc/ZRR2Zxks/Mitsubishi-Car.png",
+      "mileage": 35000
     },
     {
-      "id": "3",
-      "customerId": 3,
+      "id": 3,
       "plate": "GHI789",
       "make": "Volkswagen",
       "model": "Nivus",
       "year": 2021,
       "color": "White",
-      "imageUrl": "https://i.postimg.cc/sfZyhs86/Volkwagen-Car.png",
-      "mileage": 15000,
-      "status": "En espera de repuestos",
-      "lastVisitDate": "2024-03-10",
-      "servicesHistory": [
-        {
-          "serviceDate": "2024-02-15",
-          "description": "Oil change",
-          "cost": 50,
-          "mileage": 14000
-        },
-        {
-          "serviceDate": "2023-11-20",
-          "description": "General inspection",
-          "cost": 550,
-          "mileage": 12000
-        }
-      ],
-      "comments": "Cliente reporta vibraciones al frenar",
-      "estimates": [
-        {
-          "estimateDate": "2024-04-30",
-          "description": "Brake pads replacement",
-          "estimatedCost": 400
-        }
-      ]
+      "image_url": "https://i.postimg.cc/sfZyhs86/Volkwagen-Car.png",
+      "mileage": 15000
+    }
+  ],
+  "histories": [
+    {
+      "id": 1,
+      "service_date": "2024-04-10",
+      "description": "Maintenance service",
+      "cost": 800,
+      "mileage": 49000
     },
     {
-      "id": "4",
-      "customerId": 1,
-      "plate": "ACB132",
-      "make": "Volkswagen",
-      "model": "Nivus",
-      "year": 2021,
-      "color": "White",
-      "imageUrl": "https://i.postimg.cc/sfZyhs86/Volkwagen-Car.png",
-      "mileage": 18000,
-      "status": "Listo para entrega",
-      "lastVisitDate": "2024-02-10",
-      "servicesHistory": [
-        {
-          "serviceDate": "2024-01-09",
-          "description": "General inspection",
-          "cost": 500,
-          "mileage": 12000
-        }
-      ],
-      "comments": "Cliente reporta ruidos pronunciados del motor",
-      "estimates": [
-        {
-          "estimateDate": "2024-05-28",
-          "description": "Air filter replacements",
-          "estimatedCost": 215
-        },
-        {
-          "estimateDate": "2024-05-29",
-          "description": "Oil filter replacement",
-          "estimatedCost": 190
-        }
-      ]
+      "id": 2,
+      "service_date": "2023-12-15",
+      "description": "Tire replacement",
+      "cost": 700,
+      "mileage": 45000
+    },
+    {
+      "id": 3,
+      "service_date": "2024-04-20",
+      "description": "Engine repair",
+      "cost": 800,
+      "mileage": 34000
+    },
+    {
+      "id": 4,
+      "service_date": "2024-02-15",
+      "description": "Oil change",
+      "cost": 50,
+      "mileage": 14000
+    },
+    {
+      "id": 5,
+      "service_date": "2023-11-20",
+      "description": "General inspection",
+      "cost": 550,
+      "mileage": 12000
+    }
+  ],
+  "maintenances": [
+    {
+      "id": 1,
+      "status": "pending",
+      "lastVisitDate": "2024-04-25",
+      "comment": "Engine diagnostics",
+      "invoice_id": 1,
+      "customer_id": 1,
+      "workshop_id": 1,
+      "vehicle_id": 1,
+      "history_id": 1
+    },
+    {
+      "id": 2,
+      "status": "pending",
+      "lastVisitDate": "2024-04-30",
+      "comment": "Brake pads replacement",
+      "invoice_id": 2,
+      "customer_id": 3,
+      "workshop_id": 1,
+      "vehicle_id": 3,
+      "history_id": 2
     }
   ],
   "invoices": [
     {
-      "id": "1",
-      "customerId": 1,
+      "id": 1,
       "number": "F2022001",
       "issue_date": "2022-04-15",
       "total": 1500,
       "status": "Paid",
-      "details": [
-        {
-          "description": "Maintenance service",
-          "amount": 800
-        },
-        {
-          "description": "Tire replacement",
-          "amount": 700
-        }
-      ]
+      "detail": "detalles"
     },
     {
-      "id": "2",
-      "customerId": 2,
+      "id": 2,
       "number": "F2022002",
       "issue_date": "2022-06-20",
-      "status": "Paid",
       "total": 1200,
-      "details": [
-        {
-          "description": "Engine repair",
-          "amount": 800
-        },
-        {
-          "description": "Oil change",
-          "amount": 100
-        },
-        {
-          "description": "New brakes",
-          "amount": 300
-        }
-      ]
+      "status": "Paid",
+      "detail": "detalles"
     },
     {
-      "id": "3",
-      "customerId": 3,
+      "id": 3,
       "number": "F2022003",
       "issue_date": "2022-07-10",
       "total": 800,
       "status": "Paid",
-      "details": [
-        {
-          "description": "Engine repair",
-          "amount": 800
-        }
-      ]
+      "detail": "detalles"
     },
     {
-      "id": "4",
-      "customerId": 1,
+      "id": 4,
       "number": "F2022004",
       "issue_date": "2024-05-22",
+      "total": 50,
       "status": "Paid",
-      "details": [
-        {
-          "description": "Change Oil",
-          "amount": 50
-        }
-      ],
-      "total": 50
+      "detail": "detalles"
     },
     {
-      "id": "5",
-      "customerId": 1,
+      "id": 5,
       "number": "F2022005",
       "issue_date": "2024-05-22",
+      "total": 100,
       "status": "Paid",
-      "details": [
-        {
-          "description": "Maintance",
-          "amount": 100
-        }
-      ],
-      "total": 100
+      "detail": "detalles"
     },
     {
-      "id": "6",
-      "customerId": 3,
+      "id": 6,
       "number": "F2022006",
       "issue_date": "2024-05-23",
-      "status": "UnPaid",
-      "details": [
-        {
-          "description": "1",
-          "amount": 50
-        }
-      ],
-      "total": 50
+      "total": 50,
+      "status": "Unpaid",
+      "detail": "detalles"
     }
   ],
-  "inventory": [
+  "details": [
     {
-      "productId": "P001",
+      "id": 1,
+      "description": "Maintenance service",
+      "amount": 800,
+      "maintenance_id": 1
+    },
+    {
+      "id": 2,
+      "description": "Tire replacement",
+      "amount": 700,
+      "maintenance_id": 1
+    },
+    {
+      "id": 3,
+      "description": "Engine repair",
+      "amount": 800,
+      "maintenance_id": 2
+    },
+    {
+      "id": 4,
+      "description": "Oil change",
+      "amount": 100,
+      "maintenance_id": 2
+    },
+    {
+      "id": 5,
+      "description": "New brakes",
+      "amount": 300,
+      "maintenance_id": 2
+    },
+    {
+      "id": 6,
+      "description": "Engine repair",
+      "amount": 800,
+      "maintenance_id": 3
+    },
+    {
+      "id": 7,
+      "description": "Change Oil",
+      "amount": 50,
+      "maintenance_id": 4
+    },
+    {
+      "id": 8,
+      "description": "Maintenance",
+      "amount": 100,
+      "maintenance_id": 5
+    },
+    {
+      "id": 9,
+      "description": "Inspection",
+      "amount": 50,
+      "maintenance_id": 6
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
       "name": "Motor Oil (5W-30)",
       "quantity": 100,
       "price": 20,
       "image_url": "https://i.postimg.cc/ABC123/motor-oil.png",
-      "workshopId": 1,
-      "id": "1228"
+      "workshop_id": 1
     },
     {
-      "productId": "P002",
+      "id": 2,
       "name": "Brake Pads",
       "quantity": 50,
       "price": 40,
       "image_url": "https://i.postimg.cc/XYZ789/brake-pads.png",
-      "workshopId": 1,
-      "id": "af24"
+      "workshop_id": 1
     },
     {
-      "productId": "P003",
+      "id": 3,
       "name": "Tires (Set of 4)",
       "quantity": 20,
       "price": 300,
       "image_url": "https://i.postimg.cc/GHI789/tires.png",
-      "workshopId": 1,
-      "id": "a9a2"
+      "workshop_id": 1
     }
   ],
   "notifications": [
     {
-      "id": "1",
+      "id": 1,
+      "user_id": 1,
       "type": "info",
       "title": "System Update",
       "message": "The system will update in 15 minutes. Please save your work.",
@@ -303,16 +297,14 @@
       "read": false
     }
   ],
-  "users": [
+  "advertising": [
     {
       "id": 1,
-      "username": "autovip",
-      "password": "n2ca782e21"
-    },
-    {
-      "id": 2,
-      "username": "alejandro",
-      "password": "m12ssk726"
+      "name": "Spring Sale",
+      "image_url": "https://i.postimg.cc/SQ56kYGV/spring-sale.png",
+      "slogan": "Get ready for spring with our exclusive discounts!",
+      "text": "Save up to 50% on all services during our Spring Sale!",
+      "workshop_id": 1
     }
   ]
 }

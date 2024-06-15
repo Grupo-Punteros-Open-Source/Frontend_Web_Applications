@@ -1,0 +1,93 @@
+<div class="log-in-container">
+  <div class="form-content">
+    <form class="log-in-form" style="margin: 50px auto; width: 400px;" (ngSubmit)="onSignUp()" #signUpForm="ngForm">
+
+      <h1>Get Started</h1>
+      <span>Start Now</span>
+
+      <div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <mat-form-field>
+            <mat-label>What are you?</mat-label>
+            <mat-select [(value)]="type" placeholder="Select a type"  required>
+              <mat-option value="Customer">Customer</mat-option>
+              <mat-option value="Workshop">Workshop</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>User</label>
+          <mat-form-field>
+            <input matInput placeholder="Type a username" [(ngModel)]="user.username" name="username" required>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>Password</label>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Type a password" [(ngModel)]="user.password" name="password" required>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>Name</label>
+          <mat-form-field>
+            <input matInput placeholder="Type a name" [(ngModel)]="user.name" name="name" required>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>Direction</label>
+          <mat-form-field>
+            <input matInput placeholder="Type your direction" [(ngModel)]="user.address" name="address" required>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>Phone</label>
+          <mat-form-field>
+            <input matInput placeholder="Type your direction" [(ngModel)]="user.phone" name="phone" required>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>Email</label>
+          <mat-form-field>
+            <input matInput placeholder="Type your email" [(ngModel)]="user.email" name="email" required>
+          </mat-form-field>
+        </div>
+
+        <div class="inputs-container" style="margin-top: 20px">
+          <label>Logo</label>
+          <mat-form-field>
+            <input matInput placeholder="Type a image" [(ngModel)]="user.image_url" name="imageUrl" required>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <button mat-raised-button color="primary" style="width: 100%; background-color: black; color: white;" type="submit">Sign Up</button>
+
+      <div class="buttons" style="margin-top: 20%;">
+        <button class="button1">
+          <mat-icon>local_post_office</mat-icon>
+          Sign Up with Google
+        </button>
+
+        <button class="button1">
+          <mat-icon>apple</mat-icon>
+          Sign Up with Apple
+        </button>
+      </div>
+
+      <p>Do you already have an account? <a href="" (click)="navigateToSignIn()">Log In</a></p>
+
+    </form>
+  </div>
+  <div class="image-container">
+    <img [src]="'assets/images/logo-white.svg'" alt="Logo-AutoPro-Tracker">
+  </div>
+</div>
+

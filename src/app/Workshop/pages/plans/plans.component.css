@@ -1,0 +1,82 @@
+body {
+  background-color: #181a27;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.custom-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-card {
+  width: 300px;
+  height: 400px;
+  background-color: #B2C3D3;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+
+.custom-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.custom-price {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.custom-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.custom-features li {
+  margin-bottom: 20px;
+}
+
+.custom-cta-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  display: block;
+  padding: 10px 0;
+  background-color: #406378;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-cta-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 800px) {
+  .custom-card {
+    width: calc(100% - 40px);
+    margin: 20px;
+    width: 200px;
+  }
+
+  .plans-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

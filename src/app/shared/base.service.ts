@@ -30,8 +30,8 @@ export class BaseService<T> {
   }
 
   create(item: any): Observable<T> {
-    return this.http.post<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
-        .pipe(retry(2), catchError(this.handleError));
+    return this.http.post<T>(this.resourcePath(), item, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   delete(id: any) {
@@ -39,7 +39,7 @@ export class BaseService<T> {
   }
 
   update(id: any, item: any) {
-    return this.http.put<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item), this.httpOptions).pipe(retry(2), catchError(this.handleError));
+    return this.http.put<T>(`${this.resourcePath()}/${id}`, item, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
 
   getAll() {
@@ -49,6 +49,7 @@ export class BaseService<T> {
   getById(id: any) {
     return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
+
 
 }
 

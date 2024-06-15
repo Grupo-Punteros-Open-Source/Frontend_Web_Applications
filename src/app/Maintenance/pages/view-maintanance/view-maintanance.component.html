@@ -1,0 +1,77 @@
+<div class="container">
+  <!-- Vehicle Information -->
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Vehicle Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Year:</strong> {{vehicle.year}}</p>
+      <p><strong>Make:</strong> {{vehicle.make}}</p>
+      <p><strong>Model:</strong> {{vehicle.model}}</p>
+      <p><strong>Mileage:</strong> {{vehicle.mileage}}</p>
+      <img [src]="vehicle.image_url" alt="Vehicle Image">
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Maintenance Information -->
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Maintenance Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Description:</strong> {{maintenance.comment}}</p>
+      <!-- Add other maintenance properties here -->
+    </mat-card-content>
+  </mat-card>
+
+  <!-- History Information -->
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>History</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let historyItem of history">
+        <p><strong>Service Date:</strong> {{historyItem.service_date}}</p>
+        <p><strong>Description:</strong> {{historyItem.description}}</p>
+        <!-- Add other history properties here -->
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Detail Information -->
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="detail" class="mat-elevation-z8">
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+
+        <!-- Amount Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> Amount </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <!-- Maintenance ID Column -->
+        <ng-container matColumnDef="maintenance_id">
+          <th mat-header-cell *matHeaderCellDef> Maintenance ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.maintenance_id}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
