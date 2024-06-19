@@ -1,5 +1,5 @@
 <div class="vehicle-list">
-    <mat-card *ngFor="let vehicle of vehicles" class="vehicle-card">
+    <mat-card *ngFor="let vehicle of vehicles" (click)="viewMaintenance(vehicle.id)"  class="vehicle-card">
         <mat-card-header>
             <mat-card-title>{{ vehicle.make }} {{ vehicle.model }}</mat-card-title>
             <mat-card-subtitle>{{ vehicle.year }}</mat-card-subtitle>

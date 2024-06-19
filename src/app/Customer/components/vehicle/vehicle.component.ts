@@ -23,7 +23,7 @@ export class VehicleComponent implements OnInit {
   maintenances: Maintenance[] = [];
   vehicles: Vehicle[] = [];
 
-  constructor(private vehicleService: VehicleService) {
+  constructor(private vehicleService: VehicleService, private router: Router) {
   }
 
   ngOnInit() {
@@ -34,5 +34,8 @@ export class VehicleComponent implements OnInit {
     this.vehicleService.getAll().subscribe((vehicles: any) => {
       this.vehicles = vehicles;
     });
+  }
+  viewMaintenance(id:number): void {
+    this.router.navigate(['customer/maintenance', id]);
   }
 }
