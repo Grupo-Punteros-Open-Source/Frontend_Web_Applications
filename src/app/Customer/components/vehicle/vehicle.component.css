@@ -1,0 +1,10 @@
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.vehicle-card {
+    width: 300px;
+}

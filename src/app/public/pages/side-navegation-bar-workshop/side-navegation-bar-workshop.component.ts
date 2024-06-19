@@ -15,7 +15,7 @@ export class SideNavegationBarWorkshopComponent {
     { title: 'Profile', path: '/workshop/profile', icon: 'person' },
     { title: 'Support', path: '/workshop/support', icon: 'help' },
     { title: 'Plans', path: '/workshop/plans', icon: 'list' },
-
+    { title: 'Vehicles', path: '/customer/vehicle', icon: 'directions_car' }
   ]
 
   constructor(private router: Router,
