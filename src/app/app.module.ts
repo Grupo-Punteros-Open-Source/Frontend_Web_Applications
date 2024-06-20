@@ -44,6 +44,7 @@ import { HomeWorkshopComponent } from './public/pages/home-workshop/home-worksho
 import { HomeCustomerComponent } from './public/pages/home-customer/home-customer.component';
 import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/view-maintanance.component';
 import { VehicleComponent } from './Customer/components/vehicle/vehicle.component';
+import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { VehicleComponent } from './Customer/components/vehicle/vehicle.componen
     HomeWorkshopComponent,
     HomeCustomerComponent,
     ViewMaintananceComponent,
-    VehicleComponent
+    VehicleComponent,
+      MaintainanceComponent
   ],
   imports: [
     BrowserModule,
