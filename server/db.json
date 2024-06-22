@@ -298,13 +298,15 @@
     }
   ],
   "advertising": [
-    {
-      "id": 1,
-      "name": "Spring Sale",
-      "image_url": "https://i.postimg.cc/SQ56kYGV/spring-sale.png",
-      "slogan": "Get ready for spring with our exclusive discounts!",
-      "text": "Save up to 50% on all services during our Spring Sale!",
-      "workshop_id": 1
+    { "id" : "1",
+      "comName": "AutoVIP",
+      "comImage":"https://i.postimg.cc/BnRQw4hj/company-logo.png",
+      "workshopId": 1,
+      "image_url" : "https://i.postimg.cc/VL55XtX9/dia-del-trabajador.jpg",
+      "slogan": "Keep your vehicle running smoothly!",
+      "priceMsg": "Major Maintenance and Electronic Tuning from S/ 499.",
+      "disMsg": "YOU ASKED FOR IT, AND STARTING TODAY, WE'RE BACK WITH A 20% DISCOUNT ON ENGINE REPAIRS",
+      "repairMsg" : "Get your Engine Repair done and receive a 20% discount on labor for this service. Engine noises, loss of power in your vehicle – we provide the solution."
     }
   ]
 }
