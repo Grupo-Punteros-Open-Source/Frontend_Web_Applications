@@ -22,14 +22,14 @@ export class MenuComponent  implements OnInit{
 
   ngOnInit(): void {
 
-    this.getAdvertisingById("1");
+    this.getAdvertisingById(2);
     this.workshopService.getAll().subscribe((response: any) => {
       this.workshop = response;
     });
   }
 
 
-  getAdvertisingById(id: string) {
+  getAdvertisingById(id: number) {
     this.advertisingService.getById(id).subscribe(data => {
       this.advertising = data;
     }, error => {
