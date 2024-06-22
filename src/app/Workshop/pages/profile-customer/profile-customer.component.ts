@@ -57,11 +57,11 @@ export class ProfileCustomerComponent implements OnInit {
         this.user.address = newValue;
         break;
     }
-    this.userService.update(this.user.id, this.user).subscribe();
+    this.userService.update(Number(this.user.id), this.user).subscribe();
   }
 
   delete(clientId: number): void {
-    this.router.navigate(['/workshop/customers/profile/delete',clientId]);
+    this.router.navigate(['/workshop/customers/delete-customer',clientId]);
   }
 
   toVehicleList(id: number): void {

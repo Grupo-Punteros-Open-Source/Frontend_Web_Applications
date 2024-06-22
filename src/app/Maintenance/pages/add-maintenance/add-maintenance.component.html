@@ -1,0 +1,53 @@
+<form [formGroup]="maintenanceForm" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>New Maintenance</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Last Visit Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="lastVisitDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Customer</mat-label>
+                <mat-select formControlName="customer_id">
+                    <mat-option *ngFor="let user of users" [value]="getCustomerId(user.id)">
+                        {{ user.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Workshop</mat-label>
+                <mat-select formControlName="workshop_id">
+                    <mat-option [value]="workshop.id">
+                        {{ workshopname }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Vehicle</mat-label>
+                <mat-select formControlName="vehicle_id">
+                    <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.id">
+                        {{ vehicle.make }} {{ vehicle.model }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Comment</mat-label>
+                <textarea matInput formControlName="comment"></textarea>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="primary" type="submit" [disabled]="!maintenanceForm.valid" class="submit-button">Add Maintenance</button>
+            <button mat-flat-button color="warn" (click)="goBack()">Volver</button>
+        </mat-card-actions>
+    </mat-card>
+
+</form>

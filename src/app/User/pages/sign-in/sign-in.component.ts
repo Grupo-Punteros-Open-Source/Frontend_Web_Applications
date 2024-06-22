@@ -62,6 +62,7 @@ export class SignInComponent {
             this.router.navigate(['customer/home']);
           } else {
             console.log('User is a wokrshop');
+
             localStorage.setItem('type', 'workshop');
             this.authService.updateAuthStatus('workshop');
             this.router.navigate(['workshop/home']);

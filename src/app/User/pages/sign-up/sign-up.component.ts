@@ -18,7 +18,7 @@ export class SignUpComponent {
 
   @ViewChild('signUpForm', { static: false }) userForm!: NgForm;
   user: User = new User(0, '', '', '', '', '', '', '');
-  customer: Customer = new Customer(0,0);
+  customer: Customer = new Customer(0,0, 0);
   workshop: Workshop = new Workshop(0,0);
   type: string = "";
 
@@ -112,6 +112,7 @@ export class SignUpComponent {
               try {
                 await this.getLastWorkshopId();
                 this.workshop.user_id = this.user.id;
+
                 this.workshopService.create(this.workshop).subscribe({
                   next: response => {
                     console.log('Workshop created', response);

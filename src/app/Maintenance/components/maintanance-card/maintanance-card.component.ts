@@ -44,6 +44,7 @@ export class MaintananceCardComponent implements OnInit{
             console.log(this.workshop);
             this.maintenanceService.getAll().subscribe((response: any) => {
               this.maintenances = response.filter((maintenance: Maintenance) => Number(maintenance.workshop_id) === Number(this.workshop.id));
+              this.maintenances = response.filter((maintenance: Maintenance) => maintenance.status === 'pending');
               this.vehicleService.getAll().subscribe((response: any) => {
                 this.vehicles = this.maintenances.flatMap((maintenance: Maintenance) =>
                   response.filter((vehicle: Vehicle) => Number(vehicle.id) === Number(maintenance.vehicle_id)));
