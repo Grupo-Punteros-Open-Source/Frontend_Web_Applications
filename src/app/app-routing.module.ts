@@ -22,6 +22,7 @@ import {
   SideNavegationBarCustomerComponent
 } from "./public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component";
 import {VehicleComponent} from "./Customer/components/vehicle/vehicle.component";
+import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
   { path: 'workshop/maintenances/view/:maintenanceId', component: ViewMaintananceComponent },
   { path: 'customer', component: SideNavegationBarCustomerComponent },
   { path: 'customer/home', component: HomeCustomerComponent },
-  { path: 'customer/vehicle', component: VehicleComponent }
+  { path: 'customer/vehicle', component: VehicleComponent },
+  { path: 'customer/maintenance/:id', component: MaintainanceComponent }
 
 ];
 
