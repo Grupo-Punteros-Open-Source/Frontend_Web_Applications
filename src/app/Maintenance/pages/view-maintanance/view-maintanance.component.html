@@ -1,17 +1,5 @@
 <div class="container">
-  <!-- Vehicle Information -->
-  <mat-card class="card">
-    <mat-card-header>
-      <mat-card-title>Vehicle Information</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p><strong>Year:</strong> {{vehicle.year}}</p>
-      <p><strong>Make:</strong> {{vehicle.make}}</p>
-      <p><strong>Model:</strong> {{vehicle.model}}</p>
-      <p><strong>Mileage:</strong> {{vehicle.mileage}}</p>
-      <img [src]="vehicle.image_url" alt="Vehicle Image">
-    </mat-card-content>
-  </mat-card>
+
 
   <!-- Maintenance Information -->
   <mat-card class="card">
@@ -19,24 +7,28 @@
       <mat-card-title>Maintenance Information</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+
       <p><strong>Description:</strong> {{maintenance.comment}}</p>
+        <p><strong>Status:</strong> {{maintenance.status | titlecase}}</p>
       <!-- Add other maintenance properties here -->
     </mat-card-content>
   </mat-card>
 
-  <!-- History Information -->
-  <mat-card class="card">
-    <mat-card-header>
-      <mat-card-title>History</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div *ngFor="let historyItem of history">
-        <p><strong>Service Date:</strong> {{historyItem.service_date}}</p>
-        <p><strong>Description:</strong> {{historyItem.description}}</p>
-        <!-- Add other history properties here -->
-      </div>
-    </mat-card-content>
-  </mat-card>
+    <!-- Vehicle Information -->
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>Vehicle Information</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p><strong>Year:</strong> {{vehicle.year}}</p>
+            <p><strong>Make:</strong> {{vehicle.make}}</p>
+            <p><strong>Model:</strong> {{vehicle.model}}</p>
+            <p><strong>Mileage:</strong> {{vehicle.mileage}}</p>
+            <img [src]="vehicle.image_url" alt="Vehicle Image">
+        </mat-card-content>
+    </mat-card>
+
+
 
   <!-- Detail Information -->
   <mat-card class="card">
@@ -44,6 +36,15 @@
       <mat-card-title>Details</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+        <form (ngSubmit)="addDetail(detailDescription.value, parseFloat(detailAmount.value))">
+            <mat-form-field>
+                <input matInput placeholder="Description" #detailDescription required>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Amount" type="number" #detailAmount required>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Add Detail</button>
+        </form>
       <table mat-table [dataSource]="detail" class="mat-elevation-z8">
         <!-- ID Column -->
         <ng-container matColumnDef="id">
@@ -73,5 +74,10 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
     </mat-card-content>
+
   </mat-card>
+    <div class="button-container">
+        <button mat-raised-button color="secondary" (click)="goBack()">Go Back</button>
+        <button mat-raised-button color="secondary" (click)="completeMaintenance()">Complete Maintenance</button>
+    </div>
 </div>

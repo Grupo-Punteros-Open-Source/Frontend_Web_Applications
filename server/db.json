@@ -28,6 +28,7 @@
     },
     {
       "id": 3,
+      
       "username": "maria",
       "password": "m12ssk726",
       "name": "Maria Rodriguez",
@@ -50,15 +51,18 @@
   "customers": [
     {
       "id": 1,
-      "user_id": 2
+      "user_id": 2,
+      "workshop_id": 1
     },
     {
       "id": 2,
-      "user_id": 3
+      "user_id": 3,
+      "workshop_id": null
     },
     {
       "id": 3,
-      "user_id": 4
+      "user_id": 4,
+      "workshop_id": 1
     }
   ],
   "vehicles": [
@@ -70,7 +74,8 @@
       "year": 2018,
       "color": "Gray",
       "image_url": "https://i.postimg.cc/Qdcrnmsp/Audi-Car.png",
-      "mileage": 50000
+      "mileage": 50000,
+      "customer_id": 1
     },
     {
       "id": 2,
@@ -80,7 +85,8 @@
       "year": 2019,
       "color": "Blue",
       "image_url": "https://i.postimg.cc/ZRR2Zxks/Mitsubishi-Car.png",
-      "mileage": 35000
+      "mileage": 35000,
+      "customer_id": 1
     },
     {
       "id": 3,
@@ -90,7 +96,8 @@
       "year": 2021,
       "color": "White",
       "image_url": "https://i.postimg.cc/sfZyhs86/Volkwagen-Car.png",
-      "mileage": 15000
+      "mileage": 15000,
+      "customer_id": 3
     }
   ],
   "histories": [
@@ -98,36 +105,15 @@
       "id": 1,
       "service_date": "2024-04-10",
       "description": "Maintenance service",
-      "cost": 800,
+      "cost": 1500,
       "mileage": 49000
     },
     {
       "id": 2,
       "service_date": "2023-12-15",
       "description": "Tire replacement",
-      "cost": 700,
+      "cost": 1200,
       "mileage": 45000
-    },
-    {
-      "id": 3,
-      "service_date": "2024-04-20",
-      "description": "Engine repair",
-      "cost": 800,
-      "mileage": 34000
-    },
-    {
-      "id": 4,
-      "service_date": "2024-02-15",
-      "description": "Oil change",
-      "cost": 50,
-      "mileage": 14000
-    },
-    {
-      "id": 5,
-      "service_date": "2023-11-20",
-      "description": "General inspection",
-      "cost": 550,
-      "mileage": 12000
     }
   ],
   "maintenances": [
@@ -170,38 +156,6 @@
       "total": 1200,
       "status": "Paid",
       "detail": "detalles"
-    },
-    {
-      "id": 3,
-      "number": "F2022003",
-      "issue_date": "2022-07-10",
-      "total": 800,
-      "status": "Paid",
-      "detail": "detalles"
-    },
-    {
-      "id": 4,
-      "number": "F2022004",
-      "issue_date": "2024-05-22",
-      "total": 50,
-      "status": "Paid",
-      "detail": "detalles"
-    },
-    {
-      "id": 5,
-      "number": "F2022005",
-      "issue_date": "2024-05-22",
-      "total": 100,
-      "status": "Paid",
-      "detail": "detalles"
-    },
-    {
-      "id": 6,
-      "number": "F2022006",
-      "issue_date": "2024-05-23",
-      "total": 50,
-      "status": "Unpaid",
-      "detail": "detalles"
     }
   ],
   "details": [
@@ -234,30 +188,6 @@
       "description": "New brakes",
       "amount": 300,
       "maintenance_id": 2
-    },
-    {
-      "id": 6,
-      "description": "Engine repair",
-      "amount": 800,
-      "maintenance_id": 3
-    },
-    {
-      "id": 7,
-      "description": "Change Oil",
-      "amount": 50,
-      "maintenance_id": 4
-    },
-    {
-      "id": 8,
-      "description": "Maintenance",
-      "amount": 100,
-      "maintenance_id": 5
-    },
-    {
-      "id": 9,
-      "description": "Inspection",
-      "amount": 50,
-      "maintenance_id": 6
     }
   ],
   "products": [
@@ -298,15 +228,13 @@
     }
   ],
   "advertising": [
-    { "id" : "1",
-      "comName": "AutoVIP",
-      "comImage":"https://i.postimg.cc/BnRQw4hj/company-logo.png",
-      "workshopId": 1,
-      "image_url" : "https://i.postimg.cc/VL55XtX9/dia-del-trabajador.jpg",
-      "slogan": "Keep your vehicle running smoothly!",
-      "priceMsg": "Major Maintenance and Electronic Tuning from S/ 499.",
-      "disMsg": "YOU ASKED FOR IT, AND STARTING TODAY, WE'RE BACK WITH A 20% DISCOUNT ON ENGINE REPAIRS",
-      "repairMsg" : "Get your Engine Repair done and receive a 20% discount on labor for this service. Engine noises, loss of power in your vehicle – we provide the solution."
+    {
+      "id": 2,
+      "name": "Spring Sale",
+      "image_url": "https://i.postimg.cc/SQ56kYGV/spring-sale.png",
+      "slogan": "Get ready for spring with our exclusive discounts!",
+      "text": "Save up to 50% on all services during our Spring Sale!",
+      "workshop_id": 1
     }
   ]
 }

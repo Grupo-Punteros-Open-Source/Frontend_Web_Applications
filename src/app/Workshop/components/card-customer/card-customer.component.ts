@@ -37,9 +37,9 @@ export class CardCustomerComponent implements OnInit {
 
 
   // Primero se consigue el user logueado
-  async getUserActive() {
-    let userId = localStorage.getItem('user');
 
+  async getUserActive(){
+    let userId = localStorage.getItem('user');
     if (userId) {
       let userid = JSON.parse(userId);
       this.userService.getById(userid).subscribe((response: User) => {
@@ -47,13 +47,12 @@ export class CardCustomerComponent implements OnInit {
         this.workshopService.getAll().subscribe((workshops: any) => {
           /*Conseguir el id del workshop mediante el userid*/
           this.workshop = workshops.find((workshop: Workshop) => Number(workshop.user_id) === Number(this.user.id));
-          this.maintenanceService.getAll().subscribe((response: any) => {
-
-            this.maintenance = response.filter((maintenance: Maintenance) => Number(maintenance.workshop_id) === Number(this.workshop.id));
-            this.customerService.getAll().subscribe((response: any) => {
-              this.customers = response.filter((customer: Customer) => this.maintenance.find((maintenance: Maintenance) => Number(maintenance.customer_id) === Number(customer.id)));
-              this.userService.getAll().subscribe((response: any) => {
-                this.users = response.filter((user: User) => this.customers.find((customer: Customer) => Number(customer.user_id) === Number(user.id)));
+          this.customerService.getAll().subscribe((response: any) => {
+            this.customers = response.filter((customer: Customer) => Number(customer.workshop_id) === Number(this.workshop.id));
+            console.log(this.customers);
+            this.userService.getAll().subscribe((users: any) => {
+              this.users = users.filter((user: User) => {
+                return this.customers.some((customer: Customer) => Number(customer.user_id) === Number(user.id));
               });
             });
           });

@@ -1,0 +1,39 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.mat-card {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.submit-button:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+}

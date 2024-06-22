@@ -1,0 +1,68 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto Mono:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+</head>
+<body>
+
+<div class="supervisar-stock">
+
+    <div class="supervisar-stock-child"></div>
+    <div class="supervisar-stock-item"></div>
+    <select id="product-select" class="supervisar-stock-inner" (change)="onSelect($event)">
+        <option *ngFor="let product of products" [value]="product.name">{{ product.name }}</option>
+    </select>
+
+    <div *ngIf="selectedProduct">
+        <button class="rectangle-button" (click)="onSubmit()"></button>
+        <div class="product-name">Product name</div>
+        <div class="register-new-product">Register new product</div>
+        <div class="not-obligatory">*not obligatory</div>
+        <div class="monitor-stock-of">MONITOR STOCK OF
+            EXISTING <br>PRODUCTS</div>
+        <textarea class="rectangle-textarea" id="productDescription" [(ngModel)]="selectedProduct.description"></textarea>
+        <div class="description">Description</div>
+
+
+        <div class="update">UPDATE</div>
+        <div class="rectangle-parent">
+            <input class="group-child" id="productQuantity" type="number" [(ngModel)]="selectedProduct.quantity" />
+
+
+
+
+
+            <div class="new-stock">New stock</div>
+        </div>
+        <input class="rectangle-input" id="productPrice"type="number" [(ngModel)]="selectedProduct.price"/>
+
+
+
+        <div class="apply-discount">Apply discount</div>
+        <input class="supervisar-stock-child1" id="discount" type="number" [(ngModel)]="discount"/>
+
+        <div class="update-price">Update price</div>
+        <div class="s">S/.</div>
+        <div class="div">%</div>
+        <div class="vector-parent">
+            <div class="monitor-existing-product">
+                Monitor existing product stock
+            </div>
+        </div>
+        <button class="ellipse-div" (click)="navigateToRegisterComponent()"></button>
+        <img (click)="navigateToRegisterComponent()"
+             class="iconlylightarrow-right-4"
+             alt=""
+             src="iconlylightarrow"
+        />
+    </div>
+</div>
+</body>

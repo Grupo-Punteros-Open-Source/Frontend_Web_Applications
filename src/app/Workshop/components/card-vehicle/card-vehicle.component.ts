@@ -33,25 +33,22 @@ export class CardVehicleComponent implements OnInit{
     this.getVehicles();
   }
 
-  getVehicles(): void {
+
+
+  getVehicles () {
     const userId = Number(this.route.snapshot.paramMap.get('userId') ?? '0');
     console.log(userId);
     this.userService.getById(userId).subscribe((response: User) => {
       this.user = response;
-      this.customerService.getAll().subscribe((response: any) => {
-        this.customer = response.find((customer: Customer) => Number(customer.user_id) === Number(this.user.id));
-        console.log(this.customer);
-        this.maintenanceService.getAll().subscribe((response: any) => {
-          this.maintenances = response.filter((maintenance: Maintenance) => Number(maintenance.customer_id) === Number(this.customer.id));
-          console.log(this.maintenances);
+        this.customerService.getAll().subscribe((response: any) => {
+          this.customer = response.find((customer: Customer) => Number(customer.user_id) === Number(this.user.id));
+          console.log(this.customer.id);
           this.vehicleService.getAll().subscribe((response: any) => {
-            this.vehicles = response.filter((vehicle : Vehicle) => vehicle.id === this.maintenances.find((maintenance: Maintenance) => Number(maintenance.vehicle_id) === Number(vehicle.id))?.id);
+            this.vehicles = response.filter((vehicle : Vehicle) => Number(vehicle.customer_id) === Number(this.customer.id));
             console.log(this.vehicles);
           });
         });
-      });
     });
-
   }
 
 

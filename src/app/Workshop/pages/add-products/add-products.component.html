@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto Mono:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+</head>
+<body>
+
+<div class="ingresar-stock1">
+    <form (ngSubmit)="addProduct()" id="addProductForm">
+        <div class="ingresar-stock-child"></div>
+        <input class="ingresar-stock-item" type="text" [(ngModel)]="product.name" name="name" required />
+
+        <div class="product-name2">Product name</div>
+        <div class="organize-stock-of1">Organize stock of existing products</div>
+        <div class="register-new-product3">REGISTER NEW PRODUCT</div>
+        <input class="ingresar-stock-child1" type="text" type="number" [(ngModel)]="discount" (change)="calculateFinalPrice()" name="discount"/>
+
+
+
+        <div class="rectangle-parent1">
+            <div class="group-child2"></div>
+            <div class="reference-image1">Reference image</div>
+            <input id="productImageUrl" class="group-child2" type="text" [(ngModel)]="product.image_url" name="image" required />
+        </div>
+        <button class="group-button">
+            <div class="group-child3"></div>
+            <div class="register1">REGISTER</div>
+        </button>
+        <div class="initial-discount1">Initial discount</div>
+        <input class="ingresar-stock-child2" type="text"  type="number" [(ngModel)]="product.price" name="price" required />
+
+        <div class="regular-price1">Regular price</div>
+        <div class="s2">S/.</div>
+        <div class="rectangle-parent2">
+            <input class="group-child4" type="text" [(ngModel)]="product.quantity" name="stock" required  />
+            <div class="initial-stock">Initial stock</div>
+        </div>
+        <div class="div2">%</div>
+        <div class="vector-container">
+            <div class="register-new-product4">Register new product</div>
+        </div>
+        <button class="ellipse-group" (click)="navigateToUpdateComponent()">
+            <div class="group-child6"></div>
+            <img
+                    class="iconlylightarrow-right-42"
+                    alt=""
+                    src="iconlylightarrow--right"
+            />
+        </button>
+    </form>
+</div>
+
+</body>
+</html>

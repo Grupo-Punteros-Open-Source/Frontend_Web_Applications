@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto Mono:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Jockey One:wght@400&display=swap"
+    />
+</head>
+<body>
+<div class="add-product-button-container">
+    <button (click)="navigateToRegisterComponent()" class="add-product-button">+</button>
+</div>
+<div class="vector-parent2">
+    <div class="products-catalog1"> Product catalog</div>
+</div>
+
+<div *ngIf="mostrarNotificacion && obtenerProductosConBajoStock().length > 0" class="low-stock-notification">
+    <div class="notification-content">
+        <p>Low stock warning on:</p>
+        <ul>
+            <li *ngFor="let productName of obtenerProductosConBajoStock()">{{ productName }}</li>
+        </ul>
+    </div>
+    <span class="alert-icon">⚠️</span>
+    <button (click)="cerrarNotificacion()" class="close-notification">Close</button>
+</div>
+<div class="products-container">
+    <div class="product-card" *ngFor="let product of products" (click)="viewDetails(product.id)">
+        <img
+                class="product-image"
+                alt="Imagen del producto"
+                [src]="product.image_url"
+        />
+        <div class="product-info">
+            <ul class="product-details">
+                <li class="name">Name: {{ product.name }}</li>
+                <li class="price">Price: {{ product.price }}</li>
+                <li class="quantity">Quantity: {{ product.quantity }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>

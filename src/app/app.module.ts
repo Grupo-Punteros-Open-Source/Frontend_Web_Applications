@@ -15,7 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -43,6 +43,19 @@ import { MaintananceCardComponent } from './Maintenance/components/maintanance-c
 import { HomeWorkshopComponent } from './public/pages/home-workshop/home-workshop.component';
 import { HomeCustomerComponent } from './public/pages/home-customer/home-customer.component';
 import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/view-maintanance.component';
+import { CardNotificationComponent } from './User/components/card-notification/card-notification.component';
+import { AddMaintenanceComponent } from './Maintenance/pages/add-maintenance/add-maintenance.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import { InvoiceCardComponent } from './Workshop/components/invoice-card/invoice-card.component';
+import { InvoiceListComponent } from './Workshop/pages/invoice-list/invoice-list.component';
+import { InvoicePreviewComponent } from './Workshop/pages/invoice-preview/invoice-preview.component';
+import {HistoryCardComponent} from "./Maintenance/components/history-card/history-card.component";
+import { HistoryListComponent } from './Maintenance/pages/history-list/history-list.component';
+import { ProductCardComponent } from './Workshop/components/product-card/product-card.component';
+import { AddProductsComponent } from './Workshop/pages/add-products/add-products.component';
+import { ProductDetailsComponent } from './Workshop/pages/product-details/product-details.component';
+import { UpdateProductComponent } from './Workshop/pages/update-product/update-product.component';
 import { VehicleComponent } from './Customer/components/vehicle/vehicle.component';
 import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 import {MenuComponent} from "./Customer/components/menu/menu.component";
@@ -71,9 +84,20 @@ import {MenuComponent} from "./Customer/components/menu/menu.component";
     HomeWorkshopComponent,
     HomeCustomerComponent,
     ViewMaintananceComponent,
+    CardNotificationComponent,
+    AddMaintenanceComponent,
+    InvoiceCardComponent,
+    InvoiceListComponent,
+    InvoicePreviewComponent,
+    HistoryCardComponent,
+    HistoryListComponent,
+    ProductCardComponent,
+    AddProductsComponent,
+    ProductDetailsComponent,
+    UpdateProductComponent,
     VehicleComponent,
-      MaintainanceComponent,
-      MenuComponent
+    MaintainanceComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +121,9 @@ import {MenuComponent} from "./Customer/components/menu/menu.component";
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
-
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     provideAnimationsAsync()

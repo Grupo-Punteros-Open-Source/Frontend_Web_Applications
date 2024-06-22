@@ -1,3 +1,8 @@
+body {
+  background-color: #001f30;
+  height: 100vh;
+}
+
 .div {
   width: 100%;
   max-width: 1200px;

@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #181a27;
+}
+
+.container h1 {
+    color: whitesmoke;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.add-button p {
+    margin: 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+.add-button button {
+    padding: 20px 40px; /* Ajusta estos valores según tus necesidades */
+    font-size: 1em; /* Ajusta este valor según tus necesidades */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #002e43;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.add-button button:hover {
+    background-color: #333333;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en filas */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples filas si es necesario */
+    gap: 20px;
+    width: 100%;
+}

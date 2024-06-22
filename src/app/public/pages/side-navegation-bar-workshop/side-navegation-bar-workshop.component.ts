@@ -5,16 +5,18 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-side-navegation-bar-workshop',
   templateUrl: './side-navegation-bar-workshop.component.html',
-  styleUrl: './side-navegation-bar-workshop.component.css'
+  styleUrls: ['./side-navegation-bar-workshop.component.css']
 })
 export class SideNavegationBarWorkshopComponent {
   options = [
     { title: 'Home', path: '/workshop/home', icon: 'home' },
     { title: 'Customers', path: '/workshop/customers', icon: 'people' },
     { title: 'Maintenances', path: '/workshop/maintenances', icon: 'build'},
+    { title: 'Invoices', path: '/workshop/invoices', icon: 'receipt' },
+    { title: 'Inventory', path: '/workshop/products', icon: 'inventory' },
     { title: 'Profile', path: '/workshop/profile', icon: 'person' },
-    { title: 'Support', path: '/workshop/support', icon: 'help' },
     { title: 'Plans', path: '/workshop/plans', icon: 'list' },
+    { title: 'Support', path: '/workshop/support', icon: 'help' },
     { title: 'Vehicles', path: '/customer/vehicle', icon: 'directions_car' }
   ]
 

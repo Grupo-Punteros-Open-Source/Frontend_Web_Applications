@@ -24,8 +24,9 @@ export class ProfileWorkshopComponent {
     if (userId) {
       let userid = JSON.parse(userId);
       console.log(userid);
-      this.userService.getById(userid).subscribe((response: User) => {
+      this.userService.getById(Number(userid)).subscribe((response: User) => {
         this.user = response;
+
 
       });
     }
