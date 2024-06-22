@@ -45,6 +45,7 @@ import { HomeCustomerComponent } from './public/pages/home-customer/home-custome
 import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/view-maintanance.component';
 import { VehicleComponent } from './Customer/components/vehicle/vehicle.component';
 import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
+import {MenuComponent} from "./Customer/components/menu/menu.component";
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import {MaintainanceComponent} from "./Customer/components/maintainance/maintain
     HomeCustomerComponent,
     ViewMaintananceComponent,
     VehicleComponent,
-      MaintainanceComponent
+      MaintainanceComponent,
+      MenuComponent
   ],
   imports: [
     BrowserModule,
