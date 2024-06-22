@@ -56,6 +56,9 @@ import { ProductCardComponent } from './Workshop/components/product-card/product
 import { AddProductsComponent } from './Workshop/pages/add-products/add-products.component';
 import { ProductDetailsComponent } from './Workshop/pages/product-details/product-details.component';
 import { UpdateProductComponent } from './Workshop/pages/update-product/update-product.component';
+import { VehicleComponent } from './Customer/components/vehicle/vehicle.component';
+import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
+import {MenuComponent} from "./Customer/components/menu/menu.component";
 
 @NgModule({
   declarations: [
@@ -91,7 +94,10 @@ import { UpdateProductComponent } from './Workshop/pages/update-product/update-p
     ProductCardComponent,
     AddProductsComponent,
     ProductDetailsComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    VehicleComponent,
+    MaintainanceComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +124,6 @@ import { UpdateProductComponent } from './Workshop/pages/update-product/update-p
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule
-
   ],
   providers: [
     provideAnimationsAsync()

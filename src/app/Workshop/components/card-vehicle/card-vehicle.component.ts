@@ -16,7 +16,6 @@ import {User} from "../../../User/model/user.entity";
   styleUrl: './card-vehicle.component.css'
 })
 export class CardVehicleComponent implements OnInit{
-
   user: User = {} as User;
   customer: Customer = {} as Customer;
   maintenances: Maintenance[] = [];

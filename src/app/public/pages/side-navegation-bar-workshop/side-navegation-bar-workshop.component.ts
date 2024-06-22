@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-side-navegation-bar-workshop',
   templateUrl: './side-navegation-bar-workshop.component.html',
-  styleUrl: './side-navegation-bar-workshop.component.css'
+  styleUrls: ['./side-navegation-bar-workshop.component.css']
 })
 export class SideNavegationBarWorkshopComponent {
   options = [
@@ -17,6 +17,7 @@ export class SideNavegationBarWorkshopComponent {
     { title: 'Profile', path: '/workshop/profile', icon: 'person' },
     { title: 'Plans', path: '/workshop/plans', icon: 'list' },
     { title: 'Support', path: '/workshop/support', icon: 'help' },
+    { title: 'Vehicles', path: '/customer/vehicle', icon: 'directions_car' }
   ]
 
   constructor(private router: Router,
