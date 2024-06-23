@@ -43,6 +43,7 @@ import { MaintananceCardComponent } from './Maintenance/components/maintanance-c
 import { HomeWorkshopComponent } from './public/pages/home-workshop/home-workshop.component';
 import { HomeCustomerComponent } from './public/pages/home-customer/home-customer.component';
 import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/view-maintanance.component';
+import { ProfileComponent } from './Customer/pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/v
     MaintananceCardComponent,
     HomeWorkshopComponent,
     HomeCustomerComponent,
-    ViewMaintananceComponent
+    ViewMaintananceComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
