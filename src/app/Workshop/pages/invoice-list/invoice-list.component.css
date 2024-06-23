@@ -1,0 +1,25 @@
+.invoice-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.invoice-list-container h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 1em;
+    letter-spacing: 2px;
+}
+
+.invoice-list-container .invoices-card {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 1em;
+}

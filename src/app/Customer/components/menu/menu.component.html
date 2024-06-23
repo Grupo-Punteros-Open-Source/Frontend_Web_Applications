@@ -1,0 +1,42 @@
+<head>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto Mono:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Jockey One:wght@400&display=swap"
+    />
+</head>
+<body *ngIf="advertising">
+<div class="menu-user-vehicle">
+    <img
+            class="material-symbolsbroken-image-icon6"
+            [src]="advertising.comImage" alt="Workshop Logo"
+    />
+
+    <div class="auto-vip">{{ advertising.comName }}</div>
+    <div class="material-symbolsbroken-image-1"></div>
+    <div class="menu-user-vehicle-child"></div>
+    <div class="keep-your-vehicle">{{ advertising.slogan }}</div>
+    <div class="menu-user-vehicle-item"></div>
+    <div class="major-maintenance-and">
+        {{ advertising.priceMsg }}
+    </div>
+    <div class="menu-user-vehicle-inner"></div>
+    <div class="you-asked-for-container">
+        <p class="you-asked-for">
+            📢🚨 {{ advertising.disMsg }} 🎁🎁🎁🎁
+        </p>
+        <p class="blank-line2">&nbsp;</p>
+        <p class="get-your-engine">
+            ✳ {{ advertising.repairMsg }}
+        </p>
+    </div>
+    <img class="image-21-icon" [src]="advertising.image_url" alt="Advertising Image"/>
+</div>
+</body>

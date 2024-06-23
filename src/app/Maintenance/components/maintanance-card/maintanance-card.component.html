@@ -8,13 +8,13 @@
     <mat-card-content class="card-content">
       <div class="details-section">
         <div class="maintenance-details">
-          <p>Last Visit Date: {{maintenance.lastVisitDate}}</p>
-          <p>Comment: {{maintenance.comment}}</p>
+          <p><strong>Last Visit Date:</strong> {{maintenance.lastVisitDate}}</p>
+          <p><strong>Comment:</strong> {{maintenance.comment}}</p>
         </div>
         <div class="vehicle-details" *ngIf="getVehicle(maintenance.vehicle_id) as vehicle">
-          <p>Year: {{vehicle.year}}</p>
-          <p>Color: {{vehicle.color}}</p>
-          <p>Mileage: {{vehicle.mileage}}</p>
+          <p><strong>Year:</strong> {{vehicle.year}}</p>
+          <p><strong>Color:</strong>  {{vehicle.color}}</p>
+          <p><strong>Mileage:</strong>  {{vehicle.mileage}}</p>
         </div>
         <ng-container *ngIf="getVehicle(maintenance.vehicle_id) as vehicle">
           <img mat-card-image [src]="vehicle.image_url" alt="Vehicle image" class="vehicle-image">

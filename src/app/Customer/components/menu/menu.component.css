@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #181a27;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+.material-symbolsbroken-image-icon6 {
+    position: absolute;
+    top: 112px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    width: 388px;
+    height: 237px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.auto-vip {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 65px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    width: 280px;
+    height: 36px;
+}
+
+.material-symbolsbroken-image-1 {
+    position: absolute;
+    top: 349px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 215px;
+    height: 272px;
+    overflow: hidden;
+}
+
+.menu-user-vehicle-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-103%, -50%);
+    border-radius: 40px;
+    background-color: #d7dce0;
+    width: 194px;
+    height: 116px;
+}
+
+
+.keep-your-vehicle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-119%, -50%);
+    display: inline-block;
+    width: 141px;
+    height: 59px;
+}
+
+
+.menu-user-vehicle-item {
+    top: 560px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-103%, -50%);
+    border-radius: 40px;
+    background-color: #d7dce0;
+    width: 194px;
+    height: 116px;
+}
+
+.major-maintenance-and {
+    position: absolute;
+    top: 62.2%;
+    left: 50%;
+    transform: translate(-119%, -50%);
+    display: inline-block;
+    width: 141px;
+    height: 59px;
+}
+
+.menu-user-vehicle-inner {
+    position: absolute;
+    top: 636px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    background-color: #fff;
+    width: 400px;
+    height: 208px;
+}
+
+.you-asked-for,
+.blank-line2,
+.get-your-engine {
+    margin: 0;
+}
+
+.you-asked-for-container {
+    position: absolute;
+    top: 645px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: justify;
+    display: inline-block;
+    width: 318px;
+    height: 200px;
+}
+
+.image-21-icon {
+    position: absolute;
+    top: 382px;
+    transform: translateX(50vw);
+    border-radius: 50px;
+    width: 178px;
+    height: 226px;
+    object-fit: cover;
+}
+
+.menu-user-vehicle {
+    width: 100%;
+    position: relative;
+    height: 873px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #000;
+    font-family: "Roboto Mono";
+    background-color: #181a27;
+}

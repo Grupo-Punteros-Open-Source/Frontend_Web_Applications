@@ -1,0 +1,280 @@
+.supervisar-stock-child {
+    position: absolute;
+    top: 41px;
+    left: 33.5%;
+    border-radius: 50px;
+    background-color: #d7dce0;
+    width: 420px;
+    height: 691px;
+
+}
+.supervisar-stock-item {
+    position: absolute;
+    top: 56.2%;
+    left: 35%;
+    border-radius: 25px;
+    background-color: #d7dce0;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    width: 377px;
+    height: 134px;
+}
+.supervisar-stock-inner {
+    border: 1px solid #000;
+    outline: none;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 149px;
+    left: 36.2%;
+    border-radius: 40px;
+    box-sizing: border-box;
+    width: 352px;
+    height: 33px;
+}
+.rectangle-button {
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 90%;
+    left: 35.7%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 362px;
+    height: 48px;
+}
+.product-name {
+    position: absolute;
+    top: 16.5%;
+    left: 38%;
+    display: inline-block;
+    width: 280px;
+    height: 43px;
+    font-size: 16px;
+}
+.register-new-product {
+    position: absolute;
+    top: 46.3%;
+    left: 10%;
+    color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 266px;
+    height: 81px;
+}
+.not-obligatory {
+    position: absolute;
+    top: 52%;
+    left: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 79px;
+    font-size: 16px;
+}
+.monitor-stock-of {
+    position: absolute;
+    top: 47%;
+    right: 0.5%;
+    width: 36%;
+    height: 200%;
+    font-size: 140%;
+    color: #fff;
+    white-space: pre-wrap;
+    text-justify: distribute;
+    overflow: auto;
+}
+
+.rectangle-textarea {
+    border: 1px solid #000;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 33%;
+    left: 35.5%;
+    border-radius: 40px;
+    box-sizing: border-box;
+    width: 366px;
+    height: 148px;
+}
+.description {
+    position: absolute;
+    top: 29%;
+    left: 41.8%;
+    display: inline-block;
+    width: 145px;
+    height: 43px;
+    font-size: 16px;
+}
+.update {
+    position: absolute;
+    top: 91.5%;
+    left: 43%;
+    display: inline-block;
+    width: 146px;
+    height: 26px;
+}
+.group-child {
+    border: 1px solid #000;
+    outline: none;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 69%;
+    left: 61%;
+    border-radius: 40px;
+    box-sizing: border-box;
+    width: 144.5px;
+    height: 41.6px;
+}
+
+.new-stock {
+    position: absolute;
+    top: 38%;
+    left: 55.5%;
+    display: inline-block;
+    width: 166.6px;
+    height: 42.5px;
+}
+.rectangle-parent {
+    position: absolute;
+    top: 72%;
+    left: 36.5%;
+    width: 166.6px;
+    height: 95.2px;
+}
+.rectangle-input {
+    border: 1px solid #000;
+    outline: none;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 64%;
+    left: 37.6%;
+    border-radius: 40px;
+    box-sizing: border-box;
+    width: 144px;
+    height: 45px;
+}
+
+.apply-discount {
+    position: absolute;
+    top: 59.8%;
+    left: 46.7%;
+    display: inline-block;
+    width: 213px;
+    height: 42px;
+    font-size: 14.5px;
+}
+.supervisar-stock-child1 {
+    border: 1px solid #000;
+    outline: none;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 64%;
+    left: 49.1%;
+    border-radius: 40px;
+    box-sizing: border-box;
+    width: 144px;
+    height: 45px;
+}
+.update-price {
+    position: absolute;
+    top: 60%;
+    left: 35.2%;
+    display: inline-block;
+    width: 214px;
+    height: 42px;
+    font-size: 15.5px;
+}
+.s {
+    position: absolute;
+    top: 65.3%;
+    left: 44.6%;
+    text-align: left;
+    display: inline-block;
+    width: 39px;
+    height: 31px;
+}
+.div {
+    position: absolute;
+    top: 65.5%;
+    left: 49.5%;
+    white-space: pre-wrap;
+    text-align: right;
+    display: inline-block;
+    width: 122px;
+    height: 31px;
+}
+.group-item {
+    position: absolute;
+    top: 0px;
+
+    width: 487.5px;
+    height: 54.5px;
+}
+.monitor-existing-product {
+    position: absolute;
+    top: -25%;
+    left: 21%;
+    width: 310px;
+    height: 9px;
+    background-color: #6A90A9;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    max-width: 85%;
+    padding: 3%;
+}
+
+
+.vector-parent {
+    position: absolute;
+    top: 10.5%;
+    left: 29.5%;
+    width: 487.5px;
+    height: 54.5px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    z-index: 1000;
+}
+
+.ellipse-div {
+    position: absolute;
+    top: 46.5%;
+    left: 4.9%;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 71px;
+    height: 71px;
+}
+.iconlylightarrow-right-4 {
+    position: absolute;
+    height: 4.54%;
+    width: 2.4%;
+    top: 49.68%;
+    left: 5.98%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.iconlylightarrow-right-4::before {
+    content: "<";
+    font-size: 52px;
+}
+.supervisar-stock {
+    width: 100%;
+    position: relative;
+    background-color: #181a27;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    font-family: "Roboto Mono";
+}

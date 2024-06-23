@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class SideNavegationBarCustomerComponent {
     options = [
         { title: 'Home', path: '/customer/home', icon: 'home' },
+        { title: 'Vehicle', path: '/customer/vehicle', icon: 'directions_car' },
        
 
     ]
