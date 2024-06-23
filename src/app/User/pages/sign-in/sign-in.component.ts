@@ -31,8 +31,7 @@ export class SignInComponent {
         this.user = users.find((user: User) => user.username === this.username && user.password === this.password);
         if (this.user) {
           console.log('User logged in successfully');
-          localStorage.setItem('user', JSON.stringify(this.user));
-          localStorage.setItem('userId', JSON.stringify(this.user.id));
+          localStorage.setItem('user', JSON.stringify(this.user.id));
           this.verifyUser();
         } else {
           this.errorMessage = 'Invalid username or password.';

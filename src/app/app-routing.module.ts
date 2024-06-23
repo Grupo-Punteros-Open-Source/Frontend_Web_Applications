@@ -28,6 +28,7 @@ import {ProfileComponent} from "./Customer/pages/profile/profile.component";
 import {VehicleComponent} from "./Customer/components/vehicle/vehicle.component";
 import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 import {MenuComponent} from "./Customer/components/menu/menu.component";
+import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/vehicle-repairing.component";
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -58,7 +59,8 @@ const routes: Routes = [
   { path: 'customer/profile', component: ProfileComponent },
   { path: 'customer/vehicle', component: VehicleComponent },
   { path: 'customer/maintenance/:id', component: MaintainanceComponent },
-  { path: 'customer/menu', component: MenuComponent }
+  { path: 'customer/menu', component: MenuComponent },
+  { path: 'customer/vehicle/:id', component: VehicleRepairingComponent }
 ];
 
 @NgModule({

@@ -33,11 +33,11 @@ export class ProfileComponent implements OnInit {
 
     if (userId) {
       let userid = JSON.parse(userId);
+      console.log(userid);
       this.userService.getById(userid).subscribe((response: User) => {
         this.user = response;
-        console.log(this.user);
       });
-      console.log(userid);
+
     }
 
   }

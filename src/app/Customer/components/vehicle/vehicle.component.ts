@@ -9,6 +9,7 @@ import {User} from "../../../User/model/user.entity";
 import {Workshop} from "../../../User/model/workshop.entity";
 import {Customer} from "../../../User/model/customer.entity";
 import {CustomerService} from "../../../User/services/customer.service";
+import {MaintenanceService} from "../../../Maintenance/services/maintenance.service";
 
 @Component({
   selector: 'app-vehicle',
@@ -18,14 +19,15 @@ import {CustomerService} from "../../../User/services/customer.service";
 export class VehicleComponent implements OnInit {
   vehicles: Vehicle[] = [];
   userId: number | null = null; // Variable para almacenar el ID del usuario
-  maintenances: Maintenance[] = [];
+  maintenances: Maintenance = {} as Maintenance;
   customer: Customer = {} as Customer;
 
   constructor(
       private vehicleService: VehicleService,
       private authService: AuthenticationService,
       private router: Router,
-      private customerService: CustomerService
+      private customerService: CustomerService,
+      private maintenancesService: MaintenanceService
 
   ) {}
 
@@ -34,7 +36,7 @@ export class VehicleComponent implements OnInit {
   }
 
   async getUserActive(){
-    let userId = localStorage.getItem('userId');
+    let userId = localStorage.getItem('user');
     if (userId) {
       let userid = JSON.parse(userId);
       this.customerService.getAll().subscribe((response: any) => {
@@ -42,14 +44,24 @@ export class VehicleComponent implements OnInit {
         this.vehicleService.getAll().subscribe((response: any) => {
           this.vehicles = response.filter((vehicle : Vehicle) => Number(vehicle.customer_id) === Number(this.customer.id));
           console.log(this.vehicles);
+
         });
       });
 
     }
   }
 
-
   viewMaintenance(id:number): void {
-    this.router.navigate(['customer/maintenance', id]);
+    console.log('viewMaintenance called with ID:', id);
+    this.maintenancesService.getAll().subscribe((response: any) => {
+      this.maintenances = response.find((maintenance: Maintenance) => Number(maintenance.vehicle_id) === Number(id));
+      if (!this.maintenances || this.maintenances.status === null) {
+        console.log('Error: Maintenance status is null or does not exist');
+      } else if (this.maintenances.status === 'pending') {
+        this.router.navigate(['customer/vehicle', id]);
+      } else {
+        console.log('Error: Maintenance status is not pending');
+      }
+    });
   }
 }

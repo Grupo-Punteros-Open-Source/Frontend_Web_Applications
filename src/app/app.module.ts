@@ -60,6 +60,7 @@ import { UpdateProductComponent } from './Workshop/pages/update-product/update-p
 import { VehicleComponent } from './Customer/components/vehicle/vehicle.component';
 import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 import {MenuComponent} from "./Customer/components/menu/menu.component";
+import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/vehicle-repairing.component";
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import {MenuComponent} from "./Customer/components/menu/menu.component";
     UpdateProductComponent,
     VehicleComponent,
     MaintainanceComponent,
-    MenuComponent
+    MenuComponent,
+    VehicleRepairingComponent
   ],
   imports: [
     BrowserModule,
