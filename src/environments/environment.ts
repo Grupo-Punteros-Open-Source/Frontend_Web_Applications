@@ -1,3 +1,3 @@
 export const environment = {
-  serverBasePath: undefined
+  serverBasePath: 'https://feature-deploy--scintillating-daifuku-098b2a.netlify.app'
 };
