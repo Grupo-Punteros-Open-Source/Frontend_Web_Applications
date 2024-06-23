@@ -55,12 +55,12 @@ export class VehicleComponent implements OnInit {
     console.log('viewMaintenance called with ID:', id);
     this.maintenancesService.getAll().subscribe((response: any) => {
       this.maintenances = response.find((maintenance: Maintenance) => Number(maintenance.vehicle_id) === Number(id));
+      console.log(this.maintenances);
       if (!this.maintenances || this.maintenances.status === null) {
         console.log('Error: Maintenance status is null or does not exist');
+        this.router.navigate(['customer/maintenance', id]);
       } else if (this.maintenances.status === 'pending') {
         this.router.navigate(['customer/vehicle', id]);
-      } else {
-        console.log('Error: Maintenance status is not pending');
       }
     });
   }
