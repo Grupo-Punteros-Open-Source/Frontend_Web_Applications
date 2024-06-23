@@ -54,16 +54,10 @@ export class InvoicePreviewComponent implements OnInit{
 
       this.customerService.getById(Number(this.maintenance.customer_id)).subscribe((customer: Customer) => {
         this.customer = customer;
-        this.userService.getById(Number(customer.user_id)).subscribe((user: User) => {
-            this.userCustomer = user;
-        });
       });
 
       this.workshopService.getById(Number(this.maintenance.workshop_id)).subscribe((workshop: Workshop) => {
         this.workshop = workshop;
-        this.userService.getById(Number(workshop.user_id)).subscribe((user: User) => {
-          this.userWorkshop = user;
-        });
       });
 
       this.invoiceService.getById(Number(invoiceId)).subscribe((invoice: Invoice) => {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import {UserService} from "../../../User/services/user.service";
+import {Customer} from "../../../User/model/customer.entity";
 import {Location} from "@angular/common";
-import {User} from "../../../User/model/user.entity";
+import {CustomerService} from "../../../User/services/customer.service";
 
 
 @Component({
@@ -11,19 +11,19 @@ import {User} from "../../../User/model/user.entity";
   styleUrl: './profile-customer.component.css'
 })
 export class ProfileCustomerComponent implements OnInit {
-  user: User = {} as User;
+  userCustomer: Customer = {} as Customer;
   isEditing = false;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private userService: UserService ,
+              private customerService: CustomerService ,
               private location: Location) {}
 
   ngOnInit(): void {
     const userId = Number(this.route.snapshot.paramMap.get('userId') ?? '0');
 
-    this.userService.getById(userId).subscribe((users: User) => {
-      this.user = users;
+    this.customerService.getAll().subscribe((users: any) => {
+      this.userCustomer = users.find((user: Customer) => Number(user.id) === Number(userId));
     });
 
   }
@@ -37,7 +37,7 @@ export class ProfileCustomerComponent implements OnInit {
   }
 
   onSave(): void {
-    this.userService.update(this.user.id, this.user).subscribe(() => {
+    this.customerService.update(this.userCustomer.id, this.userCustomer).subscribe(() => {
       this.isEditing = false;
     });
   }
@@ -45,19 +45,19 @@ export class ProfileCustomerComponent implements OnInit {
   onSubmit(field: string, newValue: string): void {
     switch (field) {
       case 'name':
-        this.user.name = newValue;
+        this.userCustomer.name = newValue;
         break;
       case 'phone':
-        this.user.phone = newValue;
+        this.userCustomer.phone = newValue;
         break;
       case 'email':
-        this.user.email = newValue;
+        this.userCustomer.email = newValue;
         break;
       case 'address':
-        this.user.address = newValue;
+        this.userCustomer.address = newValue;
         break;
     }
-    this.userService.update(Number(this.user.id), this.user).subscribe();
+    this.customerService.update(this.userCustomer.id, this.userCustomer).subscribe();
   }
 
   delete(clientId: number): void {

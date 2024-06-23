@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {CustomerService} from "../../../User/services/customer.service";
 import {WorkshopService} from "../../../User/services/workshop.service";
 import {UserService} from "../../../User/services/user.service";
-
 import {MaintenanceService} from "../../../Maintenance/services/maintenance.service";
 import {Maintenance} from "../../../Maintenance/model/maintenance";
 import {Customer} from "../../../User/model/customer.entity";
@@ -17,7 +16,6 @@ import {User} from "../../../User/model/user.entity";
 })
 export class CardCustomerComponent implements OnInit {
 
-  users: User[] = [];
   user: User = {} as User;
   workshop: Workshop = {} as Workshop;
   maintenance: Maintenance[] = [];
@@ -50,11 +48,6 @@ export class CardCustomerComponent implements OnInit {
           this.customerService.getAll().subscribe((response: any) => {
             this.customers = response.filter((customer: Customer) => Number(customer.workshop_id) === Number(this.workshop.id));
             console.log(this.customers);
-            this.userService.getAll().subscribe((users: any) => {
-              this.users = users.filter((user: User) => {
-                return this.customers.some((customer: Customer) => Number(customer.user_id) === Number(user.id));
-              });
-            });
           });
         });
       });
