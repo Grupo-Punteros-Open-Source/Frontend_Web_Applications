@@ -1,30 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import {Customer} from "../../../User/model/customer.entity";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 import {Location} from "@angular/common";
+import {UserService} from "../../../User/services/user.service";
+import {Customer} from "../../../User/model/customer.entity";
 import {CustomerService} from "../../../User/services/customer.service";
 
-
 @Component({
-  selector: 'app-profile-customer',
-  templateUrl: './profile-customer.component.html',
-  styleUrl: './profile-customer.component.css'
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.css'
 })
-export class ProfileCustomerComponent implements OnInit {
+export class ProfileComponent implements OnInit {
   userCustomer: Customer = {} as Customer;
   isEditing = false;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private customerService: CustomerService ,
-              private location: Location) {}
+              private userService: UserService ,
+              private location: Location,
+              private customerService: CustomerService) {}
 
   ngOnInit(): void {
-    const userId = Number(this.route.snapshot.paramMap.get('userId') ?? '0');
+    this.getUserActive();
 
-    this.customerService.getAll().subscribe((users: any) => {
-      this.userCustomer = users.find((user: Customer) => Number(user.id) === Number(userId));
-    });
+  }
+
+  async getUserActive() {
+    let userId = localStorage.getItem('user');
+
+    if (userId) {
+      let userid = JSON.parse(userId);
+      console.log(userid);
+      this.customerService.getAll().subscribe((data: any) => {
+        this.userCustomer = data.find((customer: Customer) => Number(customer.user_id) == Number(userid));
+        console.log(this.userCustomer);
+
+      });
+
+    }
 
   }
 
@@ -60,13 +73,4 @@ export class ProfileCustomerComponent implements OnInit {
     this.customerService.update(this.userCustomer.id, this.userCustomer).subscribe();
   }
 
-  delete(clientId: number): void {
-    this.router.navigate(['/workshop/customers/delete-customer',clientId]);
-  }
-
-  toVehicleList(id: number): void {
-    this.router.navigate([`/workshop/customers/vehicles`,id]);
-  }
-
 }
-

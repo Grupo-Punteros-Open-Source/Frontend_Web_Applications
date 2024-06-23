@@ -11,15 +11,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.css'
+  styleUrls: ['./sign-up.component.css']
 })
-
 export class SignUpComponent {
 
   @ViewChild('signUpForm', { static: false }) userForm!: NgForm;
-  user: User = new User(0, '', '', '', '', '', '', '');
-  customer: Customer = new Customer(0,0, 0);
-  workshop: Workshop = new Workshop(0,0);
+  user: User = new User(0, '', '');
+  customer: Customer = new Customer(0,0, 0,'','','','','');
+  workshop: Workshop = new Workshop(0,0,'','','','','');
   type: string = "";
 
   constructor(private userService: UserService,
@@ -96,6 +95,10 @@ export class SignUpComponent {
               try {
                 await this.getLastCustomerId();
                 this.customer.user_id = this.user.id;
+                this.customer.name = this.userForm.value.name;
+                this.customer.address = this.userForm.value.address;
+                // Repite para los demás campos
+
                 this.customerService.create(this.customer).subscribe({
                   next: response => {
                     console.log('Customer created', response);
@@ -112,6 +115,9 @@ export class SignUpComponent {
               try {
                 await this.getLastWorkshopId();
                 this.workshop.user_id = this.user.id;
+                this.workshop.name = this.userForm.value.name;
+                this.workshop.address = this.userForm.value.address;
+                // Repite para los demás campos
 
                 this.workshopService.create(this.workshop).subscribe({
                   next: response => {

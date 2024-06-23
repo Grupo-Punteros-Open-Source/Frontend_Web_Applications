@@ -22,15 +22,13 @@ import {HistoryListComponent} from "./Maintenance/pages/history-list/history-lis
 import {ProductCardComponent} from "./Workshop/components/product-card/product-card.component";
 import {AddProductsComponent} from "./Workshop/pages/add-products/add-products.component";
 import {ProductDetailsComponent} from "./Workshop/pages/product-details/product-details.component";
-import {
-  SideNavegationBarWorkshopComponent
-} from "./public/pages/side-navegation-bar-workshop/side-navegation-bar-workshop.component";
-import {
-  SideNavegationBarCustomerComponent
-} from "./public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component";
+import { SideNavegationBarWorkshopComponent } from "./public/pages/side-navegation-bar-workshop/side-navegation-bar-workshop.component";
+import { SideNavegationBarCustomerComponent } from "./public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component";
+import {ProfileComponent} from "./Customer/pages/profile/profile.component";
 import {VehicleComponent} from "./Customer/components/vehicle/vehicle.component";
 import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 import {MenuComponent} from "./Customer/components/menu/menu.component";
+import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/vehicle-repairing.component";
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -58,10 +56,11 @@ const routes: Routes = [
   { path: 'workshop/products/product-detail/:productId', component: ProductDetailsComponent},
   { path: 'customer', component: SideNavegationBarCustomerComponent },
   { path: 'customer/home', component: HomeCustomerComponent },
+  { path: 'customer/profile', component: ProfileComponent },
   { path: 'customer/vehicle', component: VehicleComponent },
   { path: 'customer/maintenance/:id', component: MaintainanceComponent },
-  {path: 'customer/menu', component: MenuComponent}
-
+  { path: 'customer/menu', component: MenuComponent },
+  { path: 'customer/vehicle/:id', component: VehicleRepairingComponent }
 ];
 
 @NgModule({

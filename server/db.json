@@ -2,35 +2,51 @@
   "workshops": [
     {
       "id": 1,
-      "user_id": 1
+      "user_id": 1,
+      "name": "AutoVIP Admin",
+      "address": "456 Oak Street, City",
+      "phone": "555-789-1234",
+      "email": "admin@autovip.com",
+      "image_url": "https://i.postimg.cc/BnRQw4hj/company-logo.png"
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "autovip",
-      "password": "n2ca782e21",
-      "name": "AutoVIP Admin",
-      "address": "456 Oak Street, City",
-      "phone": "555-789-1234",
-      "email": "admin@autovip.com",
-      "image_url": "https://i.postimg.cc/BnRQw4hj/company-logo.png"
+      "password": "n2ca782e21"
     },
     {
       "id": 2,
       "username": "alejandro",
-      "password": "m12ssk726",
-      "name": "Alejandro Perez",
+      "password": "m12ssk726"
+    },
+    {
+      "id": 3,
+      "username": "maria",
+      "password": "m12ssk726"
+    },
+    {
+      "id": 4,
+      "username": "juan",
+      "password": "m12ssk726"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "workshop_id": 1,
+      "name": "Alejandro ACAAA",
       "address": "789 Workshop Street, City",
       "phone": "555-321-9876",
       "email": "alejandro@example.com",
       "image_url": "https://i.postimg.cc/zGBMZknL/persona1.png"
     },
     {
-      "id": 3,
-      
-      "username": "maria",
-      "password": "m12ssk726",
+      "id": 2,
+      "user_id": 3,
+      "workshop_id": null,
       "name": "Maria Rodriguez",
       "address": "123 Main Street, City",
       "phone": "555-456-7890",
@@ -38,31 +54,14 @@
       "image_url": "https://i.postimg.cc/3wzvJ1Z1/persona2.png"
     },
     {
-      "id": 4,
-      "username": "juan",
-      "password": "m12ssk726",
+      "id": 3,
+      "user_id": 4,
+      "workshop_id": 1,
       "name": "Juan Lopez",
       "address": "456 Elm Street, City",
       "phone": "555-654-3210",
       "email": "woa",
       "image_url": "https://i.postimg.cc/3wzvJ1Z1/persona3.png"
-    }
-  ],
-  "customers": [
-    {
-      "id": 1,
-      "user_id": 2,
-      "workshop_id": 1
-    },
-    {
-      "id": 2,
-      "user_id": 3,
-      "workshop_id": null
-    },
-    {
-      "id": 3,
-      "user_id": 4,
-      "workshop_id": 1
     }
   ],
   "vehicles": [
@@ -119,7 +118,7 @@
   "maintenances": [
     {
       "id": 1,
-      "status": "pending",
+      "status": "completed",
       "lastVisitDate": "2024-04-25",
       "comment": "Engine diagnostics",
       "invoice_id": 1,
@@ -130,7 +129,7 @@
     },
     {
       "id": 2,
-      "status": "pending",
+      "status": "completed",
       "lastVisitDate": "2024-04-30",
       "comment": "Brake pads replacement",
       "invoice_id": 2,
@@ -138,6 +137,17 @@
       "workshop_id": 1,
       "vehicle_id": 3,
       "history_id": 2
+    },
+    {
+      "id": 3,
+      "status": "pending",
+      "lastVisitDate": "2024-05-05",
+      "comment": "Oil change",
+      "invoice_id": null,
+      "customer_id": 1,
+      "workshop_id": 1,
+      "vehicle_id": 2,
+      "history_id": null
     }
   ],
   "invoices": [

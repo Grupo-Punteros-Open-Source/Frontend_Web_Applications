@@ -1,15 +1,15 @@
-import {Component} from '@angular/core';
-import {User} from "../../model/user.entity";
-import {UserService} from "../../services/user.service";
-import {CustomerService} from "../../services/customer.service";
-import {AuthenticationService} from "../../services/authentication.service";
-import {Router} from '@angular/router';
-import {Customer} from "../../model/customer.entity";
+import { Component } from '@angular/core';
+import { User } from '../../model/user.entity';
+import { UserService } from '../../services/user.service';
+import { CustomerService } from '../../services/customer.service';
+import { AuthenticationService } from '../../services/authentication.service';
+import { Router } from '@angular/router';
+import { Customer } from '../../model/customer.entity';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrl: './sign-in.component.css'
+  styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
 
@@ -22,7 +22,7 @@ export class SignInComponent {
   constructor(private userService: UserService,
               private customerService: CustomerService,
               private authService: AuthenticationService,
-              private router:Router) {}
+              private router: Router) {}
 
   onLogin() {
     console.log('Username:', this.username);
@@ -31,11 +31,8 @@ export class SignInComponent {
         this.user = users.find((user: User) => user.username === this.username && user.password === this.password);
         if (this.user) {
           console.log('User logged in successfully');
-          // handle successful login here
-          // Save in the local storage
           localStorage.setItem('user', JSON.stringify(this.user.id));
           this.verifyUser();
-
         } else {
           this.errorMessage = 'Invalid username or password.';
           console.log(this.errorMessage);
@@ -61,15 +58,14 @@ export class SignInComponent {
             this.authService.updateAuthStatus('customer');
             this.router.navigate(['customer/home']);
           } else {
-            console.log('User is a wokrshop');
-
+            console.log('User is a workshop');
             localStorage.setItem('type', 'workshop');
             this.authService.updateAuthStatus('workshop');
             this.router.navigate(['workshop/home']);
           }
         },
         error: (error) => {
-          console.log('Error fetching workshops:', error);
+          console.log('Error fetching customers:', error);
         }
       });
     }
@@ -78,5 +74,4 @@ export class SignInComponent {
   navigateToSignUp() {
     this.router.navigate(['sign-up']);
   }
-
 }

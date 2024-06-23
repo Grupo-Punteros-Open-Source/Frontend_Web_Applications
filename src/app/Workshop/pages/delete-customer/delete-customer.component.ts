@@ -13,6 +13,7 @@ import {Location} from "@angular/common";
 })
 export class DeleteCustomerComponent implements OnInit{
   user: User = {} as User;
+  customer: Customer = {} as Customer;
   userId: number = 0;
   constructor(private route: ActivatedRoute,
               private userService: UserService,
@@ -30,6 +31,12 @@ export class DeleteCustomerComponent implements OnInit{
 
     this.userService.getById(this.userId).subscribe((customer: User) => {
       this.user = customer;
+        this.customerService.getAll().subscribe((customers: any) => {
+            const foundCustomer = customers.find((customer: Customer) => Number(customer.user_id) === Number(this.userId));
+            if (foundCustomer) {
+            this.customer = foundCustomer;
+            }
+        });
     });
   }
 

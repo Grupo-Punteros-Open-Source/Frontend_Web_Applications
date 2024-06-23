@@ -5,6 +5,7 @@ import {UserService} from "../../../User/services/user.service";
 import {CustomerService} from "../../../User/services/customer.service";
 import {WorkshopService} from "../../../User/services/workshop.service";
 import {Workshop} from "../../../User/model/workshop.entity";
+import {Customer} from "../../../User/model/customer.entity";
 
 @Component({
   selector: 'app-add-customer',
@@ -18,6 +19,7 @@ export class AddCustomerComponent {
   foundUser: User = {} as User;
   statusMessage: string = '';
   chosenAccount: User = {} as User;
+  chosenAccount2: Customer = {} as Customer;
 
   constructor(private location: Location,
               private userService: UserService,
@@ -41,6 +43,7 @@ export class AddCustomerComponent {
               } else {
                 this.statusMessage = 'Account found';
                 this.chosenAccount = this.foundUser;
+                this.chosenAccount2 = foundCustomer;
               }
             });
           }

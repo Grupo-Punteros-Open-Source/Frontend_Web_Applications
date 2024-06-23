@@ -1,0 +1,51 @@
+main {
+    background-color: #181a27;
+}
+
+.upper {
+    padding: 20px;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 991px) {
+    .upper {
+        justify-content: normal;
+    }
+}
+
+.client-vehicle-card {
+    background: #181A27;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    gap: 1em;
+    max-width: 800px;
+}
+
+.card-content {
+    background: #B2C3D3;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 570px;
+}
+
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-container h1 {
+    font-size: 2.5em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}

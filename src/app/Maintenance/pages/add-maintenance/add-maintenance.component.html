@@ -15,8 +15,8 @@
             <mat-form-field appearance="fill" class="form-field">
                 <mat-label>Customer</mat-label>
                 <mat-select formControlName="customer_id">
-                    <mat-option *ngFor="let user of users" [value]="getCustomerId(user.id)">
-                        {{ user.name }}
+                    <mat-option *ngFor="let customer of customers" [value]="customer.id">
+                        {{ customer.name }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
