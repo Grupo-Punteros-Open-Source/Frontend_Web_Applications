@@ -7,8 +7,8 @@
           <div mat-card-avatar class="customer-avatar"></div>
           <mat-card-title class="customer-card-title">Name: {{ user.name }}</mat-card-title>
           <mat-card-actions class="customer-card-action">
-            <button mat-button (click)="onEdit(user.id)">Edit</button>
-            <button mat-button (click)="delete(user.id)">Delete</button>
+            <button  (click)="onEdit(user.id)">Edit</button>
+            <button  (click)="delete(user.id)">Delete</button>
           </mat-card-actions>
         </mat-card>
       </div>

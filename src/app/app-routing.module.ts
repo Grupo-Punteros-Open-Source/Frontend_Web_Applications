@@ -15,13 +15,19 @@ import {CustomerVehicleListComponent} from "./Workshop/pages/customer-vehicle-li
 import {HomeCustomerComponent} from "./public/pages/home-customer/home-customer.component";
 import {HomeWorkshopComponent} from "./public/pages/home-workshop/home-workshop.component";
 import {ViewMaintananceComponent} from "./Maintenance/pages/view-maintanance/view-maintanance.component";
-import {
-  SideNavegationBarWorkshopComponent
-} from "./public/pages/side-navegation-bar-workshop/side-navegation-bar-workshop.component";
-import {
-  SideNavegationBarCustomerComponent
-} from "./public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component";
+import {AddMaintenanceComponent} from "./Maintenance/pages/add-maintenance/add-maintenance.component";
+import {InvoiceListComponent} from "./Workshop/pages/invoice-list/invoice-list.component";
+import {InvoicePreviewComponent} from "./Workshop/pages/invoice-preview/invoice-preview.component";
+import {HistoryListComponent} from "./Maintenance/pages/history-list/history-list.component";
+import {ProductCardComponent} from "./Workshop/components/product-card/product-card.component";
+import {AddProductsComponent} from "./Workshop/pages/add-products/add-products.component";
+import {ProductDetailsComponent} from "./Workshop/pages/product-details/product-details.component";
+import { SideNavegationBarWorkshopComponent } from "./public/pages/side-navegation-bar-workshop/side-navegation-bar-workshop.component";
+import { SideNavegationBarCustomerComponent } from "./public/pages/side-navegation-bar-customer/side-navegation-bar-customer.component";
 import {ProfileComponent} from "./Customer/pages/profile/profile.component";
+import {VehicleComponent} from "./Customer/components/vehicle/vehicle.component";
+import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
+import {MenuComponent} from "./Customer/components/menu/menu.component";
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -40,10 +46,19 @@ const routes: Routes = [
   { path: 'workshop/customers/vehicles/:userId', component: CustomerVehicleListComponent },
   { path: 'workshop/maintenances', component: MaintananceListComponent },
   { path: 'workshop/maintenances/view/:maintenanceId', component: ViewMaintananceComponent },
+  { path: 'workshop/maintenances/add-maintenance', component: AddMaintenanceComponent},
+  { path: 'workshop/invoices', component: InvoiceListComponent},
+  { path: 'workshop/invoices/preview/:invoiceId', component: InvoicePreviewComponent},
+  { path: 'workshop/histories', component: HistoryListComponent},
+  { path: 'workshop/products', component: ProductCardComponent},
+  { path: 'workshop/products/add-products', component: AddProductsComponent},
+  { path: 'workshop/products/product-detail/:productId', component: ProductDetailsComponent},
   { path: 'customer', component: SideNavegationBarCustomerComponent },
   { path: 'customer/home', component: HomeCustomerComponent },
-  { path: 'customer/profile', component: ProfileComponent }
-
+  { path: 'customer/profile', component: ProfileComponent },
+  { path: 'customer/vehicle', component: VehicleComponent },
+  { path: 'customer/maintenance/:id', component: MaintainanceComponent },
+  { path: 'customer/menu', component: MenuComponent }
 ];
 
 @NgModule({

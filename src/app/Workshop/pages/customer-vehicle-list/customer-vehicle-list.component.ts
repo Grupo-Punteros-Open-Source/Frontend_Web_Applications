@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {UserService} from "../../../User/services/user.service";
 import {User} from "../../../User/model/user.entity";
 import { Router,ActivatedRoute } from "@angular/router";
+import {Location} from "@angular/common";
 
 
 @Component({
@@ -14,12 +15,13 @@ export class CustomerVehicleListComponent {
   user: User = {} as User;
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private userService: UserService) {
+              private userService: UserService,
+              private location: Location) {
     this.getUser();
   }
 
-  addVehicle(): void {
-
+  Back(): void {
+    this.location.back();
   }
 
   getUser() {
