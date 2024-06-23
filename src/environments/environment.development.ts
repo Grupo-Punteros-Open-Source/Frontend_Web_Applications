@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  serverBasePath: 'http://localhost:3000'
+  production: true,
+  serverBasePath: 'https://my-json-server.herokuapp.com'
 };

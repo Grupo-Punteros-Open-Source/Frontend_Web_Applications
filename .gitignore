@@ -134,3 +134,6 @@ dist
 .angular
 .idea
 
+
+# Local Netlify folder
+.netlify
