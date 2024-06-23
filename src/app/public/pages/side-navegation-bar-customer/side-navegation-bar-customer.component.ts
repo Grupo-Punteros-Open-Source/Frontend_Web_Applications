@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class SideNavegationBarCustomerComponent {
     options = [
-        { title: 'Home', path: '/customer/home', icon: 'home' },
+        { title: 'Home', path: '/customer/menu', icon: 'home' },
         { title: 'Profile', path: '/customer/profile', icon: 'account_circle' },
         { title: 'Vehicle', path: '/customer/vehicle', icon: 'directions_car' },
     ]

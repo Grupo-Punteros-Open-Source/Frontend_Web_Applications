@@ -22,7 +22,7 @@ export class MenuComponent  implements OnInit{
 
   ngOnInit(): void {
 
-    this.getAdvertisingById(2);
+    this.getAdvertisingById(1);
     this.workshopService.getAll().subscribe((response: any) => {
       this.workshop = response;
     });
