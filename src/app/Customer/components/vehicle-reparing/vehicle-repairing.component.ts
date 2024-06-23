@@ -18,9 +18,9 @@ export class VehicleRepairingComponent implements OnInit {
 
   user: User = {} as User;
   customer: Customer = {} as Customer;
-  maintenances: Maintenance[] = [];
+  maintenance: Maintenance = {} as Maintenance;
   vehicles: Vehicle[] = [];
-  selectedVehicle: Vehicle | undefined;
+  selectedVehicle: Vehicle = {} as Vehicle;
 
   constructor(private customerService: CustomerService,
               private maintenanceService: MaintenanceService,
@@ -35,26 +35,11 @@ export class VehicleRepairingComponent implements OnInit {
   }
 
   getVehicles(): void {
-    const user = JSON.parse(localStorage.getItem('user') as string);
-    const userId = Number(user);
-    this.userService.getById(userId).subscribe((response: User) => {
-      this.user = response;
-      this.customerService.getAll().subscribe((response: any) => {
-        this.customer = response.find((customer: Customer) => Number(customer.user_id) === Number(this.user.id));
-        console.log(this.customer);
-        this.maintenanceService.getAll().subscribe((response: any) => {
-          this.maintenances = response.filter((maintenance: Maintenance) => Number(maintenance.customer_id) === Number(this.customer.id));
-          console.log(this.maintenances);
-          this.vehicleService.getAll().subscribe((response: any) => {
-            this.vehicles = response.filter((vehicle: Vehicle) =>
-                this.maintenances.some((maintenance: Maintenance) => Number(maintenance.vehicle_id) === Number(vehicle.id))
-            );
-            console.log(this.vehicles);
-            const selectedVehicleId = Number(this.route.snapshot.paramMap.get('id'));
-            console.log(selectedVehicleId);
-            this.selectedVehicle = this.vehicles.find(vehicle => vehicle.id === selectedVehicleId);
-          });
-        });
+    const selectedVehicleId = Number(this.route.snapshot.paramMap.get('id'));
+    this.vehicleService.getById(selectedVehicleId).subscribe(vehicle => {
+      this.selectedVehicle = vehicle;
+      this.maintenanceService.getAll().subscribe((maintenances:any) => {
+        this.maintenance = maintenances.find((maintenance: Maintenance) => maintenance.vehicle_id === selectedVehicleId);
       });
     });
   }
