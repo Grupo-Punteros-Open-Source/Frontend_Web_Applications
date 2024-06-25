@@ -21,9 +21,10 @@ export class ProfileCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = Number(this.route.snapshot.paramMap.get('userId') ?? '0');
-
+    console.log("Esto es el user",userId);
     this.customerService.getAll().subscribe((users: any) => {
-      this.userCustomer = users.find((user: Customer) => Number(user.id) === Number(userId));
+      this.userCustomer = users.find((user: Customer) => Number(user.user_id) === Number(userId));
+      console.log("Esto es el user",this.userCustomer);
     });
 
   }
