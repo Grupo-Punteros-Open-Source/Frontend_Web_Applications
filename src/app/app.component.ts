@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from "./User/services/authentication.service";
+import {AuthService} from "./User/services/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'AutoPro Tracker';
   userType: string | null = '';
 
-  constructor(private authService: AuthenticationService) {
+  constructor(private authService: AuthService) {
 
   }
   ngOnInit() {

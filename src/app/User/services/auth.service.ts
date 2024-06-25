@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
+export class AuthService {
   private authStatus = new BehaviorSubject<string | null>(localStorage.getItem('type'));
 
   authStatus$ = this.authStatus.asObservable();

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AuthenticationService} from "../../../User/services/authentication.service";
+import {AuthService} from "../../../User/services/auth.service";
 
 @Component({
   selector: 'app-home-workshop',
@@ -7,7 +7,7 @@ import {AuthenticationService} from "../../../User/services/authentication.servi
   styleUrls: ['./home-workshop.component.css']
 })
 export class HomeWorkshopComponent {
-  constructor(private authService: AuthenticationService) {
+  constructor(private authService: AuthService) {
     this.authService.updateAuthStatus('workshop');
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleService } from '../../../Maintenance/services/vehicle.service';
-import { AuthenticationService } from '../../../User/services/authentication.service';
+import { AuthService } from '../../../User/services/auth.service';
 import {CustomerVehicleEntity} from "../../model/customer-vehicle.entity";
 import {Vehicle} from "../../../Maintenance/model/vehicle.entitty";
 import {Maintenance} from "../../../Maintenance/model/maintenance";
@@ -24,7 +24,7 @@ export class VehicleComponent implements OnInit {
 
   constructor(
       private vehicleService: VehicleService,
-      private authService: AuthenticationService,
+      private authService: AuthService,
       private router: Router,
       private customerService: CustomerService,
       private maintenancesService: MaintenanceService
@@ -42,12 +42,14 @@ export class VehicleComponent implements OnInit {
     if (userId) {
       let userid = JSON.parse(userId);
       this.customerService.getAll().subscribe((response: any) => {
-        this.customer = response.find((customer: Customer) => Number(customer.user_id) === Number(userid));
-        this.vehicleService.getAll().subscribe((response: any) => {
-          this.vehicles = response.filter((vehicle : Vehicle) => Number(vehicle.customer_id) === Number(this.customer.id));
-          console.log(this.vehicles);
-
-        });
+        console.log(userid);
+        this.customer = response.find((customer: Customer) => Number(customer.user_id) === userid);
+        if (this.customer) {
+          this.vehicleService.getAll().subscribe((response: any) => {
+            this.vehicles = response.filter((vehicle : Vehicle) => Number(vehicle.customer_id) === Number(this.customer.id));
+            console.log(this.vehicles);
+          });
+        }
       });
 
     }

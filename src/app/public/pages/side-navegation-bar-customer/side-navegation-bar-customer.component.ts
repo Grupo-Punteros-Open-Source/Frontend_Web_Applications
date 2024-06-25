@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {AuthenticationService} from "../../../User/services/authentication.service";
+import {AuthService} from "../../../User/services/auth.service";
+import {AuthenticationService} from "../../../IAM/services/authentication.service";
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,11 +16,13 @@ export class SideNavegationBarCustomerComponent {
     ]
 
     constructor(private router: Router,
-                private authenticationService: AuthenticationService) {
+                private authenticationService: AuthService,
+                private authService: AuthenticationService) {
     }
 
     unlogin() {
         this.authenticationService.updateAuthStatus('xd');
+        this.authService.signOut();
         this.router.navigate(['/sign-in']);
     }
 }
