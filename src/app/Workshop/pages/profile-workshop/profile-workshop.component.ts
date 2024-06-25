@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {User} from "../../../User/model/user.entity";
-import {UserService} from "../../../User/services/user.service";
+import {Workshop} from "../../../User/model/workshop.entity";
+import {WorkshopService} from "../../../User/services/workshop.service";
 
 @Component({
   selector: 'app-profile-workshop',
@@ -9,10 +9,10 @@ import {UserService} from "../../../User/services/user.service";
 })
 export class ProfileWorkshopComponent {
 
-  user: User = {} as User;
+  workshop: Workshop = {} as Workshop;
 
 
-  constructor(private userService: UserService) {
+  constructor(private workshopService: WorkshopService) {
     this.getUserActive();
   }
 
@@ -24,10 +24,9 @@ export class ProfileWorkshopComponent {
     if (userId) {
       let userid = JSON.parse(userId);
       console.log(userid);
-      this.userService.getById(Number(userid)).subscribe((response: User) => {
-        this.user = response;
-
-
+      this.workshopService.getAll().subscribe((workshops: any) => {
+        this.workshop = workshops.find((workshop: Workshop) => Number(workshop.user_id) === Number(userid));
+        console.log(this.workshop);
       });
     }
   }

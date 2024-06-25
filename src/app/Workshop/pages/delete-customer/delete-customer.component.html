@@ -1,4 +1,4 @@
-<div *ngIf="user">
+<div *ngIf="customer">
   <div class="container">
     <div class="inner-container">
       <div class="header">
@@ -6,8 +6,8 @@
         <div class="content">
           <div class="column">
             <div class="column-content">
-              <div class="textbox">Name: {{user.name}}</div>
-              <div class="textbox">Phone: {{user.phone}}</div>
+              <div class="textbox">Name: {{customer.name}}</div>
+              <div class="textbox">Phone: {{customer.phone}}</div>
             </div>
             <div class="button-group">
               <button class="confirm-button" (click)="deleteCustomer()">Confirm</button>
@@ -15,8 +15,8 @@
           </div>
           <div class="column">
             <div class="column-content">
-              <div class="textbox">E-mail: {{user.email}}</div>
-              <div class="textbox">Address: {{user.address}}</div>
+              <div class="textbox">E-mail: {{customer.email}}</div>
+              <div class="textbox">Address: {{customer.address}}</div>
             </div>
             <div class="button-group">
               <button class="cancel-button" (click)="onCancel()">Cancel</button>

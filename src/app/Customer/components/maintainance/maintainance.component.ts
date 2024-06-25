@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {VehicleService} from "../../../Maintenance/services/vehicle.service";
 import {MaintenanceService} from "../../../Maintenance/services/maintenance.service";
 import {HistoryService} from "../../../Maintenance/services/history.service";
+import {Location} from "@angular/common";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {HistoryService} from "../../../Maintenance/services/history.service";
   templateUrl: './maintainance.component.html',
   styleUrl: './maintainance.component.css'
 })
-export class MaintainanceComponent {
+export class MaintainanceComponent implements OnInit {
     vehicle: any;
     history: any;
     mileage!: number;
@@ -19,7 +20,8 @@ export class MaintainanceComponent {
         private route: ActivatedRoute,
         private vehicleService: VehicleService,
         private maintenanceService: MaintenanceService,
-        private historyService: HistoryService
+        private historyService: HistoryService,
+        private location: Location
     ) {
     }
 
@@ -52,5 +54,9 @@ export class MaintainanceComponent {
         } else {
             console.log('Enter a valid mileage value');
         }
+    }
+
+    cancel() {
+        this.location.back();
     }
 }

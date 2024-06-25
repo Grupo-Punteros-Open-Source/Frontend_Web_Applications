@@ -26,7 +26,6 @@ export class AddMaintenanceComponent implements OnInit {
     workshops: Workshop[] = [];
     workshop: Workshop = {} as Workshop;
     vehicles: Vehicle[] = [];
-    users: User[] = [];
     workshopname = '';
 
   maintenanceForm = this.fb.group({
@@ -61,18 +60,16 @@ export class AddMaintenanceComponent implements OnInit {
       let userid = JSON.parse(userId);
       console.log(userid);
       this.userService.getById(Number(userid)).subscribe((response: User) => {
-        this.workshopname = response.name;
+
         this.workshopService.getAll().subscribe((workshops: any) => {
           this.workshops = workshops;
+          this.workshopname = workshops.name;
           this.workshop = workshops.find((workshop: Workshop) => Number(workshop.user_id) === Number(response.id));
             this.maintenanceService.getAll().subscribe((maintenances: any) => {
               this.maintenances = maintenances.filter((maintenance: Maintenance) => Number(maintenance.workshop_id) === Number(this.workshop.id));
                 this.customerService.getAll().subscribe((customers: any) => {
                     this.customers = customers.filter((customer: Customer) => this.maintenances.find((maintenance: Maintenance) => Number(maintenance.customer_id) === Number(customer.id)));
                     console.log(this.customers);
-                    this.userService.getAll().subscribe((users: any) => {
-                        this.users = users.filter((user: User) => this.customers.find((customer: Customer) => Number(customer.user_id) === Number(user.id)));
-                    });
                 });
 
                 this.vehicleService.getAll().subscribe((vehicles: any) => {
@@ -86,14 +83,6 @@ export class AddMaintenanceComponent implements OnInit {
       });
     }
   }
-
-  getCustomerId(userId: number): number | null {
-    const customer = this.customers.find(customer => Number(customer.user_id) === Number(userId));
-    return customer ? customer.id : null;
-  }
-
-
-
 
   onSubmit() {
     if (this.maintenanceForm.valid) {

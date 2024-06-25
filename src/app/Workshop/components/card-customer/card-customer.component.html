@@ -1,14 +1,14 @@
 <div class="div">
   <div class="div-2">
     <div class="div-3">
-      <div *ngFor="let user of users">
+      <div *ngFor="let customer of customers">
         <mat-card class="customer-card">
-          <img mat-card-image [src]="user.image_url" alt="Client Image" class="customer-image">
+          <img mat-card-image [src]="customer.image_url" alt="Client Image" class="customer-image">
           <div mat-card-avatar class="customer-avatar"></div>
-          <mat-card-title class="customer-card-title">Name: {{ user.name }}</mat-card-title>
+          <mat-card-title class="customer-card-title">Name: {{ customer.name }}</mat-card-title>
           <mat-card-actions class="customer-card-action">
-            <button  (click)="onEdit(user.id)">Edit</button>
-            <button  (click)="delete(user.id)">Delete</button>
+            <button  (click)="onEdit(customer.user_id)">Edit</button>
+            <button  (click)="delete(customer.user_id)">Delete</button>
           </mat-card-actions>
         </mat-card>
       </div>

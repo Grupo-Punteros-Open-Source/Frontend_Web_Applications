@@ -43,6 +43,7 @@ import { MaintananceCardComponent } from './Maintenance/components/maintanance-c
 import { HomeWorkshopComponent } from './public/pages/home-workshop/home-workshop.component';
 import { HomeCustomerComponent } from './public/pages/home-customer/home-customer.component';
 import { ViewMaintananceComponent } from './Maintenance/pages/view-maintanance/view-maintanance.component';
+import { ProfileComponent } from './Customer/pages/profile/profile.component';
 import { CardNotificationComponent } from './User/components/card-notification/card-notification.component';
 import { AddMaintenanceComponent } from './Maintenance/pages/add-maintenance/add-maintenance.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
@@ -59,6 +60,7 @@ import { UpdateProductComponent } from './Workshop/pages/update-product/update-p
 import { VehicleComponent } from './Customer/components/vehicle/vehicle.component';
 import {MaintainanceComponent} from "./Customer/components/maintainance/maintainance.component";
 import {MenuComponent} from "./Customer/components/menu/menu.component";
+import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/vehicle-repairing.component";
 
 @NgModule({
   declarations: [
@@ -84,6 +86,7 @@ import {MenuComponent} from "./Customer/components/menu/menu.component";
     HomeWorkshopComponent,
     HomeCustomerComponent,
     ViewMaintananceComponent,
+    ProfileComponent,
     CardNotificationComponent,
     AddMaintenanceComponent,
     InvoiceCardComponent,
@@ -97,7 +100,8 @@ import {MenuComponent} from "./Customer/components/menu/menu.component";
     UpdateProductComponent,
     VehicleComponent,
     MaintainanceComponent,
-    MenuComponent
+    MenuComponent,
+    VehicleRepairingComponent
   ],
   imports: [
     BrowserModule,

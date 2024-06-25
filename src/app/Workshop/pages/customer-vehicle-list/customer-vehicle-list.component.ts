@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {UserService} from "../../../User/services/user.service";
-import {User} from "../../../User/model/user.entity";
+import {CustomerService} from "../../../User/services/customer.service";
+import {Customer} from "../../../User/model/customer.entity";
 import { Router,ActivatedRoute } from "@angular/router";
 import {Location} from "@angular/common";
 
@@ -12,10 +12,10 @@ import {Location} from "@angular/common";
 })
 export class CustomerVehicleListComponent {
 
-  user: User = {} as User;
+  customer: Customer = {} as Customer;
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private userService: UserService,
+              private customerService: CustomerService,
               private location: Location) {
     this.getUser();
   }
@@ -26,8 +26,8 @@ export class CustomerVehicleListComponent {
 
   getUser() {
     const userId = Number(this.route.snapshot.paramMap.get('userId') ?? '0');
-    this.userService.getById(userId).subscribe((response: User) => {
-      this.user = response;
+    this.customerService.getAll().subscribe((data: any) => {
+        this.customer = data.find((customer: Customer) => Number(customer.user_id) === Number(userId));
     });
   }
 
