@@ -60,7 +60,7 @@ const routes: Routes = [
   { path: 'customer/home', component: HomeCustomerComponent },
   { path: 'customer/vehicle', component: VehicleComponent },
   { path: 'customer/maintenance/:id', component: MaintainanceComponent },
-  {path: 'customer/menu', component: MenuComponent}
+  { path: 'customer/menu', component: MenuComponent}
 
 ];
 
