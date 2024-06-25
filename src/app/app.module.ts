@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthenticationInterceptor} from "./IAM/services/authentication.interceptor.service";
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,6 +64,7 @@ import {MaintainanceComponent} from "./Customer/components/maintainance/maintain
 import {MenuComponent} from "./Customer/components/menu/menu.component";
 import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/vehicle-repairing.component";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,7 +104,7 @@ import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/
     VehicleComponent,
     MaintainanceComponent,
     MenuComponent,
-    VehicleRepairingComponent
+    VehicleRepairingComponent,
   ],
   imports: [
     BrowserModule,
@@ -130,6 +133,7 @@ import {VehicleRepairingComponent} from "./Customer/components/vehicle-reparing/
     MatNativeDateModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true },
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]

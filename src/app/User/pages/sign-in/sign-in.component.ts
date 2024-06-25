@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { User } from '../../model/user.entity';
 import { UserService } from '../../services/user.service';
 import { CustomerService } from '../../services/customer.service';
-import { AuthenticationService } from '../../services/authentication.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { Customer } from '../../model/customer.entity';
+import {AuthenticationService} from "../../../IAM/services/authentication.service";
+import {SignInRequest} from "../../../IAM/model/sign-in.request";
 
 @Component({
   selector: 'app-sign-in',
@@ -21,14 +23,20 @@ export class SignInComponent {
 
   constructor(private userService: UserService,
               private customerService: CustomerService,
-              private authService: AuthenticationService,
-              private router: Router) {}
+              private authService: AuthService,
+              private router: Router,
+              private authenticationService:AuthenticationService) {}
 
   onLogin() {
-    console.log('Username:', this.username);
+
+    const signInRequest = new SignInRequest(this.username, this.password);
+    this.authenticationService.signIn(signInRequest);
+
     this.userService.getAll().subscribe({
       next: (users: any) => {
+
         this.user = users.find((user: User) => user.username === this.username && user.password === this.password);
+        console.log('User:', this.user);
         if (this.user) {
           console.log('User logged in successfully');
           localStorage.setItem('user', JSON.stringify(this.user.id));

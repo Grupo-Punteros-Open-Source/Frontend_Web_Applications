@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
       let userid = JSON.parse(userId);
       console.log(userid);
       this.customerService.getAll().subscribe((data: any) => {
-        this.userCustomer = data.find((customer: Customer) => Number(customer.user_id) == Number(userid));
+        this.userCustomer = data.find((customer: Customer) => Number(customer.user_id) == userid);
         console.log(this.userCustomer);
 
       });
