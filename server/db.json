@@ -239,7 +239,7 @@
   ],
   "advertising": [
     {
-      "id" : "1",
+      "id" : 1,
       "comName": "AutoVIP",
       "comImage":"https://i.postimg.cc/BnRQw4hj/company-logo.png",
       "workshopId": 1,

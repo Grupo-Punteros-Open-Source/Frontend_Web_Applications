@@ -10,6 +10,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   height: auto;
+  color: white;
 }
 
 .form-content {
@@ -20,20 +21,23 @@ h1 {
 
 .image-container {
   display: flex;
-  border: 1px solid black ;
-  background-color: blue;
+  background-image: url('/assets/images/panel.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 40%;
-  height: 120vh;
+  flex-grow: 1; /* Añade esta línea */
   text-align: center;
   border-bottom-left-radius: 10%;
   border-top-left-radius: 10%;
   align-items: center;
   justify-content: center;
-
+  height: calc(100vh + 500px); /* Añade esta línea */
 }
 
 .image-container img {
   max-width: 100%;
+  background: transparent;
 }
 
 .buttons {
@@ -86,6 +90,16 @@ a {
 
 .checks {
   margin-bottom: 20px;
+}
+
+.text-white {
+  color: white;
+}
+
+.background-white {
+  background: transparent;
+  color: white;
+
 }
 
 
